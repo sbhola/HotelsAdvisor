@@ -1,0 +1,21 @@
+﻿divHome,.header-inside
+userName,#UserName
+password,#Password
+submitButton,input[type='submit']
+lnkUserName,a[title="Manage"]
+lnkRegister,#registerLink
+divCreateAccount,div[class='crt_acnt']
+lnkLogin,#loginLink
+btnGoogle,button[value='Google']
+btnFacebook,button[value='Facebook']
+googleBaner,.banner h2
+facebookContainer,#facebook
+banerHome,.banner-text
+lnkHome,.row-fluid .span4 a
+aLogOff,a[title='aLogOff']
+displayUserName,a#displayUserName
+logoutForm,a#logoutForm
+inputUserName,input#UserName
+inputPassword,input#Password
+loginButton,input#loginButton
+loginForm,form.form-horizontal

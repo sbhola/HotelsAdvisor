@@ -1,0 +1,376 @@
+/*------------------------TemplateList START---------------------------*/
+.code-container {
+    border: solid thin lightgray;
+    background: white;
+}
+
+.border-container {
+    padding: 5px 0px;
+    margin: 25px 0px;
+    border: solid thin lightgrey;
+    border-width: 1px 0px 0px 0px;
+}
+.keywords-container
+{
+    height: 240px;
+    overflow: auto;
+}
+
+.strip-loader{
+    background:url(images/throbber.gif) no-repeat;
+    width: 128px;
+    height: 16px;
+}
+
+.strip-item:focus
+{
+    background-color: white;
+    transition-duration: 1s;
+}
+/**style for height of keywords area in template listing*/
+.keywords-textarea-height{
+    height: 300px !important;
+}
+/*------------------------TemplateList ENDS----------------------------*/
+/*---------------------------------------------------------------------*/
+
+.crossBtn{
+    background-color: rgb(255, 255, 255);
+
+}
+.no-image-selected {
+    background-image: url('../../../images/common/img_notthing_selected.gif');
+    background-repeat: no-repeat;
+    height: 70px;
+}
+
+/*---------------------------------------------------------------------*/
+/*-----------------------Watermark SART----------------------------*/
+.placeholder { 
+    color:gray;
+}
+/*-----------------------Watermark END----------------------------*/
+/*hack to render google map controls properly while bootstrap is on page START*/
+.hotelDetailsMapCanvas {
+    height:500px;
+}
+.gmapCanvas img {
+    max-width: none;
+}
+
+/*hack to render google map controls properly while bootstrap is on page END*/
+
+/* Autosuggest loader image styles START*/
+input[type="text"].loader {
+    background: url(Images/textbox_loader.gif) no-repeat 1% center;
+}
+/* Autosuggest loader image styles END*/
+
+/**Sticking footer to the bottom of the page.*/
+html, body, form {
+    height: 100%;
+}
+
+/*Fix for template editor showing scroll in firefox when editor is opened as margin-bottom was applied by bootstrap*/
+body>form {
+    margin-bottom: 0px;
+}
+
+#ucPWP_AP{
+    height: 100%;
+}
+
+#wrap_small, #wrap_mapview{
+    min-height: 100%;
+    position: relative;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: auto !important;
+}
+/*footer section ends*/
+
+/**styles forhotel results overlay    */
+.overlay
+    {
+		        background: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+    }
+
+
+   .loader-centered
+    {
+        position: fixed;
+        top: 40%;
+        right: 50%;       
+        margin-right: -20px;
+    }
+
+    .preloader {
+        margin: 0px auto;
+        display: inline-block;
+        background: url(Images/img_loading_small.gif) no-repeat;
+        width: 60px;
+        height: 60px;
+    }
+/**overlay style ends*/
+
+/*cancellation policy START */
+.width500
+{
+    width:500px;
+}
+.gap
+{
+    line-height: 5px;
+    height: 5px;
+}
+/*cancellation policy END */
+/* Hotel search START */
+
+
+.hotelroom-bar{
+	background-color: #f9f9f9;
+	background-image: -o-linear-gradient(180deg , rgb(239,242,244) 0%, rgb(250,250,250) 100%);
+	background-image: -moz-linear-gradient(180deg , rgb(239,242,244) 0%, rgb(250,250,250) 100%);
+	background-image: -webkit-linear-gradient(180deg , rgb(239,242,244) 0%, rgb(250,250,250) 100%);
+	background-image: -ms-linear-gradient(180deg , rgb(239,242,244) 0%, rgb(250,250,250) 100%);
+	background-image: linear-gradient(180deg , rgb(239,242,244) 0%, rgb(250,250,250) 100%);
+	border-bottom:0px solid #CCC;
+	}
+/*Hotel search END*/
+
+/* Button loading style START */
+.processing-primary{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+    margin-right :3px;
+	background-image:url(Images/processing-primary.gif);
+}
+
+.processing-secondary{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin-right :3px;
+    background-image:url(Images/processing-secondary.gif);
+}
+
+/* Button loading style END */
+
+/*
+    Used to font-up-case any text, eg. Hotel Name and Address.
+    
+    */
+.font-up-case {
+       text-transform: font-up-case;
+}
+/* END */
+/* Width 25% */
+.width25p {
+    width: 25%;
+}
+/* */
+
+/*custom css for the sticky searchCriteria*/
+.floatElement
+{
+    z-index:1;
+    background-color:white;
+    
+}
+
+/*.niceScroll::-webkit-scrollbar {
+width: 3px;
+background-color: black;
+color: #ffffff;
+border:none;
+}*/
+
+/*::-webkit-scrollbar {
+    width: 12px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.7); 
+    border-radius: 2px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+}*/
+
+
+/*Hotel results map view modal pop up css overrides [START]*/
+.mapViewPopUp.modal {
+    top: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: 99% !important;
+    margin: 0px !important;
+}
+
+.mapViewPopUp .modal-body{
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    padding: 0px !important;
+    overflow: hidden;
+}
+
+.mapViewPopUp .modal-header{
+    padding:0px !important;
+}
+
+.mapViewPopUp iframe {
+    width: 100% !important;
+    height: 97% !important;
+    border:0px !important;
+    -moz-box-shadow:none !important;
+    -webkit-box-shadow:none !important;
+    box-shadow:none !important;
+}
+
+/*Hotel results map view modal pop up css overrides [END]*/
+
+.cluster{
+  	color: #FFFFFF;
+  	text-align:center;
+  	font-size:11px;
+  	font-weight:bold;
+}
+.cluster-1{
+background-image:url(images/m1.png);
+line-height:53px;
+  	width: 53px;
+  	height: 52px;
+}
+.cluster-2{
+background-image:url(images/m2.png);
+line-height:53px;
+  	width: 56px;
+  	height: 55px;
+}
+.cluster-3{
+background-image:url(images/m3.png);
+line-height:66px;
+  	width: 66px;
+  	height: 65px;
+}
+
+.mapview_utilitylink_box {height: auto !important; line-height: none !important; /*position:fixed; width:100%; z-index:1000;*/} 
+
+/*Hotel results map view modal pop up css overrides [END]*/
+.carousel img {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Max-Height Remover */
+.maxHeightNone {
+    max-height: none !important;
+}
+
+.emberrow .emberspan:first-of-type {
+    margin-right: 0px;
+}
+
+.jMapTabsContainer {
+    width: 7000px;
+}
+/*Deals carousel styles override as creative team has set styles for id but we need for classes
+    */
+.hotelcarousel-nav{
+text-align: center;
+
+}
+.hotelcarousel-nav a {
+    margin: 5px 0px;
+    background:url(../../images/dot_inactive.png) no-repeat;
+	width:16px;
+	height:16px;
+	color: #000;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+.hotelcarousel-nav a.current {
+	margin: 5px 0px;
+	background:url(../../images/dot_active.png) no-repeat;
+	
+	width:16px;
+	height:16px;
+ 
+}
+.destinationCarousel.carousel { margin-bottom:9px !important;}
+
+.lineHeight2 {
+    line-height: 2;
+}
+.inlineB{
+    display: inline-block;
+}
+.hover-view .hover-visible{
+    opacity: 0;
+}
+.hover-view:hover .hover-visible{
+    opacity: 0.7;
+}
+.hover-visible:hover{
+    opacity: 1 !important;
+}
+.full-height{
+    height: 100%;
+}
+
+.single-line-truncate{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* feedback btn css starts */
+#sideLnkBtnFeedback
+{
+background: url(Images/feedback_icon.png) center no-repeat;
+color: #FFFFFF;
+cursor: pointer;
+height: 101px;
+right: 0;
+margin-right: -4px; 
+overflow: hidden;
+position: fixed;
+text-indent: -100000px;
+bottom: 20%;
+margin-top: 10px;
+width: 27px;
+z-index: 100001;
+border:2px solid lightslategrey;
+}
+
+#sideLnkBtnFeedback:hover,#sideLnkBtnFeedback:active
+{
+background: url(Images/feedback_icon_hover.png) center no-repeat;
+border:2px solid black;
+}
+
+.feedbackModel{
+    max-height: 409px !important;
+}
+
+/* feed*/

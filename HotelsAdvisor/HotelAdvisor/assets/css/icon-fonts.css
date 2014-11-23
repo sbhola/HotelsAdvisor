@@ -1,0 +1,229 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "tavisca-product-suite";
+  src:url("../../assets/fonts/tavisca-product-suite.eot");
+  src:url("../../assets/fonts/tavisca-product-suite.eot?#iefix") format("embedded-opentype"),
+    url("../../assets/fonts/tavisca-product-suite.woff") format("woff"),
+    url("../../assets/fonts/tavisca-product-suite.ttf") format("truetype"),
+    url("../../assets/fonts/tavisca-product-suite.svg#tavisca-product-suite") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "tavisca-product-suite" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="i-"]:before,
+[class*=" i-"]:before {
+  font-family: "tavisca-product-suite" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-repeat:before {
+  content: "m";
+}
+.i-sound:before {
+  content: "n";
+}
+.i-question:before {
+  content: "r";
+}
+.i-question-circle:before {
+  content: "a";
+}
+.i-arrow-down-type-3:before {
+  content: "d";
+}
+.i-arrow-down-type-1:before {
+  content: "b";
+}
+.i-arrow-down-type-2:before {
+  content: "c";
+}
+.i-arrow-down-type-3-1:before {
+  content: "e";
+}
+.i-arrow-left-type-1:before {
+  content: "f";
+}
+.i-arrow-right-type-2:before {
+  content: "g";
+}
+.i-arrow-up-down:before {
+  content: "h";
+}
+.i-arrow-up-type-1:before {
+  content: "i";
+}
+.i-cross:before {
+  content: "k";
+}
+.i-cross-type-2:before {
+  content: "l";
+}
+.i-dashboard:before {
+  content: "o";
+}
+.i-error:before {
+  content: "p";
+}
+.i-info:before {
+  content: "q";
+}
+.i-info-type1:before {
+  content: "s";
+}
+.i-pencil:before {
+  content: "t";
+}
+.i-plus-sign:before {
+  content: "u";
+}
+.i-reports:before {
+  content: "v";
+}
+.i-seach:before {
+  content: "w";
+}
+.i-swap-1:before {
+  content: "x";
+}
+.i-swap-2:before {
+  content: "y";
+}
+.i-user:before {
+  content: "A";
+}
+.i-export:before {
+  content: "B";
+}
+.i-swap-3:before {
+  content: "j";
+}
+.i-bell:before {
+  content: "z";
+}
+.i-arrow-left-type-2:before {
+  content: "C";
+}
+.i-arrow-left-type-2:before {
+  content: "C";
+}
+.i-arrow-left-type-3:before {
+  content: "D";
+}
+.i-arrow-right-type-3:before {
+  content: "E";
+}
+.i-arrow-right-type-3-1:before {
+  content: "F";
+}
+.i-arrow-left-type-3-1:before {
+  content: "G";
+}
+.i-arrow-left-type-4:before {
+  content: "H";
+}
+.i-arrow-right-type-4:before {
+  content: "I";
+}
+.i-calendar:before {
+  content: "J";
+}
+.i-filter:before {
+  content: "K";
+}
+.i-arrow-left-type-5:before {
+  content: "L";
+}
+.i-filter-1:before {
+  content: "M";
+}
+.i-arrow-right-type-5:before {
+  content: "N";
+}
+.i-trash-bin:before {
+  content: "O";
+}
+.i-gear-setting-2:before {
+  content: "P";
+}
+.i-photo-picture:before {
+  content: "Q";
+}
+.i-youtube-two:before {
+  content: "S";
+}
+.i-trash:before {
+  content: "R";
+}
+.i-check-mark-2:before {
+  content: "T";
+}
+.i-document:before {
+  content: "U";
+}
+.i-vertical-lines:before {
+  content: "V";
+}
+.i-resize:before {
+  content: "W";
+}
+.i-move-arrow:before {
+  content: "X";
+}
+.i-duplicate:before {
+  content: "Y";
+}
+.i-map-marker-1:before {
+  content: "Z";
+}
+.i-form:before {
+  content: "0";
+}
+.i-image-box:before {
+  content: "1";
+}
+.i-booking:before {
+  content: "2";
+}
+.i-carausal:before {
+  content: "3";
+}
+.i-map:before {
+  content: "4";
+}
+.i-text-box:before {
+  content: "5";
+}
+.i-video:before {
+  content: "6";
+}
+.i-offer:before {
+  content: "7";
+}
+.i-deal:before {
+  content: "8";
+}
+.i-3dots:before {
+  content: "9";
+}

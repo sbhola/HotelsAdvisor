@@ -1,0 +1,178 @@
+﻿@using TwitterBootstrap2
+@model IList<HotelsAdvisor.Models.HotelModelForIntermediatePage>
+@{
+    ViewBag.Title = "HotelsListing";
+    Layout = "~/Views/Shared/_IntermediateLayout1.cshtml";
+}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Discount Hotel</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- base styles include --->
+    <!--libs-->
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/libs/0.bootstrap-fileupload.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/libs/1.bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/libs/2.bootstrap-responsive.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/libs/3.datepicker.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/libs/3.daterangepicker-bs3.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/libs/3.datetimepicker.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/libs/4.bootstrap-timepicker.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/libs/4.bootstrap-transfer.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/libs/4.carousel_deals.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/libs/4.style.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/libs/5.bootstrap-image-gallery.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/libs/5.prettyPhoto.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/libs/6.jquery.jscrollpane.codrops2.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/libs/6.slider.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/libs/7.hotel_search.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/libs/8.car_dropdown_search.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/libs/8.main.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/libs/9.custom_button.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/libs/10.responsiveslides_modified.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/libs/11.icon-fonts.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/libs/12.layout-editor.css">
+
+    <!--user-->
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/user/CodeMirror-codemirror.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/user/core-styles.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/user/jquery.jscrollpane.codrops1.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/user/TreeView-jquery.treeview.css">
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/user/z.Custom.css">
+
+    <!-- Img gallery styles -->
+    <link href="~/assets/css/style.css" rel="stylesheet">
+    <link href="~/assets/css/bootstrap-image-gallery.css" rel="stylesheet">
+    <link href="~/assets/css/prettyPhoto.css" rel="stylesheet">
+    <!-- Img gallery styles -->
+
+    <link href="~/assets/css/jquery.jscrollpane.codrops2.css" rel="stylesheet">
+    <link href="~/assets/css/slider.css" rel="stylesheet">
+    <link href="~/assets/css/tn3.css" rel="stylesheet">
+    <link href="~/assets/css/hotel_search.css" rel="stylesheet">
+    <link href="~/assets/css/car_dropdown_search.css" rel="stylesheet">
+    <link href="~/assets/css/main.css" rel="stylesheet">
+    <!--<link href="../assets/css/mediaquery_widget.css" rel="stylesheet">-->
+    <link href="~/assets/css/custom_button.css" rel="stylesheet">
+    <link href="~/assets/css/core-styles.css" rel="stylesheet">
+    <link href="~/assets/css/jquery.jscrollpane.codrops1.css" rel="stylesheet">
+    <!--[if IE 8]>     <html class="ie8"> <![endif]-->
+    <link href="~/assets/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <!-- base styles include --->
+
+    <!-- Google Web Font -->
+    <link href="http://fonts.googleapis.com/css?family=Merriweather:400,300,700,900,300italic,400italic,700italic|Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <link href="~/assets/css/icon-fonts.css" rel="stylesheet">
+    <link href="~/assets/css/layout-editor.css" rel="stylesheet">
+    <!--theme styles-->
+    <link rel="stylesheet" type="text/css" href="~/standardized-theme/Theme/Default/assets/css/user/discount-hotel-style.css">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="~/Content/Custom-AddReview.css" rel="stylesheet" />
+    <link media="screen" rel="stylesheet" href="~/Content/colorbox.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script src="~/Scripts/jquery.colorbox.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".example1").colorbox();
+        });
+    </script>
+</head>
+<body>
+    <div class="main-content">
+        <div class="container">
+            <div class="row-fluid mbl">
+                <div class="span12">
+                    <h1 class="color-black mbs">Search Result</h1>
+                    <p id="pAddress">List of Hotels for @Model.First().City , @Model.First().State , @Model.First().Country </p>
+                    <p id="hotelCount" style="margin-top: -6px">Total No of Hotels Found  @Model.Count</p>
+                </div>
+            </div>
+
+
+            @foreach (var item in Model)
+            {   
+                <div id="hotelDisplayDiv" class="row-fluid dh-search-item" style="border-width: thin; border: solid lightgray; margin-bottom: 1%">
+                    <div class="span3">
+                        <div class="well-small clearfix">
+                            <div class=" positionR view-gallery-wrap">
+                                <a class='example1 img-responsive' href="@item.Image" style="border:none">
+                                    <img id="imgClick" src="@item.Image" alt="Hotel Image" class="height-100p width100p img-responsive" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6 mln">
+                        <div class="well-small prn clearfix" style="padding-top: 5%">
+                            <div class="item-title" style="font-size: x-large"><a id="hotelNameLink" href='@Url.Action("Details", "Hotel", new { hotelId = @item.HotelId })'>@item.Name</a></div>
+
+                            <div class="mbm clearfix">
+                                <ul class="hotel-stars">
+                                    @for (int i = 0; i < @item.Rating; i++)
+                                    {
+                                        <li class="rated"></li>
+                                    }
+                                    @for (int i = 0; i < 5 - @item.Rating; i++)
+                                    {
+                                        <li class=""></li>
+                                    }
+                                </ul>
+                            </div>
+                            <div class="mbl clearfix">
+                                <i class="icon-map-marker mrs"></i>
+                                <span class="font-11 color-blue font-wt-600" style="font-size: large">@item.Address
+                                </span>
+                            </div>
+
+                            <div class="pull-left mrs font-11">
+                                <span data-toggle="tooltip" data-placement="bottom" title="Fitness Facility">
+                                    <i class="hotel-icon-gym pull-left mls"></i>
+                                </span>
+                            </div>
+                            <div class="pull-left mrs font-11">
+                                <span data-toggle="tooltip" data-placement="bottom" title="Vehicle Parking">
+                                    <i class="hotel-icon-parking pull-left mls"></i>
+                                </span>
+                            </div>
+
+                            <div class="pull-left mrs font-11">
+                                <span data-toggle="tooltip" data-placement="bottom" title="Restaurant">
+                                    <i class="hotel-icon-restaurant pull-left mls"></i>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="pull-right ptl">
+                        <div class="well-small clearfix">
+
+                            <div class="price pagination-right color-black">&nbsp;</div>
+                            <div class="pagination-right font-11 color-black">&nbsp;</div>
+                            <div class="pagination-right">
+
+
+                                @Html.Hidden(item.HotelId)
+                                @(Html.Bootstrap().ActionLinkButton("Show Details", "Details")
+                                      .Class("btn btn-warning mtm btn-custom")
+                                      .Id("showDetailsButton")
+                                      .Style(ButtonStyle.Primary)
+                                      .RouteValues(new { hotelId = @item.HotelId }))
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <script type="text/javascript" src="~/standardized-theme/Theme/DiscountHotel/Layouts/IndexStyles/js/discount-hotel-script.js"></script>
+</body>
+</html>

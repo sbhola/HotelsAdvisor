@@ -1,0 +1,67 @@
+﻿body {
+}
+
+.details-container {
+    width: 1140px;
+    margin: 15px 15px;
+    border-style: groove;
+    margin-top: 30px;
+}
+
+.RatingsColumn {
+    max-width: 50%;
+}
+
+.review_description {
+    text-align: justify;
+}
+
+.hotelImagesContainer {
+    max-width: 45%;
+    margin-top: -780px;
+    margin-left: 15px;
+}
+
+.hotel-carousel {
+    border-style: solid;
+    box-shadow: 3px 3px 3px 3px;
+}
+
+#carouselcontainer {
+    margin-left: 15px;
+}
+
+#map_canvas {
+    width: 99.5%;
+    height: 500px;
+    background-color: #CCC;
+    margin-top: 2px;
+    border: 2px 2px;
+    border-style: solid;
+}
+
+.Individual_Review_Element {
+    border-style: ridge;
+    border: 1px 1px;
+    padding: 5px 5px 5px 5px;
+}
+
+.tab-pane .delete_btn {
+    width: 120px;
+}
+
+.tab-pane .edit_btn {
+    width: 120px;
+}
+
+.tab-pane .add_btn {
+    width: 120px;
+    margin-left: 10px;
+}
+.rbm_nav {
+    margin-bottom:0px;
+}
+
+.ntm1 {
+    margin-top:-1px;
+}

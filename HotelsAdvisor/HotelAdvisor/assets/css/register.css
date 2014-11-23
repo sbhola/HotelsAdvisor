@@ -1,0 +1,20 @@
+﻿body {
+    font-size:18px;
+}
+
+.crt_acnt {
+    font-size:24px;
+    padding-top:5px;
+    margin-left:4px;
+}
+.form-group {
+    margin:5px 5px 5px 5px;
+    /*margin-bottom:4px;*/
+}
+.mgn-right {
+    margin-right:5px;
+    font-size:18px;
+}
+.mgn-left {
+    margin-left:5%;
+}

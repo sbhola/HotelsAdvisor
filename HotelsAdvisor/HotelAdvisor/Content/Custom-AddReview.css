@@ -1,0 +1,345 @@
+﻿.body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.custom-align {
+    text-align: center;
+    margin-top: 16px;
+    color: #ea682f;
+}
+
+.custom-rating {
+    float: left;
+}
+
+    .custom-rating span {
+        font-size: 18px;
+        cursor: pointer;
+        float: right;
+    }
+
+.carousel-nav-icon {
+    display: none;
+}
+
+.carousel-image {
+    margin-top: -18px;
+    position: relative;
+    padding-bottom: 2.4em;
+    margin: -1px;
+}
+
+.custom-padding {
+    padding-top: 6px;
+}
+
+.carousel-image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    width: 100%;
+    font-size: 0.9em;
+    font-family: 'Open Sans';
+    padding: .6em;
+    text-align: start;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+
+.carousel-indicators-image {
+    position: absolute;
+    bottom: -0.5em;
+    left: 50%;
+    right: 0;
+    z-index: 15;
+    width: 60%;
+    padding-left: 0;
+    text-align: center;
+    list-style: none;
+    text-shadow: inherit;
+}
+
+.custom-title {
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+    font-size: 25px;
+    margin-top: 13px;
+    color: #777777;
+    margin-left: 25px;
+}
+
+.custom-title-ratinghead {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 30px;
+    display: inline-block;
+    font-size: 25px;
+    margin-top: 13px;
+    color: #777777;
+    margin-left: 25px;
+}
+
+.custom-textbox-size {
+    margin-left: 25px;
+    padding-left: 7px;
+    margin-top: 13px;
+    width: 100%;
+}
+
+.custom-description-box {
+    margin-left: 25px;
+    margin-top: 13px;
+    width: 100%;
+}
+
+.custom-title-rating {
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+    font-size: 25px;
+    margin-left: 25px;
+}
+
+.custom-star-rating {
+    margin-top: 12px;
+    font-size: 20px;
+    width: 100%;
+    height: 28px;
+    margin-bottom: 2px;
+}
+
+.custom-star-rating {
+    float: left;
+}
+
+    .custom-star-rating span {
+        font-size: 25px;
+        cursor: pointer;
+        float: right;
+        display: block;
+    }
+
+        .custom-star-rating span:hover, .custom-star-rating span:hover ~ span {
+            color: #d58512;
+        }
+
+/*Rating Value*/
+.custom-star-rating-hotels-value {
+    margin-top: -17px;
+    font-size: 20px;
+    width: 100%;
+    height: 28px;
+    margin-bottom: 16px;
+}
+
+.custom-star-rating-hotels-value {
+    float: left;
+}
+
+    .custom-star-rating-hotels-value span {
+        font-size: 15px;
+        cursor: pointer;
+        float: right;
+        display: block;
+    }
+
+        .custom-star-rating-hotels-value span:hover, .custom-star-rating-hotels-value span:hover ~ span {
+            color: #d58512;
+        }
+
+/*Rating Rooms */
+.custom-star-rating-hotels-rooms {
+    margin-top: -17px;
+    font-size: 20px;
+    width: 100%;
+    height: 28px;
+    margin-bottom: 16px;
+}
+
+.custom-star-rating-hotels-rooms {
+    float: left;
+}
+
+    .custom-star-rating-hotels-rooms span {
+        font-size: 15px;
+        cursor: pointer;
+        float: right;
+        display: block;
+    }
+
+        .custom-star-rating-hotels-rooms span:hover, .custom-star-rating-hotels-rooms span:hover ~ span {
+            color: #d58512;
+        }
+
+/*Rating Cleanliness */
+.custom-star-rating-hotels-cleanliness {
+    margin-top: -17px;
+    font-size: 20px;
+    width: 100%;
+    height: 28px;
+    margin-bottom: 16px;
+}
+
+.custom-star-rating-hotels-cleanliness {
+    float: left;
+}
+
+    .custom-star-rating-hotels-cleanliness span {
+        font-size: 15px;
+        cursor: pointer;
+        float: right;
+        display: block;
+    }
+
+        .custom-star-rating-hotels-cleanliness span:hover, .custom-star-rating-hotels-cleanliness span:hover ~ span {
+            color: #d58512;
+        }
+
+
+/*Rating Location*/
+.custom-star-rating-hotels-location {
+    margin-top: -17px;
+    font-size: 20px;
+    width: 100%;
+    height: 28px;
+    margin-bottom: 16px;
+}
+
+.custom-star-rating-hotels-location {
+    float: left;
+}
+
+    .custom-star-rating-hotels-location span {
+        font-size: 15px;
+        cursor: pointer;
+        float: right;
+        display: block;
+    }
+
+        .custom-star-rating-hotels-location span:hover, .custom-star-rating-hotels-location span:hover ~ span {
+            color: #d58512;
+        }
+
+/*Rating Service*/
+
+.custom-star-rating-hotels-service {
+    margin-top: -17px;
+    font-size: 20px;
+    width: 100%;
+    height: 28px;
+    margin-bottom: 16px;
+}
+
+.custom-star-rating-hotels-service {
+    float: left;
+}
+
+    .custom-star-rating-hotels-service span {
+        font-size: 15px;
+        cursor: pointer;
+        float: right;
+        display: block;
+    }
+
+        .custom-star-rating-hotels-service span:hover, .custom-star-rating-hotels-service span:hover ~ span {
+            color: #d58512;
+        }
+
+.button:hover {
+    border-top-color: #28597a;
+    background: #28597a;
+    color: #ccc;
+}
+
+.button:active {
+    border-top-color: #1b435e;
+    background: #1b435e;
+}
+
+.text-box {
+    width: 100%;
+}
+
+.star-color {
+    color: gold;
+}
+
+
+#map_canvas {
+    height: 285px;
+    margin-top: 20px;
+}
+
+.sizedThumb {
+    overflow: hidden;
+}
+
+.photo_image {
+    float: left;
+    height: 105px;
+    width: 102px;
+    margin-top: 25px;
+}
+
+.locationInfo {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.wrap {
+    height: 100%;
+    overflow: hidden;
+}
+
+.nameAndAddress {
+    margin: 8px 0 0 14px;
+}
+
+
+.align-color {
+    margin-top: 14px;
+    margin-left: -90px;
+    color: #23649d;
+}
+
+.gly-color {
+    color: #23649d;
+}
+
+.custom-form-block {
+    padding: 15px;
+    margin-top: 25px;
+    border-color: #777777;
+    border-width: 2px;
+    margin-left: 20%;
+}
+
+.custom-title-rating {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    margin-top: -2px;
+    color: #777777;
+}
+
+.custom-title-overall {
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+    font-size: 25px;
+    margin-top: -4px;
+    color: #777777;
+    margin-left: 25px;
+}
+
+.btnsize {
+    margin-left: 252px;
+}
+
+.btn-custom {
+    margin-top: 89%;
+}
+
+#alertmsg {
+    margin-left: 4%;
+    color: #b94a48;
+}

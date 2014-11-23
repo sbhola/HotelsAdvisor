@@ -1,0 +1,20 @@
+﻿divHome,.header-home
+AutocompeteSearchBox,#SearchResult_SearchResultLine1
+SearchButton,#search
+DisplayPage,.result_title
+FirstItem,.ui-menu-item a
+FirstThumbNail,.pull-left a
+OptionOnEnteringSpaces,.ui-state-disabled a
+loginpage,.create_profile_wrap
+LogOff,a[title='aLogOff']
+username,a[title='Manage']
+divContainer,div.container
+inputSearch,input.autocomplete-with-hidden
+listUl,ul.ui-autocomplete
+anchorTag,a.ui-corner-all
+registerLink,a#registerLink
+loginLink,a#loginLink
+logoutForm,a#logoutForm
+inputUserName,input#UserName
+inputPassword,input#Password
+loginButton,input#loginButton

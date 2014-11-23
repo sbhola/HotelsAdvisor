@@ -1,0 +1,11 @@
+﻿.thumb .thumbnail img {
+    opacity: initial
+}
+
+.thumb .thumbnail img:hover {
+    opacity: 0.75
+}
+
+.image-hover:hover {
+    opacity: 0.75
+}

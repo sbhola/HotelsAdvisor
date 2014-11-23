@@ -1,0 +1,158 @@
+﻿.ribbon {
+    position: relative;
+    width: 100%;
+    font-size: 80%;
+    font-weight: bold;
+    padding: 6px 20px 6px 10px;
+    /*margin: 30px 10px 10px -71px;*/
+    margin-left: 4px;
+    color: #fff;
+    background-color: #ff6a00;
+    text-shadow: 0px 1px 2px #bbb;
+    -webkit-box-shadow: 0px 2px 4px #888;
+    -moz-box-shadow: 0px 2px 4px #888;
+    box-shadow: 0px 2px 4px #fff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-shadow: 1px 3px 2px rgba(0,0,0,0.3);
+}
+
+    .ribbon:before, .ribbon:after {
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: auto;
+    }
+
+    .ribbon:before {
+        width: 30px;
+        left: -30px;
+        top: 12px;
+        border-width: 12px 30px;
+        border-style: solid;
+        border-color: #999 #999 #999 transparent;
+    }
+
+    .ribbon.simple:before {
+        display: none;
+    }
+
+    .ribbon.flag:before {
+        width: 0px;
+        left: auto;
+        right: -2px;
+        top: 0px;
+        border-color: transparent #fff transparent transparent;
+    }
+
+    .ribbon:after {
+        left: 0px;
+        top: 100%;
+        border-width: 5px 10px;
+        border-style: solid;
+        border-color: #fff #fff transparent transparent;
+    }
+
+.spaces {
+    color: darkorange;
+    font-size: 120%;
+    font-family: Arial;
+    line-height: 65%;
+    font-weight: 700;
+    float: right;
+}
+
+.special {
+    font-style: italic;
+}
+
+.fontcolor {
+    color: #888;
+}
+
+
+.thumb {
+    /*width:135%*/
+    -webkit-box-shadow: 2px 4px 5px 0px rgba(48, 50, 50, 0.39);
+    -moz-box-shadow: 2px 4px 5px 0px rgba(48, 50, 50, 0.39);
+    box-shadow: 2px 4px 5px 0px rgba(48, 50, 50, 0.39);
+}
+
+@media only screen and (max-device-width : 240px) {
+    .ribbon {
+        font-size: 0.9em;
+        width: 115%;
+    }
+
+        .ribbon:before {
+            border-width: 12px 50px;
+        }
+}
+
+
+@media (max-device-width:320px) and (min-device-width:240px) {
+
+    .ribbon {
+        font-size: 1em;
+        width: 120%;
+    }
+
+        .ribbon:before {
+            border-width: 34px 50px;
+        }
+}
+
+@media (max-device-width:480px) and (min-device-width:320px) {
+
+    .ribbon {
+        font-size: 0.8em;
+        width: 100%;
+    }
+
+        .ribbon:before {
+            border-width: 12px 30px;
+        }
+}
+
+
+@media (max-device-width:640px) and (min-device-width:480px) {
+    .ribbon {
+        font-size: 75%;
+        width: 100%;
+    }
+
+        .ribbon:before {
+            border-width: 12px 30px;
+        }
+}
+
+@media (max-device-width:960px) and (min-device-width:640px) {
+    .ribbon {
+        width: 100%;
+    }
+
+        .ribbon:before {
+            border-width: 12px 30px;
+        }
+
+    .caption-header {
+        font-size: 16px;
+    }
+}
+
+@media (max-device-width:960px) {
+    .fontcolor {
+        font-size: 12px;
+    }
+}
+
+span.stars, span.stars span {
+    display: block;
+    background: url(stars.png) 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+
+span.stars span {
+    background-position: 0 0;
+}

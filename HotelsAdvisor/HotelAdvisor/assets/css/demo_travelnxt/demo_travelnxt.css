@@ -1,0 +1,633 @@
+/* ------------------- unique styles-------------------- */
+
+*{
+	padding:0;
+	margin:0;
+	-moz-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-o-tap-highlight-color:rgba(0,0,0,0);
+	-ms-tap-highlight-color:rgba(0,0,0,0);
+	tap-highlight-color:rgba(0,0,0,0);
+}
+
+body,html {
+	font-family: 'Roboto',sans-serif;
+	height: 100%;
+	position: relative;
+}
+
+.pointer{ cursor:pointer !important;}
+a:hover{text-decoration:none;}
+.border-right{ border-right:1px solid #ccc;}
+.borderBotDashed {border-bottom: 1px dashed #D1D1D1;}
+
+.margin10-bottom{ margin-bottom:10px;}
+
+.positionR{ position:relative !important;} .positionA{position:absolute !important;}
+
+.container_wrap{
+	height:100%;
+	width:100%;
+}
+
+
+.navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle
+{background:none;}
+
+
+/* 
+======================================================
+========= Header Styles ==============================
+*/
+
+header .header{
+	height:90px;
+	position:fixed;
+	width:100%;
+	z-index:999;
+}
+
+.header_top{
+	background:url(../../../images/demo_travelnxt/pattern_dark.png) repeat;
+	height:29px;
+}
+
+/* **************** Nav bar *************** */
+
+.navbar {
+	margin-bottom: 20px;
+	overflow: visible;
+}
+
+ul.nav{
+	float:right !important; 
+	list-style:none;
+	margin-right:1px !important;
+}
+
+ul.nav > li{
+	line-height:13px;
+	margin:8px 7px 0 0;
+}
+
+ul.nav > li > a{
+	color:#939393 !important;
+	text-transform:uppercase;
+	font-size:11px !important;
+	font-weight:bold !important;
+	padding:0px 10px 0 0 !important;
+	text-shadow:none !important;
+	-webkit-text-shadow:none !important;
+	-moz-text-shadow:none !important;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+
+.navbar .nav > li > a:hover{color:#fff !important;}
+
+ul.nav > li:last-child,
+ul.nav > li:last-child a{ margin-right:-5px; border-right:none;}
+
+i.icon_map{
+	display:inline-block;
+	height:10px;
+	width:16px;
+	margin-right:5px;
+}
+
+i.icon_map.us{	background:url(../../../images/demo_travelnxt/map.png) no-repeat;}
+
+.dropdown-menu .dd_container{
+	height:auto;
+	overflow:hidden;
+	margin:10px;
+	min-width:170px;
+}
+
+.dropdown-menu .title{ 
+	border-bottom:1px solid #D2D2D2;
+	font-size:14px; 
+	font-weight:bold;
+	padding-bottom:10px;
+	margin-bottom:5px; 
+
+}
+
+.dropdown-menu ul{ list-style:none; margin-left:0px;}
+
+.dropdown-menu li a{
+	display:block;
+	padding: 3px 7px!important;
+	font-size:12px !important;
+	color:#393939;
+}
+
+.dropdown-menu li a:hover, .dropdown-menu li a:focus, .dropdown-submenu:hover a, .dropdown-submenu:focus a {
+	background-color: #0081C2;
+	background-image: linear-gradient(to bottom, #0088CC, #0077B3);
+	background-repeat: repeat-x;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+
+.dropdown-menu li a img{ margin-right:5px;}
+
+ul.scroll-menu-currency {
+	min-width: 205px !important;
+		height:100px;
+	overflow-y:scroll;
+}
+
+
+.logo_container{
+	background:url(../../../images/demo_travelnxt/pattern.png) repeat; 
+	border-bottom:1px solid #292f3e;
+	height:60px;
+}
+.logo_container .logo_holder , .logo_c_nav{
+	margin:15px 0px;
+}
+
+.main_navigation { 
+	list-style:none; 
+	margin:0 !important;
+	padding:0 !important;
+}
+
+.main_navigation li{ 
+	display:block; 
+	float:left; 
+}
+
+.main_navigation li a{
+	display:block;
+	float:left;
+	font-size:13px;
+	padding:2px 10px;
+	color:#fff;
+}
+
+.user_container{margin-top:-7px; position:relative;}
+
+.user_snap{
+	background:url(../../../images/demo_travelnxt/user_thumnail.png) no-repeat;
+	height: 27px;
+	margin-top: 6px;
+	width: 27px;
+	display:inline-block;
+	border-radius:50%;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+}
+.user_container .arrow{
+	margin:8px 0 0 7px;
+
+}
+
+.search_container{
+	background:#E7AC38;
+	border-left:1px solid #262f38;
+	border-right:1px solid #dd8b1f;
+}
+
+.search_icon{
+	background:url(../../../images/demo_travelnxt/search_icon.png) center center no-repeat;
+	cursor:pointer;
+	height:59px;
+	margin:auto;
+}
+
+.place_info{
+	padding:20px;
+	color:#fff;
+	background:rgba(0,0,0,0.7);
+	font-size:15px;
+	margin-top:5px;
+	line-height:21px;
+	min-height:140px;
+}
+
+.user_info{
+	border:1px solid #B5B6B8;
+	width:205px;
+	margin-left:-140px;
+	padding:10px;
+	margin-top:10px;
+}
+
+.popup_top{
+	height:10px;
+	width:20px;
+	position:absolute;
+	background:url(../../../images/demo_travelnxt/popup_arrow.png) no-repeat;
+}
+
+.user_info .popup_top{top:-8px;	left:161px;}
+
+.user_info span.largetitle{
+	color:#363636;
+	font-size:15px;
+	font-size:15px;
+	font-weight:bold;
+}
+
+.user_info span.smalltitle{
+	color:#707070; 
+	display:block; 
+	font-size:11px;
+}
+
+.user_info_pic{
+	margin-right:15px;
+	border-radius:50%;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+}
+
+.prof_detail_link{
+	color:#016CBE !important;
+	display:block;
+	font-size:12px;
+	margin:5px 0px;
+	padding-left:0px !important;
+	text-transform:uppercase;
+}
+
+/* -------------buttons--------------- */
+
+.button{
+	padding:10px 24px;
+	color:#FFF;
+	font-size:14px;
+	font-weight:bold;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border:0px;
+	text-transform:uppercase;
+}
+
+.button.large{ width:100% !important;}
+
+.button.orange_link{
+	background:#F29F29;
+	border-top:2px solid #F9C989;
+}
+
+
+/* 
+======================================================
+========= Section Styles ==============================
+*/
+
+section {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 100% !important;
+}
+
+section.page{
+	min-height:100%;
+}
+
+#page2.page {
+    height: auto;
+    overflow: auto;
+}
+.add_container{
+	max-width:270px;
+	margin:0 auto;
+}
+
+
+.carousel-caption {
+	background-color: rgba(0, 0, 0, 0);
+	max-width: 360px;
+	position: absolute;
+	top: 200px;
+}
+
+div.heading_title {
+	background:rgba(0, 0, 0, 0.8);
+	color: #FFFFFF;
+	font-size: 24px;
+	max-width: 360px;
+	padding: 19px;
+}
+
+a.redeem_btm{
+	border:2px solid rgba(255,255,255,0.4);
+	color:#fff;
+	display: block;
+	padding:15px 20px;
+	font-size:14px;
+	font-weight:bold;
+	float:right;
+	margin:10px 0 0 10px;
+	text-transform:uppercase;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+a.redeem_btm.withbg{
+	background:#FAB93F;
+	color:#fff;
+}
+
+a.redeem_btm.withbg:hover{
+	background:#202020;
+	color:#fff;
+}
+
+a.redeem_btm.empty:hover{
+	border:2px solid #FAB93F;
+	color:#FAB93F;
+}
+
+
+.carousel-div.bottom{
+	background:#fdb834 url(../../../images/demo_travelnxt/down_arrow.png)23px 14px no-repeat;
+	bottom:0;
+	cursor:pointer;
+	height:40px;
+	width:70px;
+	position:absolute;
+	z-index:991;
+	left:50%;
+	margin-left:-20px;
+	opacity:0.7;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.carousel-div.bottom:hover{
+	opacity:1;
+}
+
+.add_container{
+	max-width:270px;
+	margin:0 auto;
+}
+
+.add_section .add_image{
+	border-radius:50%;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	margin:0 auto 20px;
+	height:270px;
+	max-width:270px;
+}
+
+
+
+.add_section .add_title{
+	margin:0 auto;
+	text-align:center;
+	font-size:17px;
+	color:#da8f00;
+}
+
+.add_section .add_details{
+	color:#727171;
+	font-size:13px;
+	text-align:center;
+	line-height:19px;
+	min-height:30px;
+}
+
+/*
+==============================================
+============ Footer ==========================
+*/
+
+
+footer.footer{
+	background:#000000;
+	color:#fff;
+	bottom:0;
+	width:100%;
+position:absolute;
+}
+
+ul.footer_links{list-style:none;}
+ul.footer_links  li{
+	display:block;
+	float:left;
+	margin-right:10px;
+}
+
+ul.footer_links  li a{
+	color:#efefef;
+	font-size:11px;
+	padding:0px 5px;
+}
+
+.footer .span12 {
+	margin: 0 auto;
+	padding: 20px 0;
+	font-size:11px;
+}
+
+
+
+/* -------------------------advance_search_container-------------------- */
+
+.advance_search_container{
+	border-top:3px solid #C3943A;
+	border-bottom:1px solid #C3943A;
+	position:absolute;
+	width:370px;
+	height:450px;
+	background:url(../../../images/demo_travelnxt/pattern_dark.png) repeat;
+	margin-left: -341px;
+	padding:20px;
+	display:none;
+}
+
+span.search_heading{
+	cursor:pointer;
+	display:block;
+	text-transform:uppercase;
+	color:#BDBDBF;
+	margin-bottom:15px;
+	float:left;
+	padding:0 20px;
+}
+span.search_heading:first-child{ padding-left:0px;}
+
+span.search_heading.r_border{
+	border-right:1px solid #ccc;
+}
+
+span.search_heading a{
+	display:block;
+	color:#BDBDBF;
+	font-size:14px;
+}
+
+span.search_heading:hover a, 
+span.search_heading.active a{ border-bottom: 1px solid #E7AC38; color:#fff; }
+
+
+.advance_search_container .row-fluid:last-child{border-bottom:0px;}
+
+.advance_search_container ul{ list-style:none; margin-left: -8px;}
+.advance_search_container  ul li.child_menus{
+	float:left;
+	position:relative;
+}
+
+.advance_search_container ul li > ul{width:90px;}
+.advance_search_container ul li > ul > li > a{width:120px; margin-right:0px; color:#2D2D2D;}
+.advance_search_container ul li > ul > li > a:hover{ text-decoration:none !important;}
+
+.advance_search_container ul li a{
+	display:block;
+	float:left;
+	margin-right:10px;
+	color:#BBBBBD;
+	font-size:14px;
+	text-decoration:none !important;
+}
+
+.advance_search_container a.close{ 
+	color:#c6c8c7; 
+	text-shadow:none;
+	opacity:1.0 !important;
+	font-weight:normal !important;
+}
+.advance_search_container form .date_field{
+	background:#fff;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+
+.calender_icon{
+	cursor:pointer;
+	float:right;
+	height:20px;
+	width:20px;
+	margin:9px 8px 0 0;
+	background:url(../../../images/demo_travelnxtcalender_icon.png) no-repeat;
+}
+
+.advance_search_container form input[type="text"].large{
+	height:30px; 
+	margin-bottom:0px;
+	width:96%; 
+}
+
+.advance_search_container form input[type="text"].small{
+	border:0px none; 
+	height:30px; 
+	margin-bottom:0px;
+	width:120px; 
+}
+
+
+.hide_adv_search{
+	background:#aa7330 url(../../../images/demo_travelnxt/up_arrow.png) 18px 7px no-repeat;
+	bottom: -25px;
+	height: 25px;
+	left: 193px;
+	position: absolute;
+	width: 50px;
+	border-radius:0 0 80px 80px;
+	-moz-border-radius:0 0 80px 80px;
+	-webkit-border-radius:0 0 80px 80px;
+
+}
+
+
+.flag_new {
+	background: url("../../../images/flags.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	height: 11px;
+	width: 16px;
+}
+
+.flag_new.flag-in {background-position: -128px -66px;}
+.flag_new.flag-us {background-position: -144px -154px;}
+
+.controll_group label,
+.advance_search_container .hdetails_selectrooms_fields{ color:#fff;}
+a.add_pref{ color:#fff; display:block; margin-bottom:10px;}
+
+/* ------------------- Media Queries------------------ */
+
+
+.caretWhite {
+	border-left: 4px solid rgba(0, 0, 0, 0);
+	border-right: 4px solid rgba(0, 0, 0, 0);
+	border-top: 4px solid #BBBBBD;
+	content: "";
+	display: inline-block;
+	height: 0;
+	margin-top: 0;
+	vertical-align: middle !important;
+	width: 0;
+}
+
+.container{
+ max-width: 1170px;
+}
+
+.span12 {
+ width:100%;
+}
+
+@media screen and (max-width : 1024px) {
+	.advance_search_container{ margin-left:-351px !important;}
+	.container{padding:0px 10px;}
+}
+
+@media screen and (max-width : 775px) {
+.advance_search_container{ margin-left:-369px !important;}
+
+}
+
+@media screen and (max-width : 760px) {
+.advance_search_container{ margin-left:100px;}
+}
+
+.advance_search_container  ul#myTab{border:0px none !important;}
+.advance_search_container ul#myTab > li{
+	display:inline-block;
+	text-align:center;
+}
+.advance_search_container ul#myTab > li:last-child{border:0px none;}
+.advance_search_container ul#myTab > li > a{
+	display:inline-block;
+	float:left;
+	background:none  !important;
+	font-size:14px !important;
+	font-weight:normal !important;
+	border-width:0 1px 1px 0 !important;
+	border-bottom-color:#000;
+	border-right-color:#ccc;
+	padding:3px 0px !important;
+	margin:0px 10px;
+}
+
+.advance_search_container ul#myTab > li:hover > a{
+	border-bottom:1px solid red !important;
+	color:#fff;
+}
+
+
+.car-time select, .carLocationSelection {
+    height: 38px;
+}

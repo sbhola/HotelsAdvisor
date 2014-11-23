@@ -1,0 +1,15 @@
+@charset 'UTF-8';
+/*
+ * Bootstrap Image Gallery CSS Example 1.0
+ * https://github.com/blueimp/Bootstrap-Image-Gallery
+ *
+ * Copyright 2012, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/MIT
+ */
+
+.modal {
+    color: #333;
+}

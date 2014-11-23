@@ -1,0 +1,42 @@
+﻿@using HotelsAdvisor.Models;
+@using Microsoft.AspNet.Identity;
+@{
+    ViewBag.Title = "Manage Account";
+    Layout = "~/Views/Shared/_IntermediateLayout.cshtml";
+}
+<link href="~/assets/css/bootstrap.css" rel="stylesheet" />
+<div class="row-fluid">
+    <div class="col-sm-offset-2 .col-sm-5">
+        <h2 style="text-align: center;">@ViewBag.Title.</h2>
+    </div>
+</div>
+
+<p class="text-success">@ViewBag.StatusMessage</p>
+
+<div class="container">
+    <div class="row-fluid">
+        <div class="create_profile_wrap" style="margin-bottom: 1%">
+            <div class="row">
+                <div class="col-md-12">
+                    @if (ViewBag.HasLocalPassword)
+                    {
+                        @Html.Partial("_ChangePasswordPartial")
+                    }
+                    else
+                    {
+                        @Html.Partial("_SetPasswordPartial")
+                    }
+
+                    <section id="externalLogins">
+                        @Html.Action("RemoveAccountList")
+                        @Html.Partial("_ExternalLoginsListPartial", new { Action = "LinkLogin", ReturnUrl = ViewBag.ReturnUrl })
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

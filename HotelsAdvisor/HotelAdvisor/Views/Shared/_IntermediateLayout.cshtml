@@ -1,0 +1,164 @@
+﻿﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Discount Hotel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    @Styles.Render("~/bundles/css")
+   @Styles.Render("~/standardized-theme/Theme")
+    @Styles.Render("~/assets/css")
+
+    <!-- Google Web Font -->
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700,900,300italic,400italic,700italic|Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+
+    <!--theme styles-->
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/standardized-theme/Theme/Default/assets/css/user/core-styles.css")">
+
+    <link rel="stylesheet" type="text/css"
+        href="@Url.Content("~/standardized-theme/Theme/Default/assets/css/user/discount-hotel-style.css")" />
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+</head>
+<body>
+    <div class="header-inside">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span4 pvm">
+                    <a href='@Url.Action("Index", "Hotel")'>
+                        <img id="logoImg" src="~/standardized-theme/Theme/Default/images/discount-hotel/dh-logo-color.png" alt="Discount hotel" class="ptm"></a>
+                </div>
+                <div class="span8 pvm">
+                    <div class="navbar pull-right mll ptm">
+                        <div class="navbar-inner user-links mts" style="margin-top: -11px;">
+                            @*<ul class="nav pull-right">
+                                <li>
+                                    <div id="fb-root"></div>
+                                    <div class="fb-login-button" style="margin: 10px; margin-left: 10px" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true"></div>
+                                </li>
+                                <li>
+                                    <div class="fb-like" style="margin: 10px" data-href="https://demos.appacitive.com/explore.htm" data-width="600" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                                </li>
+                            </ul>*@
+                           @* <label id="divUserName" style="color: white;">*@
+                            <section id="login">
+                                @Html.Partial("_LoginPartial")
+                            </section>
+                            @*    <ul class="nav pull-right phm">
+                                <li class="dropdown font-case-none"><span class="pagination-right color-white font-12">Welcome</span>
+                                    <a class="dropdown-toggle pan" data-toggle="dropdown" href="#">Johndoe@abc.com<b class="caret-white mls"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </li>
+                            </ul>*@
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+
+    <!-- Footer include --->
+    <footer id="dh-footer">
+        <div class="container">
+            <div class="row-fluid pagination-centered pbl border-btm-blu">
+                <i class="dh-icon-mail-big valign-mid mrs valign-top mts"></i>
+                <div class="display-inline mrl">
+                    <div class="font-16 color-white pagination-left">
+                        Sign up for our newsletter
+               
+                    </div>
+                    <div class="font-13 color-white">Enter your email address to subscribe</div>
+                </div>
+                <div class="input-append display-inline valign-top mts pagination-left">
+
+                    <input class="display-inline width-70p" id="appendedInputButton" type="text" placeholder="Your email">
+                    <button class="btn btn-warning" type="button"><i class="dh-icon-white-arrow"></i></button>
+                </div>
+            </div>
+
+
+            <div class="row-fluid footer-menu ptl pbl border-btm-blu">
+                <div class="span5">
+                    <div class="font-bold font-16 mbl">Top travel destinations</div>
+                    <ul class="two-column">
+                        <li><a href="#">Las Vegas</a> </li>
+                        <li><a href="#">London</a> </li>
+                        <li><a href="#">New York City</a> </li>
+                        <li><a href="#">Los Angels</a> </li>
+                        <li><a href="#">Rome</a> </li>
+                        <li><a href="#">Boston</a> </li>
+                        <li><a href="#">Hong Kong</a> </li>
+                        <li><a href="#">Miami</a> </li>
+                        <li><a href="#">Paris</a> </li>
+                    </ul>
+
+                </div>
+                <div class="span4">
+                    <div class="font-bold font-16 mbl">Information</div>
+                    <ul>
+                        <li><a href="#">About Us</a> </li>
+                        <li><a href="#">FAQs</a> </li>
+                        <li><a href="#">Site map</a> </li>
+                        <li><a href="#">Privay policy</a> </li>
+                        <li><a href="#">Terms and conditions</a> </li>
+                    </ul>
+                </div>
+
+                <div class="pull-right">
+                    <div class="font-bold font-16 mbl">Customer service</div>
+                    <ul>
+                        <li><a href="#">My reservation</a> </li>
+                        <li><a href="#">Help</a> </li>
+                        <li>Phone: 1-866-540-4762</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="row-fluid ptl pagination-centered color-white">
+                <div class="font-18 font-bold">Join Us On</div>
+                <div class="pvm"><a href="#" class="mhs"><i class="dh-icon-fb"></i></a><a href="#" class="mhs"><i class="dh-icon-twitter"></i></a><a href="#" class="mhs"><i class="dh-icon-rss"></i></a></div>
+                <div class="font-12">DiscountHotels.com is not responsible for content on external websites.</div>
+                <div class="font-12">© 2014 DiscountHotels.com - All rights reserved.</div>
+            </div>
+
+        </div>
+
+    </footer>
+    <!-- Footer include --->
+
+
+    <!-- javascript Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="@Url.Content("standardized-theme/Theme/Default/assets/js/jquery-1.10.2.js")"></script>
+    <script type="text/javascript" src="@Url.Content("standardized-theme/Theme/Default/assets/js/bootstrap.min.js")"></script>
+    <script src="~/Scripts/facebookIntegration.js"></script>
+
+    <!--custom script-->
+    <script type="text/javascript" src="@Url.Content("standardized-theme/Theme/DiscountHotel/Layouts/IndexStyles/js/discount-hotel-script.js")"></script>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryval")
+   @* @Scripts.Render("~/bundles/jquery")*@
+    @Scripts.Render("~/assets/js")
+    @Scripts.Render("~/standardized-theme/Theme")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

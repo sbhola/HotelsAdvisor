@@ -1,0 +1,244 @@
+﻿@using TwitterBootstrap2
+@model HotelsAdvisor.Models.HotelReview
+@{
+    ViewBag.Title = "AddReview";
+    Layout = "~/Views/Shared/_IntermediateLayout2.cshtml";
+}
+
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/standardized-theme/Theme")
+    <link href="~/standardized-theme/Theme/Default/assets/css/user/discount-hotel-style.css" rel="stylesheet" />
+    <link href="~/standardized-theme/Theme/Default/assets/css/user/core-styles.css" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/Custom-AddReview.css")" 
+          rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700,900,300italic,400italic,700italic|Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+     <script src="~/Scripts/jquery-1.10.2.js"></script>
+
+<div class="container">
+
+    <div class="row-fluid border-btm-grey pbm">
+
+        <img src="@Model.Hotel.ImageList[0]" class="photo_image img-responsive img-thumbnail imgBox" alt="Hotel img">
+        <div class="span9">
+
+            <h1 class="font-normal color-grey-dark " style="margin-top: 22px">@Html.DisplayFor(model => model.Hotel.Name)</h1>
+
+            <div class="color-grey">
+                <p class="mbn">@Html.DisplayFor(model => model.Hotel.Address) | @Html.DisplayFor(model => model.Hotel.City) | @Html.DisplayFor(model => model.Hotel.StateCode) | @Html.DisplayFor(model => model.Hotel.Country)</p>
+            </div>
+            <div class="custom-rating custom-padding">
+                <div>
+                    @for (var index = 1; index <= 5 - Model.Hotel.Rating; index++)
+                    {
+                        <span id="index" class="glyphicon glyphicon-star"></span>
+                    }
+                    @for (var indexcolor = 1; indexcolor <= Model.Hotel.Rating; indexcolor++)
+                    {
+                        <span id="indexcolor" class="glyphicon glyphicon-star star-color"></span>
+                    }
+                </div>
+            </div>
+            <br />
+
+            <div>
+                <span class="glyphicon glyphicon-home align-color"></span>
+                <a id="hotelDetailsLink" href='@Url.Action("Details", "Hotel", new { hotelId = Model.Hotel.Id })'>Hotel Details</a>
+                |
+                    <span class="glyphicon glyphicon-phone gly-color"></span>
+                020 4141 1234
+            </div>
+        </div>
+    </div>
+
+    @using (Html.BeginForm("AddReview", "Hotel", FormMethod.Post, new { @class = "form-inline", id = "frmAddReview",@onsubmit="return validation()" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        <div class="row-fluid">
+            <div class="col-lg-7 border-grey custom-form-block">
+
+                <div>
+                    @(Html.Bootstrap().LabelFor(model => model.Review.Title)
+                          .LabelText("Title")
+                          .Class("custom-title")
+                          .ShowRequiredStar(true))
+                </div>
+                <div>
+                    @(Html.Bootstrap().TextAreaFor(model => model.Review.Title)
+                          .Class("custom-textbox-size")
+                          .Placeholder("Enter Title of Review")
+                          .Rows(1)
+                          .Columns(100))
+                </div>
+                <div>
+                    @Html.ValidationMessageFor(model => model.Review.Title, String.Empty, new { @style = "margin-left:4%" })
+                </div>
+
+                <div>
+                    @(Html.Bootstrap().LabelFor(model => model.Review.Description)
+                          .LabelText("Description")
+                          .Class("custom-title")
+                          .ShowRequiredStar(true))
+                </div>
+                <div>
+
+                    @(Html.Bootstrap().TextAreaFor(model => model.Review.Description)
+                          .Class("custom-description-box")
+                          .Placeholder("Enter Description")
+                          .Rows(3)
+                          .Columns(100))
+                </div>
+                <div>
+                    @Html.ValidationMessageFor(model => model.Review.Description, String.Empty, new { @style = "margin-left:4%" })
+                </div>
+
+                <div>
+                    @(Html.Bootstrap().Label("Hotel Ratings")
+                          .Class("custom-title-ratinghead")
+                          .LabelText("Hotel Ratings")
+                          .ShowRequiredStar(false))
+                </div>
+
+                <div>
+                    <div class="custom-star-rating-hotels-service">
+                        @(Html.Bootstrap().LabelFor(model => model.Review.Service)
+                              .LabelText("Service")
+                              .Class("custom-title-rating")
+                              .ShowRequiredStar(false))
+                        <span id="5s" class="glyphicon glyphicon-star" style="margin-right: 380px"></span>
+                        <span id="4s" class="glyphicon glyphicon-star"></span>
+                        <span id="3s" class="glyphicon glyphicon-star"></span>
+                        <span id="2s" class="glyphicon glyphicon-star"></span>
+                        <span id="1s" class="glyphicon glyphicon-star"></span>
+                    </div>
+                    @Html.HiddenFor(m => m.Review.Service, new
+                        {
+                            @id = "review-rating-service",
+                            @value = ""
+
+                        })
+                </div>
+                <div>
+                    <div class="custom-star-rating-hotels-location">
+                        @(Html.Bootstrap().LabelFor(model => model.Review.Location)
+                              .LabelText("Location")
+                              .Class("custom-title-rating")
+                              .ShowRequiredStar(false))
+                        <span id="5l" class="glyphicon glyphicon-star" style="margin-right: 380px"></span>
+                        <span id="4l" class="glyphicon glyphicon-star"></span>
+                        <span id="3l" class="glyphicon glyphicon-star"></span>
+                        <span id="2l" class="glyphicon glyphicon-star"></span>
+                        <span id="1l" class="glyphicon glyphicon-star"></span>
+                    </div>
+                    @Html.HiddenFor(m => m.Review.Location, new
+                        {
+                            @id = "review-rating-location",
+                            @value = ""
+
+                        })
+                </div>
+                <div>
+                    <div class="custom-star-rating-hotels-rooms">
+                        @(Html.Bootstrap().LabelFor(model => model.Review.Rooms)
+                              .LabelText("Rooms")
+                              .Class("custom-title-rating")
+                              .ShowRequiredStar(false))
+                        <span id="5r" class="glyphicon glyphicon-star" style="margin-right: 380px"></span>
+                        <span id="4r" class="glyphicon glyphicon-star"></span>
+                        <span id="3r" class="glyphicon glyphicon-star"></span>
+                        <span id="2r" class="glyphicon glyphicon-star"></span>
+                        <span id="1r" class="glyphicon glyphicon-star"></span>
+                    </div>
+                    @Html.HiddenFor(m => m.Review.Rooms, new
+                        {
+                            @id = "review-rating-room",
+                            @value = ""
+
+                        })
+                </div>
+                <div>
+                    <div class="custom-star-rating-hotels-cleanliness">
+                        @(Html.Bootstrap().LabelFor(model => model.Review.Cleanliness)
+                              .LabelText("Cleanliness")
+                              .Class("custom-title-rating")
+                              .ShowRequiredStar(false))
+                        <span id="5c" class="glyphicon glyphicon-star" style="margin-right: 380px"></span>
+                        <span id="4c" class="glyphicon glyphicon-star"></span>
+                        <span id="3c" class="glyphicon glyphicon-star"></span>
+                        <span id="2c" class="glyphicon glyphicon-star"></span>
+                        <span id="1c" class="glyphicon glyphicon-star"></span>
+                    </div>
+                    @Html.HiddenFor(m => m.Review.Cleanliness, new
+                        {
+                            @id = "review-rating-cleanliness",
+                            @value = ""
+
+                        })
+                </div>
+                <div>
+                    <div class="custom-star-rating-hotels-value">
+                        @(Html.Bootstrap().LabelFor(model => model.Review.Value)
+                              .LabelText("Value")
+                              .Class("custom-title-rating")
+                              .ShowRequiredStar(false))
+                        <span id="5v" class="glyphicon glyphicon-star" style="margin-right: 380px"></span>
+                        <span id="4v" class="glyphicon glyphicon-star"></span>
+                        <span id="3v" class="glyphicon glyphicon-star"></span>
+                        <span id="2v" class="glyphicon glyphicon-star"></span>
+                        <span id="1v" class="glyphicon glyphicon-star"></span>
+                    </div>
+                    @Html.HiddenFor(m => m.Review.Value, new
+                        {
+                            @id = "review-rating-value",
+                            @value = ""
+
+                        })
+                </div>
+              
+
+                <div>
+                    @(Html.Bootstrap().LabelFor(model => model.Review.Rating)
+                          .Class("custom-title-overall")
+                          .LabelText("Overall Rating")
+                          .ShowRequiredStar(true))
+                </div>
+                <div class="custom-star-rating">
+                    <span id="5" class="glyphicon glyphicon-star" style="margin-right: 483px"></span>
+                    <span id="4" class="glyphicon glyphicon-star"></span>
+                    <span id="3" class="glyphicon glyphicon-star"></span>
+                    <span id="2" class="glyphicon glyphicon-star"></span>
+                    <span id="1" class="glyphicon glyphicon-star"></span>
+                    @Html.HiddenFor(m => m.Review.Rating, new
+                            {
+                                @id = "review-rating",
+                                @value = ""
+                            })
+                </div>
+
+                <div>
+                    @Html.ValidationMessageFor(model => model.Review.Rating)
+                    <p id="alertmsg"></p>
+                </div>
+
+
+                @Html.HiddenFor(m => m.Review.HotelId)
+
+                @Html.HiddenFor(m => m.Review.Id)
+                <div>
+                    <input type="submit" id="addreview" class="btn btn-warning btnsize" value="Add Review" style="margin-left: 40%" />
+                </div>
+
+            </div>
+        </div>
+    }
+</div>
+@section scripts {
+    <section>
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/autocomplete/js")
+        @Scripts.Render("~/standardized-theme/Theme")
+        <script src="~/Scripts/rating-validation.js"></script>
+        <script src="~/Scripts/CustomAddReview.js"></script>
+    </section>
+}

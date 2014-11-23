@@ -1,0 +1,795 @@
+﻿﻿@model HotelsAdvisor.Models.Hotel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_IntermediateLayout.cshtml";
+}
+
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Hotel Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/bootstrap.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="~/assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/assets/css/detailspage.css" />
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="~/assets/js/jquery-1.8.2.min.js"></script>
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <!-- Included css styles -->
+    <link href="~/assets/css/bootstrap-fileupload.css" rel="stylesheet">
+    <link href="~/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="~/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="~/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="~/assets/css/datepicker.css" rel="stylesheet">
+    <link href="~/assets/css/daterangepicker-bs3.css" rel="stylesheet">
+    <link href="~/assets/css/datetimepicker.css" rel="stylesheet">
+    <link href="~/assets/css/bootstrap-timepicker.css" rel="stylesheet">
+    <link href="~/assets/css/bootstrap-transfer.css" rel="stylesheet">
+    <link href="~/assets/css/carousel_deals.css" rel="stylesheet">
+
+    <!-- Img gallery styles -->
+    <link href="~/assets/css/style.css" rel="stylesheet">
+    <link href="~/assets/css/bootstrap-image-gallery.css" rel="stylesheet">
+    <link href="~/assets/css/prettyPhoto.css" rel="stylesheet">
+    <link href="~/assets/css/prettyPhoto.css" rel="stylesheet" />
+    <!-- Img gallery styles -->
+
+    <link href="~/assets/css/jquery.jscrollpane.codrops2.css" rel="stylesheet">
+    <link href="~/assets/css/slider.css" rel="stylesheet">
+    <link href="~/assets/css/tn3.css" rel="stylesheet">
+    <link href="~/assets/css/hotel_search.css" rel="stylesheet">
+    <link href="~/assets/css/car_dropdown_search.css" rel="stylesheet">
+    <link href="~/assets/css/main.css" rel="stylesheet">
+    <!--<link href="../assets/css/mediaquery_widget.css" rel="stylesheet">-->
+    <link href="~/assets/css/custom_button.css" rel="stylesheet">
+    <link href="~/assets/css/core-styles.css" rel="stylesheet">
+    <link href="~/assets/css/jquery.jscrollpane.codrops1.css" rel="stylesheet">
+    <!--[if IE 8]>     <html class="ie8"> <![endif]-->
+    @*<link href="assets/css/print.css" rel="stylesheet" type="text/css" media="print">*@
+
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic,700italic,900italic' rel='stylesheet' type='text/css' />
+    <link href="~/assets/css/icon-fonts.css" rel="stylesheet">
+    <link href="~/assets/css/layout-editor.css" rel="stylesheet">
+
+    <!--Included css styles-->
+
+    <!-- Google Web Font -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic,700italic,900italic'
+        rel='stylesheet' type='text/css' />
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="~/assets/ico/apple-touch-icon-57-precomposed.png">
+    <link href="~/assets/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <script src="~/assets/js/jquery-1.8.2.min.js"></script>
+</head>
+
+
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+    <div class="ptm bgWhite">&nbsp;</div>
+
+
+    <!--------Main Continer --------------->
+
+    <div class="container">
+        <!--------hotel detail title and price  --------------->
+        <div class="row-fluid">
+            <div class="span7 result_title">@Model.Name</div>
+        </div>
+        <!--------//hotel detail title and price  --------------->
+
+        <!--------hotel detail stars and info --------------->
+        <div class="row-fluid pbl hotel_dtl_stars clearfix">
+            <div class="clearfix">
+                <ul class="pull-left hotel_stars">
+
+                    @for (int i = 0; i < @Model.Rating; i++)
+                    {
+                        <li><a class="rated" href="#"></a></li>
+                    }
+                    @for (int i = 0; i < 5 - @Model.Rating; i++)
+                    {
+                        <li><a href="#"></a></li>
+                    }
+                </ul>
+                <span class="greyfont">|</span>  @Model.Address, @Model.City, @Model.Country
+            </div>
+
+            <div class="controls amenities-listing clearfix">
+
+                <!-- Restaurant -->
+                <div class="pull-left mrs font11">
+                    <a href="#" rel="tooltip" data-placement="bottom" class="tooltiplink" data-original-title="Restaurant">
+                        <i class="icon_Restaurant pull-left mls"></i></a>
+                </div>
+
+                <!-- Vehicle Parking -->
+                <div class="pull-left mrs font11">
+                    <a href="#" rel="tooltip" data-placement="bottom" class="tooltiplink" data-original-title="Pool">
+                        <i class="icon_Pool pull-left mls"></i></a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--------//hotel detail stars and info --------------->
+    </div>
+
+
+    <!--------//hotel detail title and price  --------------->
+    <div class="hotel_dtl_featured pbl border_top borderBot">
+        <div class="pbl"></div>
+        <div class="container">
+            <!--------hotel detail gallery--------------->
+            <div class="row-fluid hotel_dtl_gallery mbl">
+                <div class="span3 positionR">
+                    <a href="@Model.ImageList[0]" rel="lightbox[group]" class="">
+                        <img title="" alt="" src="@Model.ImageList[0]">
+                        <span class="gal_caption pls pts pbs"><strong class="font12">@Model.ImageList.Count photos</strong><br>
+                            @Model.Name, @Model.City,@Model.Country</span>
+                    </a>
+                    <!----gallery other images should be display none--->
+                    @*  <a style="display: none" href="@Model.ImageList[1]" rel="lightbox[group]" class=""></a>
+                    <a style="display: none" href="@Model.ImageList[2]" rel="lightbox[group]" class=""></a>
+                    <a style="display: none" href="@Model.ImageList[3]" rel="lightbox[group]" class=""></a>
+                    <a style="display: none" href="@Model.ImageList[4]" rel="lightbox[group]" class=""></a>
+                    <a style="display: none" href="@Model.ImageList[5]" rel="lightbox[group]" class=""></a>
+                    <a style="display: none" href="@Model.ImageList[6]" rel="lightbox[group]" class=""></a>*@
+                    @foreach (var imageUrl in @Model.ImageList)
+                    {
+                        <a style="display: none" href="@imageUrl" rel="lightbox[group]" class=""></a>
+                    }
+                    <!----gallery other images--->
+
+                </div>
+                <!--	<div class="clearfix span9">
+		<div id="freewall" class="free-wall"></div>
+	</div>-->
+
+                <div class="span9 mCustomScrollbar _mCS_1 mCS-autoHide" id="cm_scroll">
+                    <div id="mCSB_1" class="mCustomScrollBox mCS-dark mCSB_horizontal mCSB_inside" tabindex="0">
+                        <div id="mCSB_1_container" class="mCSB_container" style="position: relative; top: 0px; left: 0px; width: 1912px;" dir="ltr">
+                            <div id="freewall" style="position: relative; width: 1910.5px; height: 266px;" data-min-width="1280" data-total-col="96" data-total-row="10" data-wall-width="1911" data-wall-height="266">
+
+                                <a rel="lightbox[group]" href="@Model.ImageList[1]">
+                                    <div class="cell" data-image="@Model.ImageList[1]" style="height: 125.44px; width: 165.56px; position: absolute; opacity: 1; top: 0px; left: 0px; -webkit-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; background-image: url(@Model.ImageList[1]);" data-delay="1" data-height="130" data-width="158" data-state="move" id="1-2"></div>
+                                </a>
+                                <a rel="lightbox[group]" href="@Model.ImageList[2]">
+                                    <div class="cell" data-image="@Model.ImageList[2]" style="height: 125.44px; width: 285.94px; position: absolute; opacity: 1; top: 0px; left: 180.56px; -webkit-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; background-image: url(@Model.ImageList[2]);" data-delay="2" data-height="130" data-width="278" data-state="move" id="2-2"></div>
+                                </a>
+                                <a rel="lightbox[group]" href="@Model.ImageList[3]">
+                                    <div class="cell" data-image="@Model.ImageList[3]" style="height: 125.44px; width: 125.44px; position: absolute; opacity: 1; top: 0px; left: 481.5px; -webkit-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; background-image: url(@Model.ImageList[3]);" data-delay="3" data-height="130" data-width="130" data-state="move" id="3-2"></div>
+                                </a>
+                                <a rel="lightbox[group]" href="@Model.ImageList[4]">
+                                    <div class="cell" data-image="@Model.ImageList[4]" style="height: 125.44px; width: 185.63px; position: absolute; opacity: 1; top: 0px; left: 621.94px; -webkit-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; background-image: url(@Model.ImageList[4]);" data-delay="4" data-height="130" data-width="188" data-state="move" id="4-2"></div>
+                                </a>
+                                <a rel="lightbox[group]" href="@Model.ImageList[5]">
+                                    <div class="cell" data-image="@Model.ImageList[5]" style="height: 125.44px; width: 225.75px; position: absolute; opacity: 1; top: 0px; left: 822.56px; -webkit-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; background-image: url(@Model.ImageList[5]);" data-delay="5" data-height="130" data-width="219" data-state="move" id="5-2"></div>
+                                </a>
+                                <a rel="lightbox[group]" href="@Model.ImageList[6]">
+                                    <div class="cell" data-image="@Model.ImageList[6]" style="height: 125.44px; width: 145.5px; position: absolute; opacity: 1; top: 0px; left: 1063.31px; -webkit-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; background-image: url(@Model.ImageList[6]);" data-delay="6" data-height="130" data-width="153" data-state="move" id="6-2"></div>
+                                </a>
+                                <a rel="lightbox[group]" href="@Model.ImageList[7]">
+                                    <div class="cell" data-image="@Model.ImageList[7]" style="height: 125.44px; width: 225.75px; position: absolute; opacity: 1; top: 0px; left: 1223.81px; -webkit-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; background-image: url(@Model.ImageList[7]);" data-delay="7" data-height="130" data-width="224" data-state="move" id="7-2"></div>
+                                </a>
+                                <a rel="lightbox[group]" href="@Model.ImageList[8]">
+                                    <div class="cell" data-image="@Model.ImageList[8]" style="height: 125.44px; width: 145.5px; position: absolute; opacity: 1; top: 0px; left: 1464.56px; -webkit-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; background-image: url(@Model.ImageList[8]);" data-delay="8" data-height="130" data-width="142" data-state="move" id="8-2"></div>
+                                </a>
+                                <a rel="lightbox[group]" href="@Model.ImageList[9]">
+                                    <div class="cell" data-image="@Model.ImageList[9]" style="height: 125.44px; width: 145.5px; position: absolute; opacity: 1; top: 0px; left: 1625.06px; -webkit-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; background-image: url(@Model.ImageList[9]);" data-delay="9" data-height="130" data-width="153" data-state="move" id="9-2"></div>
+                                </a>
+                                <a rel="lightbox[group]" href="@Model.ImageList[10]">
+                                    <div class="cell" data-image="@Model.ImageList[10]" style="height: 125.44px; width: 185.63px; position: absolute; opacity: 1; top: 140.44px; left: 0px; -webkit-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; background-image: url(@Model.ImageList[10]);" data-delay="10" data-height="130" data-width="178" data-state="move" id="10-2"></div>
+                                </a>
+                                <a rel="lightbox[group]" href="@Model.ImageList[11]">
+                                    <div class="cell" data-image="@Model.ImageList[11]" style="height: 125.44px; width: 306px; position: absolute; opacity: 1; top: 140.44px; left: 200.63px; -webkit-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; background-image: url(@Model.ImageList[11]);" data-delay="11" data-height="130" data-width="297" data-state="move" id="11-2"></div>
+                                </a>
+                                <a rel="lightbox[group]" href="@Model.ImageList[12]">
+                                    <div class="cell" data-image="@Model.ImageList[12]" style="height: 125.44px; width: 125.44px; position: absolute; opacity: 1; top: 0px; left: 1785.56px; -webkit-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; background-image: url(@Model.ImageList[12]);" data-delay="12" data-height="130" data-width="119" data-state="move" id="12-2"></div>
+                                </a>
+                                <a rel="lightbox[group]" href="@Model.ImageList[13]">
+                                    <div class="cell" data-image="@Model.ImageList[13]" style="height: 125.44px; width: 265.88px; position: absolute; opacity: 1; top: 140.44px; left: 521.63px; -webkit-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; background-image: url(@Model.ImageList[13]);" data-delay="13" data-height="130" data-width="267" data-state="move" id="13-2"></div>
+                                </a>
+                                <a rel="lightbox[group]" href="@Model.ImageList[14]">
+                                    <div class="cell" data-image="@Model.ImageList[14]" style="height: 125.44px; width: 105.38px; position: absolute; opacity: 1; top: 140.44px; left: 802.5px; -webkit-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; background-image: url(@Model.ImageList[14]);" data-delay="14" data-height="130" data-width="110" data-state="move" id="14-2"></div>
+                                </a>
+                                <a rel="lightbox[group]" href="@Model.ImageList[15]">
+                                    <div class="cell" data-image="@Model.ImageList[15]" style="height: 125.44px; width: 205.69px; position: absolute; opacity: 1; top: 140.44px; left: 922.88px; -webkit-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; background-image: url(@Model.ImageList[15]);" data-delay="15" data-height="130" data-width="209" data-state="move" id="15-2"></div>
+                                </a>
+                                <a rel="lightbox[group]" href="@Model.ImageList[16]">
+                                    <div class="cell" data-image="@Model.ImageList[16]" style="height: 125.44px; width: 245.81px; position: absolute; opacity: 1; top: 140.44px; left: 1143.56px; -webkit-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; background-image: url(@Model.ImageList[16]);" data-delay="16" data-height="130" data-width="246" data-state="move" id="16-2"></div>
+                                </a>
+                                <a rel="lightbox[group]" href="@Model.ImageList[17]">
+                                    <div class="cell" data-image="@Model.ImageList[17]" style="height: 125.44px; width: 145.5px; position: absolute; opacity: 1; top: 140.44px; left: 1404.38px; -webkit-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; background-image: url(@Model.ImageList[17]);" data-delay="17" data-height="130" data-width="141" data-state="move" id="17-2"></div>
+                                </a>
+                                <a rel="lightbox[group]" href="@Model.ImageList[18]">
+                                    <div class="cell" data-image="@Model.ImageList[18]" style="height: 125.44px; width: 245.81px; position: absolute; opacity: 1; top: 140.44px; left: 1564.88px; -webkit-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s; background-image: url(@Model.ImageList[18]);" data-delay="18" data-height="130" data-width="249" data-state="move" id="18-2"></div>
+                                </a>
+
+
+                            </div>
+                        </div>
+                        <div id="mCSB_1_scrollbar_horizontal" class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark mCSB_scrollTools_horizontal" style="display: block;">
+                            <div class="mCSB_draggerContainer">
+                                <div id="mCSB_1_dragger_horizontal" class="mCSB_dragger" style="position: absolute; min-width: 30px; display: block; width: 354px; max-width: 860px; left: 0px;" oncontextmenu="return false;">
+                                    <div class="mCSB_dragger_bar"></div>
+                                </div>
+                                <div class="mCSB_draggerRail"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--------//hotel detail gallery--------------->
+        </div>
+    </div>
+
+    <div class="pbl"></div>
+
+
+    <div class="container">
+        <!--------hotel detail tabs--------------->
+        <div class="row-fluid result_dtl_tabs">
+            <div>
+                <ul class="nav nav-tabs detailtabs_Infolist borderTop multiroom bgGrediantR rbm_nav">
+                    <li><a href="#tab1" data-toggle="tab">Overview</a></li>
+                    <li><a id="lnkMap" href="#tab2" data-toggle="tab">Map</a></li>
+                    <li class="active"><a href="#tab3" data-toggle="tab">Reviews</a></li>
+                    @*<li><a href="@Url.Action("AddReview", "Hotel", new { hotelId = @Model.Id })" >Add Review</a></li>*@
+                </ul>
+            </div>
+
+            <!-- Tab content starts -->
+            <div class="tab-content">
+                <!-- Tab 1 -->
+                <div class="tab-pane" id="tab1">
+                    <div class="well-small bgWhite border_notop">
+                        <p><strong>Description</strong></p>
+
+
+                        @* Display Rating of the Hotel 
+                        <div class="review-for-rating">
+                            Review &emsp; 
+                            @for (int i = 0; i < (@Model.Reviews[0].Rating); i++)
+                            {
+                                <span style="color: #F28E00">★</span>
+                            }
+                            @for (int i = 0; i < 5 - (@Model.Reviews[0].Rating); i++)
+                            {
+                                <span style="color: black">★</span>
+                            }
+
+                        </div>*@
+
+                        <p style="text-align:justify">
+                            @*@Model.Reviews[0].Description*@
+                            @Model.Description
+                        </p>
+
+                    </div>
+                </div>
+                <!-- Tab 1 End -->
+
+                <!-- tab 2 -->
+                <div class="tab-pane" id="tab2">
+                    <div id="map_canvas"></div>
+                </div>
+                <!-- //tab 1 -->
+
+                <!-- tab 3 -->
+                <div class="tab-pane active" id="tab3">
+                    @foreach (var review in @Model.Reviews)
+                    {
+                        <div class="well-small bgWhite border_notop">
+                            <p><strong>@review.Title </strong></p>
+                            @* Display Rating of the Hotel *@
+                            <div class="review-for-rating">
+                                Review &emsp; 
+                            @for (int i = 0; i < (@review.Rating); i++)
+                            {
+                                <span style="color: #F28E00">★</span>
+                            }
+                                @for (int i = 0; i < 5 - (@review.Rating); i++)
+                                {
+                                    <span style="color: black">★</span>
+                                }
+                            </div>
+
+                            <p><i>Added By :</i> @review.UserName &emsp;&emsp; <i>Added On (UTC Time) :</i> @review.UtcTimeSubmitted </p>
+
+                            <p style="text-align:justify">
+                                @review.Description
+                            </p>
+
+                            @* Display Rating of the Value *@
+                            <span class="review-for-value">
+                                @for (int i = 0; i < (@review.Value); i++)
+                                {
+                                    <span style="color: #F28E00">★</span>
+                                }
+                                @for (int i = 0; i < 5 - (@review.Value); i++)
+                                {
+                                    <span style="color: black">★</span>
+                                }
+                                &emsp;   Value
+                            </span>
+                            <br />
+                            @* Display Rating of the Rooms *@
+                            <span class="review-for-rooms">
+                                @for (int i = 0; i < (@review.Rooms); i++)
+                                {
+                                    <span style="color: #F28E00">★</span>
+                                }
+                                @for (int i = 0; i < 5 - (@review.Rooms); i++)
+                                {
+                                    <span style="color: black">★</span>
+                                }
+                                &emsp; Rooms
+                            </span>
+                            <br />
+                            @* Display Rating of the Cleanliness *@
+                            <span class="review-for-cleanliness">
+                                @for (int i = 0; i < (@review.Cleanliness); i++)
+                                {
+                                    <span style="color: #F28E00">★</span>
+                                }
+                                @for (int i = 0; i < 5 - (@review.Cleanliness); i++)
+                                {
+                                    <span style="color: black">★</span>
+                                }
+                                &emsp; Cleanliness
+                            </span>
+                            <br />
+                            @* Display Rating of the Location *@
+                            <span class="review-for-location">
+                                @for (int i = 0; i < (@review.Location); i++)
+                                {
+                                    <span style="color: #F28E00">★</span>
+                                }
+                                @for (int i = 0; i < 5 - (@review.Location); i++)
+                                {
+                                    <span style="color: black">★</span>
+                                }
+                                &emsp;  Location
+                            </span>
+                            <br />
+                            @* Display Rating of the Service *@
+                            <span class="review-for-service">
+                                @for (int i = 0; i < (@review.Service); i++)
+                                {
+                                    <span style="color: #F28E00">★</span>
+                                }
+                                @for (int i = 0; i < 5 - (@review.Service); i++)
+                                {
+                                    <span style="color: black">★</span>
+                                }
+                                &emsp;  Service
+                            </span>
+                            <br />
+
+
+                            @*           @using (Html.BeginForm("Delete", "Hotel", FormMethod.Get))
+                            {                        
+                                @Html.Hidden(review.Id)
+                                @Html.Hidden(review.HotelId)
+                                <div>
+                                    <input type="submit" class="btn btn-warning btnsize delete_btn" value="Delete Review" />
+                                </div>
+                            }*@
+
+                            @if (User.Identity.Name.Equals(@review.UserName))
+                            {
+@*     @Html.Hidden(item.HotelId)*@
+                                @(Html.Bootstrap().ActionLinkButton("Delete Review", "Delete")
+                                      .Class("btn btn-warning mtm btn-custom")
+                                      .Style(ButtonStyle.Primary)
+                                      .RouteValues(new { hotelId = @review.HotelId, reviewId = @review.Id }))
+                            }
+
+@*   @using (Html.BeginForm("Edit", "Hotel", FormMethod.Get))
+                            {                        
+                                @Html.HiddenFor(model => model.Id)
+                                <div>
+                                    <input type="submit" class="btn btn-warning btnsize edit_btn" value="Edit Review" />
+                                </div>
+                            }*@
+
+                        </div>
+                        
+                    }
+
+                    @*  @using (Html.BeginForm("AddReview", "Hotel", FormMethod.Get))
+                    {                        
+                        @Html.HiddenFor(model => model.Id)
+                        <div>
+                            <input type="submit" class="btn btn-warning btnsize add_btn" value="Add Review" />
+                        </div>
+                    }*@
+
+                </div>
+                <!-- //tab 3 -->
+
+                <!-- tab 3 -->
+                <div class="tab-pane" id="tab4">
+
+
+                    @*                    @Html.RenderAction("AddReview", new { hotelId = @Model.Id });*@
+
+                    @*@Html.ActionLink("AddReview", new { hotelId = @Model.Id });*@
+
+                    @*                    @Response.Redirect(Url.Action("AddReview", new { hotelId = @Model.Id }));*@
+
+                    @*@Url.Action("AddReview", "Hotel", new { hotelId = @Model.Id })*@;
+                    @*@RedirectToAction("AddReview", "Hotel", new { hotelId = @Model.Id });*@
+                    @*                    @(Html.Bootstrap().ActionLinkButton("Add Review", "AddReview")
+                                      .Class("btn btn-warning mtm btn-custom addReview")
+                                      .Style(ButtonStyle.Primary)
+                                      .RouteValues(new { hotelId = @Model.Id }))*@
+
+                </div>
+                <!-- //tab 4 -->
+
+            </div>
+        </div>
+        <!--------//hotel detail tabs--------------->
+        <!--	<div class="borderBot mtl"></div>-->
+
+        <div class="ptl pbl">
+            <div class="span3 result_title" style="margin-left: 0px">Add a review for this hotel</div>
+            @(Html.Bootstrap().ActionLinkButton("Add Review", "AddReview")
+                                      .Class("btn btn-warning btn-custom addReview ntm1")
+                                      .Id("addReviewButton")
+                                      .Style(ButtonStyle.Primary)
+                                      .RouteValues(new { hotelId = @Model.Id }))
+
+        </div>
+
+
+        @*  <div class="borderBot mbl"></div>*@
+
+        <div class="ptl"></div>
+    </div>
+
+    <script type="text/javascript">
+        var map = null;
+        function initialize() {
+            if(map == null)
+            {
+                var mapOptions = {
+                    center: new google.maps.LatLng(@Model.Latitude,@Model.Longitude),
+                    zoom: 14,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+
+                var mapCanvas = document.getElementById('map_canvas');
+                map = new google.maps.Map(mapCanvas, mapOptions);
+
+                var contentString = '<div id="content">'+ '<div id="siteNotice">'+
+                                     '</div>'+
+                                     '<h4 id="firstHeading" class="firstHeading">@Model.Name</h4>'+
+                                      '<div id="bodyContent">'+
+                                      '<p>@Model.Address</p>'+     
+                                      '</div>'+
+                                      '</div>';
+
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                });
+
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(@Model.Latitude,@Model.Longitude),
+                    map: map,
+                    title: "@Model.Name"
+                });
+                google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.open(map,marker);
+                });
+            }
+        }
+
+        var aMap = document.getElementById('lnkMap');
+        google.maps.event.addDomListener(aMap, 'click', initialize);        
+        
+    </script>
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <!-- Twitter Bootstrap Widgets -->
+    <script type="text/javascript" src="./new details page_files/jquery-1.8.2.min.js"></script>
+    <script src="./new details page_files/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./new details page_files/respond.js"></script>
+    <script type="text/javascript" src="./new details page_files/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="./new details page_files/bootstrap-slider.js"></script>
+    <script src="./new details page_files/css_browser_selector.js"></script>
+    <script src="./new details page_files/jquery.prettyPhoto.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $("[rel^='lightbox']").prettyPhoto();
+            // rooms popup
+            var $roomspopover = $('.room_details_help').popover({
+                html: true,
+                content: function () {
+                    return $('.selectrooms').html();
+                }
+
+            });
+            var isVisible = false;
+            $('.cancellationpolicylink').popover({
+                html: true,
+                placement: 'bottom',
+                trigger: 'click',
+                title: '',
+                content: function () {
+                    return $(this).parents('td').find('.info_Popover').html();
+                },
+
+            }).click(function (e) {
+                $('.popover-title').remove();
+                isVisible = true;
+                e.preventDefault();
+                e.stopPropagation();
+
+            });
+
+            $(document).on('click', function (e) {
+                $('[data-toggle="popover"]').each(function () {
+                    if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                        $('.cancellationpolicylink').popover('hide');
+                    }
+                });
+                $('.cancellationpolicylink').popover('hide');
+                isVisible = false;
+            });
+
+
+            //remove popover empty elements
+            //        $('.room_details_help').click(function (event) {
+            ////                $('.popover').addClass('room_dtl_popover');
+            //$("#reportrange").close();
+            //            $('.popover .popover-inner h3.popover-title ').filter(function () {
+            //                return $.trim($(this).text()) === ''
+            //            }).remove();
+            //
+            //        });
+
+            $(document).on("click", function (e) {
+                var $target = $(e.target),
+                        isPopover = $(e.target).is('.room_details_help'),
+                        inPopover = $(e.target).closest('.popover').length > 0
+
+                //hide only if clicked on button or inside popover
+                if (!isPopover && !inPopover) $roomspopover.popover('hide');
+            });
+
+
+            //show hide stay period rooms availability
+            $('.avail_after_srch').hide();
+            $('.rooms_n_avail_wrap').hide();
+            $('.modify_search').click(function (event) {
+                event.preventDefault();
+                $('.avail_before_srch').show();
+                $('.avail_after_srch').hide();
+                $('.rooms_n_avail_wrap').hide();
+            });
+            $('#btn_chk_avail').click(function (event) {
+                event.preventDefault();
+                $('.rooms_n_avail_wrap').show();
+                $('.avail_before_srch').hide();
+                $('.avail_after_srch').show();
+
+                $('.selected-room-summery').height($('.multi-room-view').height() - 79);
+            });
+
+            $('.room_tabs ul li a').click(function () {
+                setTimeout(function () {
+                    $('.selected-room-summery').stop().animate({
+                        "height": $('.multi-room-view').height() - 79
+                    }, 200)
+                }, 50)
+            })
+            //show hide stay period rooms availability
+
+        });
+
+        $(function () {
+            $('.stay_from_dt').datepicker()
+                    .on('changeDate', function (ev) {
+                        if (ev.date.valueOf() > endDate.valueOf()) {
+                            $('#alert').show().find('strong').text('The start date can not be greater then the end date');
+                        } else {
+                            $('#alert').hide();
+                            startDate = new Date(ev.date);
+                            $('#stayfromdt').text($('.stay_from_dt').data('date'));
+                        }
+                        $('.stay_from_dt').datepicker('hide');
+                    });
+            $('.stay_to_dt').datepicker()
+                    .on('changeDate', function (ev) {
+                        if (ev.date.valueOf() > endDate.valueOf()) {
+                            $('#alert').show().find('strong').text('The start date can not be greater then the end date');
+                        } else {
+                            $('#alert').hide();
+                            startDate = new Date(ev.date);
+                            $('#staytodt').text($('.stay_to_dt').data('date'));
+                        }
+                        $('.stay_to_dt').datepicker('hide');
+                    });
+
+            //////////////// Date Range Datepicker Script ///////////////////
+            $('#reportrange').daterangepicker({
+                startDate: moment(),
+                endDate: moment().add('days', 30),
+                minDate: '01/01/2012',
+                maxDate: '12/31/2014',
+                dateLimit: {
+                    days: 60
+                },
+                //  showDropdowns: true,
+                // showWeekNumbers: true,
+                timePicker: false,
+                // timePickerIncrement: 1,
+                // timePicker12Hour: true,
+                //         ranges: {
+                //             'Today': [moment(), moment()],
+                //             //'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
+                //             'Last 2 Days': [moment().subtract('days', 1), moment()],
+                //             'Last Week': [moment().subtract('days', 6), moment()],
+                //             //'This Month': [moment().startOf('month'), moment().endOf('month')],
+                //             'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+                //         },
+                //opens: 'left',
+                // buttonClasses: ['btn btn-default'],
+                // applyClass: 'btn-small btn-primary',
+                //  cancelClass: 'btn-small',
+                format: 'MM/DD/YYYY',
+                separator: ' to '
+                //         locale: {
+                //             applyLabel: 'Apply',
+                //             fromLabel: 'From',
+                //             toLabel: 'To',
+                //             customRangeLabel: 'Custom Range',
+                //             daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+                //             monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                //             firstDay: 1
+                //         }
+            },
+                    function (start, end) {
+                        console.log("Callback has been called!");
+                        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' <i class="icon-arrow-right mls mrs"></i> ' + end.format('MMMM D, YYYY'));
+                    }
+            );
+            //Set the initial state of the picker label
+            //$('#reportrange span').html(moment().subtract('days', 29).format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+
+        });
+
+
+</script>
+
+   <script type="text/javascript" src="~/assets/js/jquery.mCustomScrollbar.js"></script>
+    <script src="~/assets/js/freewall.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+
+        $('#freewall').find('.cell').each(function () {
+            var bg_img = $(this).data('image');
+            $(this).css('background-image', 'url(' + bg_img + ')');
+            $(this).parent('a').prop('href', bg_img);
+        });
+
+        // ------- freewall gallery ------------
+        var totalWidth = 0;
+
+        var a1, a2, a3, a4;
+        var wall = new freewall("#freewall");
+
+        if ($(window).width() > 1200) {
+            a1 = 200; a2 = 130; a3 = 20; a4 = 28;
+        }
+        else if ($(window).width() < 1200 && $(window).width() > 1000) {
+            a1 = 150; a2 = 110; a3 = 15; a4 = 23;
+        } else if ($(window).width() < 1000) {
+            a1 = 100; a2 = 75; a3 = 12; a4 = 20;
+        }
+
+        $(window).resize(function () {
+            if ($(window).width() > 1200) {
+                a1 = 200; a2 = 130; a3 = 20; a4 = 28;
+            }
+            else if ($(window).width() < 1200 && $(window).width() > 1000) {
+                a1 = 150; a2 = 110; a3 = 15; a4 = 23;
+            } else if ($(window).width() < 1000) {
+                a1 = 100; a2 = 75; a3 = 12; a4 = 20;
+            }
+
+            wall.reset({
+                cellW: a3,
+                cellH: a4,
+                onResize: function () {
+                    wall.fitWidth();
+                }
+            });
+        })
+
+        //			test();
+        //
+        //			
+        //		function test(){
+
+
+        $(".cell").each(function (index) {
+            $(this).css('height', a2);
+            var w = 100 + a1 * Math.random() << 0;
+            totalWidth += w + 20;
+            $(this).css('width', w + 'px');
+        });
+
+        $('#freewall').css('width', totalWidth / 2 + 'px');
+
+
+
+        wall.reset({
+            selector: '.cell',
+            animate: true,
+            cellW: a3,
+            cellH: a4,
+            onResize: function () {
+                wall.fitWidth();
+            }
+        });
+        wall.fitWidth();
+        $(window).trigger("resize");
+        //		}
+
+
+        // ------- popover close ------------
+        $("#reportrange").click(function () {
+            $(".room_details_help").popover('hide');
+        });
+
+
+
+        // ------- Custome Scroll ------------
+
+
+        $("#content-scroll, #cm_scroll").mCustomScrollbar({
+            axis: "x",
+            autoHideScrollbar: true,
+            advanced: {
+                autoExpandHorizontalScroll: true
+            },
+            theme: "dark"
+        });
+
+		</script>
+    <script src="~/assets/js/moment.js"></script>
+      @Scripts.Render("~/assets/js");
+    @Scripts.Render("~/bundles/jquery");
+    @Scripts.Render("~/bundles/jqueryval");
+    @Scripts.Render("~/bundles/modernizr");
+    @Scripts.Render("~/bundles/bootstrap");
+    @Styles.Render("~/standardized-theme/Theme");
+</body>
+

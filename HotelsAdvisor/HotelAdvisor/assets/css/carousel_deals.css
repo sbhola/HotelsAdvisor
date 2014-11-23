@@ -1,0 +1,120 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*-------------HomePage All Deals Carousel Style Start -----------------*/
+
+.dealscarousel .carousel, .dealscarousel .carousel-inner .item {height:234px}
+.dealscarousel .carousel-control {top: 15% !important;}
+#allDealsCarousel {
+    margin:0px 0px 0px;
+    width:100%;
+}
+.dealscarousel .carousel-caption h4 a {color:white; font-size:24px; }
+.dealscarousel .carousel-caption p {
+margin-bottom: 0;
+}
+.dealscarousel .carousel-inner .item a.whole {
+display: block;
+width: 100%;
+height: 234px;
+z-index: 10001;
+position: absolute;
+bottom: 0px;
+}
+.dealscarousel .carousel-caption p a {display:none;}
+#carousel-nav, #carousel-nav_deals {
+text-align: center;
+
+}
+#carousel-nav a {
+margin: 5px 0px;
+background:url(../../images/dot_inactive.png) no-repeat;
+	width:16px;
+	height:16px;
+	color: #000;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+#carousel-rel{
+margin: -24px 0px 0px;
+font-size: 0.9em;
+}
+#carousel-nav a.active {
+	margin: 5px 0px;
+	background:url(../../images/dot_active.png) no-repeat;
+	width:16px;
+	height:16px;
+ 
+}
+
+#carousel-nav_deals {
+text-align: center;
+
+}
+#carousel-nav_deals a {
+margin: 5px 0px;
+background:url(../../images/dot_inactive.png) no-repeat;
+	width:16px;
+	height:16px;
+color: #000;
+display: inline-block;
+width: 16px;
+height: 16px;
+opacity: 0.5;
+filter: alpha(opacity=50);
+}
+#carousel-rel_deals{
+margin: -24px 0px 0px;
+font-size: 0.9em;
+}
+#carousel-nav_deals a.active {
+	margin: 5px 0px;
+	background:url(../../images/dot_active.png) no-repeat;
+	
+	width:16px;
+	height:16px;
+ 
+}
+
+
+.right,
+.alignright {
+float: right;
+padding-left: 5px;
+}
+#allDealsCarousel .right {
+float: none;
+}
+
+/* Hotel Destinatin Carousel */ 
+#hotelcarousel-nav{
+text-align: center;
+
+}
+#hotelcarousel-nav a {
+margin: 5px 0px;
+background:url(../../images/dot_inactive.png) no-repeat;
+	width:16px;
+	height:16px;
+	color: #000;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+
+#hotelcarousel-nav a.current {
+	margin: 5px 0px;
+	background:url(../../images/dot_active.png) no-repeat;
+	
+	width:16px;
+	height:16px;
+ 
+}
+
+#destinationCarousel.carousel { margin-bottom:9px !important;}
+/*-------------HomePage All Deals Carousel Style End -----------------*/

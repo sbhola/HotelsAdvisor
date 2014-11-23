@@ -1,0 +1,31 @@
+﻿@using Microsoft.AspNet.Identity
+@using HotelsAdvisor.Models
+@using MongoDB.AspNet.Identity
+
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+    @Html.AntiForgeryToken()
+    
+        var currentUserId = User.Identity.GetUserId();
+        var manager = new UserManager<ApplicationUser>(
+                new UserStore<ApplicationUser>("mongodb://lab22/hotels"));
+        var currentUser = manager.FindById(currentUserId);
+        var displayName = currentUser.DisplayName;
+    
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            @Html.ActionLink("Hello " + displayName + "!", "Manage", "Account", routeValues: null, htmlAttributes: new { @Id="displayUserName",title = "Manage" })
+        </li>
+        <li><a  id="logoutForm" title ="aLogOff" href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+    </ul>
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}

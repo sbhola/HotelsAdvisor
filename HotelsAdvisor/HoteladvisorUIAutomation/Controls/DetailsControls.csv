@@ -1,0 +1,28 @@
+﻿divHotelName,.row-fluid .result_title
+lnkRegister,#registerLink
+divCreateAccount,div[class='crt_acnt']
+lnkLogin,#loginLink
+divHome,.header-inside
+lnkHome,.row-fluid .span4 a
+banerHome,.banner-text
+hotelMainImage,.hotel_dtl_gallery .span3 img
+galleryContainer,.pp_content_container
+firstImageOfGallery,.cell[id='1-2']
+autoplayButton,.pp_nav .pp_play
+imageSrc,#fullResImage
+aNextButton,.pp_arrow_next
+aPreviousButton,.pp_arrow_previous
+aCloseButton,.pp_close
+btnAddReview,.addReview 
+titleLoginPage,.create_profile_title .title
+userName,#UserName
+password,#Password
+submitButton,input[type='submit']
+lnkUserName,a[title="Manage"]
+formAddReview,.row-fluid .custom-form-block
+aLogOff,a[title='aLogOff']
+lnkMap,#lnkMap
+map_canvas,#map_canvas
+tabOverview,a[href='#tab1']
+titleDescription,#tab1 p strong
+tabActive,li[class='active']

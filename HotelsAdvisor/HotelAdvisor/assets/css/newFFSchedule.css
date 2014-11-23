@@ -1,0 +1,1429 @@
+body {
+    word-wrap: break-word;
+}
+
+/*new FFS minimum styles*/
+.font8 {
+    font-size: 8px;
+}
+
+.font9 {
+    font-size: 9px;
+}
+
+.font22 {
+    font-size: 22px;
+}
+
+.pagination-left {
+    text-align: left;
+}
+
+.color-red {
+    color: #FF0000;
+}
+
+.color-reddim {
+    color: #da8383;
+}
+
+.vert-sep {
+    font-size: inherit;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 1px;
+    line-height: inherit;
+}
+
+.ffsflightSlider {
+    border: 1px solid #e9e9e9;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    background: #f5f5f5;
+}
+
+.ffsflightSlider input[type="checkbox"] {
+    margin-top: -2px;
+    margin-right: 2px;
+}
+
+.ffsflightSlider .ffsSliderFlightWrap {
+    overflow-x: hidden;
+    max-height: 50px;
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+.ffsflightSlider .sliderFlights {
+    position: relative;
+    display: block;
+    margin: 0px;
+    padding-top: 6px;
+    max-height: 44px;
+}
+
+.ffsflightSlider .sliderFlights li {
+    list-style: none;
+    float: left;
+    position: relative;
+    border: 1px solid #e0e0e0;
+    border-left: 0px;
+    margin: 0px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.ie8 .ffsflightSlider .sliderFlights li {
+    width: 33.15%;
+}
+
+.ffsflightSlider .sliderFlights li:hover {
+    background: #fff;
+}
+
+.ffsflightSlider .sliderFlights li:first-child {
+    border-left: 1px solid #e0e0e0;
+}
+
+.ffsflightSlider .sliderFlights li a {
+    padding: 5px;
+    display: block;
+    text-decoration: none;
+    min-height: 32px;
+}
+
+.ffsflightSlider .sliderFlights li a > span,
+.ffsflightSlider .sliderFlights li a > strong {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 16px;
+}
+
+.ffsflightSlider .sliderFlights li a > strong span {
+    display: block;
+}
+
+.ffsflightSlider .sliderFlights li.allAirlines span {
+    margin-top: 4px;
+}
+
+.ffsflightSlider .sliderFlights li.allAirlines strong {
+    margin-top: 9px;
+}
+
+.ffsflightSlider .slider-btn-prev,
+.ffsflightSlider .slider-btn-next {
+    background: url(../../images/fullschedule_sprites.png) no-repeat;
+    text-indent: -9999px;
+    margin-top: 16px;
+}
+
+.ffsflightSlider .slider-btn-prev {
+    background-position: -18px -124px;
+    width: 20px;
+    height: 23px;
+    display: block;
+    margin-left: -20px;
+}
+
+.ffsflightSlider .slider-btn-next {
+    background-position: -43px -124px;
+    width: 21px;
+    height: 23px;
+    display: block;
+    margin-right: -20px;
+}
+
+.ffsflightSlider .icon_flight {
+    background: url(../../images/sprite/sprites-new.png) no-repeat;
+    text-indent: -9999px;
+}
+
+.ffsflightSlider .icon_flight {
+    background-position: -560px -14px;
+    display: inline-block;
+    height: 20px;
+    top: 3px;
+    width: 30px;
+}
+
+.ffsflightSlider .ffsSlider {
+    position: relative;
+    margin-bottom: -1px;
+}
+
+.ffsflightSlider .ffsSlider li.active {
+    background: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.ffsflightSlider .tagBestFare {
+    position: absolute;
+    z-index: 9;
+    left: 0;
+    top: -5px;
+    width: 85px;
+    height: 12px;
+    font-size: 9px;
+    color: #fff;
+    background: url("../../images/best-fare.png") left top no-repeat;
+    text-align: center;
+    line-height: 12px;
+}
+
+.ffsFlightCard {
+    border: 1px solid #30c1fa;
+    background-color: #e9f9ff;
+    margin-bottom: 5px;
+    box-shadow: 0 0 2px #b2b2b2;
+    -moz-box-shadow: 0 0 2px #b2b2b2;
+    -webkit-box-shadow: 0 0 2px #b2b2b2;
+}
+
+.ffsFlightCard .ffsFlightName,
+.ffsFlightCard .ffsFlightReturn {
+    display: inline-block;
+}
+
+.ffsFlightCard .cardBtm {
+    padding: 10px;
+}
+
+.ffsFlightCard .cardBtm .bookCart button {
+    vertical-align: top;
+}
+
+.ffsFilterSort .mtl {
+    margin-top: 0px;
+}
+
+.ffsFilterSort .borderBotDashed {
+    margin-top: 10px;
+    padding-bottom: 0px;
+    border-bottom: 0px;
+    margin-bottom: 15px;
+}
+
+.ffsFilterSort .borderBotDashed .span8 {
+    padding-top: 5px;
+}
+
+.ffsFilters {
+    padding-top: 6px;
+}
+
+.ffsFilters .showmapviewfilters {
+    display: none;
+}
+
+.ffsFilters .showmapviewfilters .filtertoparrow {
+    margin-left: 65px;
+}
+
+.ffsFilters .dropdown-menu {
+    min-width: 200px;
+}
+
+.ffsFilters .ffsFilterAirlines ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.ffsFilters .ffsFilterAirlines li a {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.ffsFilters .ffsFilterAirlines li a strong {
+    font-weight: normal;
+}
+
+.ffsFlightCard .cardTop {
+    background-color: #fff;
+    padding: 10px 0px 15px 0px;
+    background-image: url("../../images/bg-btm-cut.jpg");
+    background-position: left bottom;
+    background-repeat: repeat-x;
+}
+
+.ffsFlightCard .cardTop .icon-flight-return {
+    margin-top: 10px;
+}
+
+.ffsSrchResult {
+    margin-bottom: 20px;
+}
+
+.ffsSrchResult .ffsBoarding .ffsResultWrap > div:first-child,
+.ffsSrchResult .ffsDeparture .ffsResultWrap > div:first-child {
+    background-color: #f5f5f5;
+    border: 1px solid #d9d9d9;
+    line-height: 28px;
+}
+
+.ffsBoarding.closed .ffsResultWrap,
+.ffsDeparture.closed .ffsResultWrap {
+    display: none;
+    margin-bottom: 0px;
+    min-height: 1px;
+}
+
+.ffsBoarding.closed.span3,
+.ffsDeparture.closed.span3 {
+    min-height: 1px;
+}
+
+.ffsSrchResult .prevDay,
+.ffsSrchResult .nxtDay {
+    display: block;
+    font-size: 12px;
+    color: #006699;
+    line-height: 28px;
+    height: 28px;
+    vertical-align: middle;
+    position: relative;
+    padding: 0px 10px;
+    cursor: pointer;
+    font-weight:normal;
+}
+
+.ffsSrchResult .prevDay:after,
+.ffsSrchResult .nxtDay:before {
+    left: 100%;
+    top: 0;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.ffsSrchResult .nxtDay:before {
+    left: -7px;
+    top: 0;
+}
+
+.ffsSrchResult .prevDay:after {
+    width: 0px;
+    height: 0px;
+
+
+}
+
+.ffsSrchResult .nxtDay:before {
+    width: 0px;
+    height: 0px;
+
+
+}
+
+.ffsSrchResult .nxtDay:hover, .ffsSrchResult .prevDay:hover {
+    text-decoration: none;
+
+}
+
+.ffsSrchResult .ffsSrchItemsWrap .ffsSrchItem {
+    padding: 0px;
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-color: #f2f2f2 #f2f2f2 #f2f2f2 #f2f2f2;
+}
+.table-heading + .ffsSrchItemsWrap .ffsSrchItem{
+    border-top: none;
+}
+.table-heading + .ffsSrchItemsWrap .ffsSrchItem.active,
+.table-heading + .ffsSrchItemsWrap .ffsSrchItem.active:hover{
+    border-top: none;
+    -webkit-box-shadow: 0 -1px 0 0 #f7901b;
+    box-shadow: 0 -1px 0 0 #f7901b;
+}
+.ffsSrchResult .ffsSrchItemsWrap .ffsSrchItem.active,
+.ffsSrchResult .ffsSrchItemsWrap .ffsSrchItem.active:hover {
+    border-color: #f7901b #f7901b #f7901b #f7901b;
+}
+.ffsSrchResult .ffsSrchItemsWrap .ffsSrchItem:hover {
+    border-color: #CFCFCF #CFCFCF #CFCFCF #CFCFCF;
+}
+.ffsSrchResult .ffsSrchItem.active .ffsItemInfo {
+    background-color: #fffce7;
+    border-bottom: none;
+}
+.ffsSrchResult .ffsSrchItem .ffsItemDtlWrap {
+    background-color: #fffefa;
+    border-top: 1px solid #bdbdbd;
+    min-height: 50px;
+}
+
+.ffsSrchResult .ffs-lft-arrow {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: url("../../images/Nxt-Back-Arrow.png") 0 -19px no-repeat;
+    vertical-align: middle;
+}
+
+.ffsSrchResult .ffs-rt-arrow {
+    color:#006699;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: url("../../images/Nxt-Back-Arrow.png") 0 0 no-repeat;
+    vertical-align: middle;
+}
+
+.ffsSrchItem{
+    cursor: default;
+}
+.ffsSrchItem .ffsItemInfo {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.ffsSrchItem:hover .ffsItemInfo,
+.ffsSrchItem .touchDevice{
+    background-image: url("../../images/ffs-icon-select-gry.png");
+    background-repeat: no-repeat;
+}
+.ffsSrchItem.active .ffsItemInfo,
+.ffsSrchItem.active:hover .ffsItemInfo {
+    background-image: url("../../images/ffs-icon-select.png");
+    background-repeat: no-repeat;
+}
+
+.ffsSrchItem .ffsDuration {
+    padding-top: 7px;
+    position: relative;
+}
+
+.icon-red-eye {
+    display: inline-block;
+    background: url("../../images/red-eye.png") left top no-repeat;
+    width: 10px;
+    height: 7px;
+    vertical-align: middle;
+}
+
+.ffsSrchItem .ffsDuration .icon-red-eye {
+    display: inline-block;
+    position: absolute;
+    left: 38%;
+    width: 10px;
+    height: 7px;
+}
+
+.book_flight {
+    margin-top: 10px;
+}
+
+.ffsSrchItem .ffsDuration .flightLine {
+    background: url("../../images/ffs-flight-line.png") right center no-repeat;
+    line-height: 7px;
+    height: 7px;
+    width:60px;
+}
+
+.ffsSrchItem .ffsDuration span:first-child {
+    line-height: 7px;
+}
+
+.ffsItemDtlWrap {
+    /*padding: 0px 0px 15px 0px;*/
+    background-color: #fffefa;
+}
+
+.ffsDtlFlight .ffsDuration {
+    padding-top: 6px;
+}
+
+.ffsItemDtlWrap .ffsDuration .ffsStops {
+    font-size: 13px;
+}
+
+.ffsDuration .ffsStops {
+    font-size: 10px;
+}
+
+.ffsDtlFlight .ffsDuration .flightLine {
+    margin-bottom: 10px;
+}
+
+.ffsDtlFlight .ffsFlightName {
+    margin-bottom: 10px;
+}
+
+.ffsItemDtlWrap .ffsLayover {
+    border-top: 1px solid #cdcdcc;
+}
+
+.ffsItemDtlWrap .ffsLayover span {
+    top: -13px;
+    position: relative;
+    display: inline-block;
+    /*color: #f5811d;*/
+    color: #afafaf;
+    background-color: #fffefa;
+}
+.ffsSaveBadgeWrap{
+    position: absolute;
+    top: -1px;
+    right: 0;
+    z-index: 9;
+}
+.ffsSaveBadge {
+    float: left;
+    margin-left: 10px;
+    background-image: url("../../images/deal-label.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    padding-left: 6px;
+    max-height: 15px;
+}
+.ffsSaveBadge img {
+    float: left;
+    margin-top:1px;
+}
+.ffsSaveBadge small {
+    display: inline-block;
+    float: left;
+    background-color: #ffcc66;
+    border: 1px solid #ebb955;
+    border-left: 0px;
+    color: #8a703b;
+    font-size: 9px;
+    line-height: 13px;
+    height: 13px;
+    /*padding-left: 5px;*/
+}
+.seatsCnt{
+    float: left;
+    margin: 0;
+    padding: 2px 8px 4px;
+    font-size: 12px;
+    line-height: 13px;
+    color: #fff;
+    vertical-align: middle;
+    background: #d9534f;
+}
+.ffsFilterNav.navbar {
+    text-transform: none;
+}
+
+.ffsFilterNav .navbar-inner {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #333333;
+    font-style: normal;
+    background-color: #f5f5f5;
+    *background-color: #e6e6e6;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    background-repeat: repeat-x;
+    border: 1px solid #bbbbbb;
+    *border: 0;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-bottom-color: #a2a2a2;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+    filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+    *zoom: 1;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.ffsCardInfo span, .ffsCardInfo small {
+    vertical-align: top;
+}
+
+.ffsCardInfo i {
+    vertical-align: top;
+}
+
+.ffsCardInfo .icon-red-eye {
+    margin-top: 4px;
+}
+
+.ffsFilterNav.navbar .nav > li {
+    border-left: 1px solid #dadada;
+}
+
+.ffsFilterNav.navbar .nav > li > a {
+    padding: 5px 10px;
+    color: #333333;
+    text-transform: none;
+    text-decoration: none;
+    text-shadow: none;
+    font-weight: 700;
+}
+
+.ffsFilterNav.navbar .nav > li:first-child {
+    border-left: 0px;
+}
+
+.ffsFilterNav .navbar-inner {
+    min-height: 30px;
+}
+
+.ffsFilterNav.navbar .btn-link {
+    margin-top: 3px;
+}
+
+.ffsSrchResult .ffsSrchItemsWrap .actDetails{
+    border-color: #CFCFCF;
+}
+.ffsSrchResult .actDetails .ffsItemDtlWrap{
+    background: rgba(0,0,0,.05);
+}
+.actDetails .ffsLayover span{
+    border: 1px solid #ddd;
+}
+
+.detBtmCnt{
+    margin: 10px 0 0;
+    padding: 7px 10px 8px;
+    border-top: 1px solid #ddd;
+    background: #ebebeb;
+    overflow: hidden;
+}
+.dealCnt{
+    clear: both;
+    padding: 0 8px;
+    font-size: 11px;
+    line-height: 14px;
+    color: #777;
+    overflow: hidden;
+}
+.dealBox{
+    display: inline-block;
+    padding: 1px 7px 0 0;
+    font-size: 10px;
+    color: #e89a15;
+    border-radius: 0 8px 8px 0;
+    background: #fef1d9;
+}
+.deal-icon{
+    display: inline-block;
+    margin: -1px 7px 0 0;
+    width: 40px;
+    height: 17px;
+    background: url("../../images/deal-icon.png") no-repeat;
+    vertical-align: middle;
+}
+.dealTripBased{
+    position: absolute;
+    bottom: 7px;
+    padding: 0 6px;
+}
+
+/*new FFS minimum styles*/
+
+.add_to_cart {
+    background: url(../../images/add-to-cart.png) 11px 0 no-repeat;
+    border-left: 1px solid #a3aeb2;
+    display: inline-block;
+    height: 26px;
+    margin: 2px 20px 0 10px;
+    padding-left: 10px;
+    width: 30px;
+
+}
+
+.add_to_cart:hover {
+    background-position: 11px -46px;
+}
+
+.popover {
+    background: #f8f8f8;
+    width: 225px !important;
+    min-height: 300px;
+    padding: 30px;
+}
+
+.popover-inner > h3 {
+    display: none !important;
+}
+
+.popover-content {
+    padding: 0px !important;
+}
+
+.popover_data {
+    display: none;
+    left: -96px;
+    padding: 30px;
+    position: absolute;
+    top: 20px;
+    width: 195px;
+    z-index: 999;
+    /*
+    background: #f8f8f8;
+    border: 1px solid #979797;
+    box-shadow: 0px 1px 5px #979797;
+    -moz-box-shadow: 0px 1px 5px #979797;
+    -webkit-box-shadow: 0px 1px 5px #979797;
+    */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background-color: #ffffff;
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+.popover_data:after, .popover_data:before {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.popover_data:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fff;
+    border-width: 5px;
+    margin-left: -5px;
+}
+.popover_data:before {
+    border-color: rgba(203, 203, 203, 0);
+    border-bottom-color: #cbcbcb;
+    border-width: 6px;
+    margin-left: -6px;
+}
+.popoverCnt{
+    font-size: 12px;
+    color: #000;
+    text-align: left;
+
+}
+.popoverRow{
+    padding: 4px 0px 5px;
+    border-top: 1px dotted #ccc;
+    overflow: hidden;
+}
+.popoverCnt .popoverRow:first-child{
+    border: none;
+}
+.taxCnt{
+    clear: both;
+}
+.taxCntRow{
+    padding: 8px 0px 2px;
+    overflow: hidden;
+}
+.taxFeesCnt a{
+    text-decoration: none;
+}
+.taxFeesCnt .taxCnt{
+    display: none;
+}
+.taxFeesCnt.active .taxAmt{
+    display: none;
+}
+
+.popoverRow .label{
+    margin-top: 5px;
+}
+.boldFont{
+    font-weight: bold;
+}
+.popover_data > table {
+    font-size: 13px;
+}
+
+.popover_data th, td {
+    color: #727272;
+    padding: 8px 0px !important;
+    text-align: left;
+}
+
+.popover_data td.bordered {
+    /*border-bottom: 1px dotted #CCCCCC;*/
+    border-top: 1px dotted #CCCCCC;
+
+}
+
+.popover_data table th, td span {
+    display: block;
+}
+
+.popover_data td a {
+    border-bottom: 1px dotted #CCCCCC;
+    border-top: 1px dotted #CCCCCC;
+    color: #2567A0;
+    display: block;
+    padding: 10px 0;
+}
+
+span.bold {
+    color: #2D2D2D;
+    font-weight: bold;
+}
+
+.fare_breakup {
+    display: inline-block;
+    position: relative;
+}
+
+.fare_breakup .popover_data {
+    padding: 15px 20px;
+}
+
+.fare_breakup .popover_data .corner {
+    width: 20px;
+    height: 15px;
+    background: url(../../images/corner.png) top center no-repeat;
+    top: -9px;
+    left: 106px;
+    position: absolute;
+}
+
+span.gray_label {
+    background: #b8b8b8;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    display: inline-block;
+    margin: auto;
+    padding: 5px 7px;
+}
+
+.ffsBoarding, .ffsDeparture {
+    position: relative;
+}
+
+.panel {
+    background:#e2f6fe;
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.panel.left {
+    box-shadow: 1px 2px 4px #b3b3b3;
+    -moz-box-shadow: 1px 2px 4px #b3b3b3;
+    -webkit-box-shadow: 1px 2px 4px #b3b3b3;
+    -o-box-shadow: 1px 2px 4px #b3b3b3;
+    -ms-box-shadow: 1px 2px 4px #b3b3b3;
+    padding-right: 0px;
+
+}
+
+.panel.right {
+    box-shadow: -1px 2px 4px #b3b3b3;
+    -moz-box-shadow: -1px 2px 4px #b3b3b3;
+    -webkit-box-shadow: -1px 2px 4px #b3b3b3;
+    -o-box-shadow: -1px 2px 4px #b3b3b3;
+    -ms-box-shadow: -1px 2px 4px #b3b3b3;
+    padding-left: 0px;
+}
+
+
+
+
+.flight_bound{
+    height:140px;
+    position:absolute;
+    top:50%;
+    margin-top:-70px;
+}
+
+.flight_bound > div {
+    padding:6px;
+}
+
+.flight_bound span {
+    color: #3e7488;
+    display: block;
+    text-align:center;
+}
+
+
+
+.flight_bound span:first-child {
+    background:url(../../images/outbound_return_sprite.png) no-repeat;
+    height:60px;
+}
+
+.panel.right .flight_bound{left:0px;}
+.panel.left .flight_bound{right:0px;}
+.panel.right .flight_bound span:first-child{background-position:center -73px;}
+.panel.left .flight_bound span:first-child{background-position:center top;}
+
+
+
+
+.ffsSrchResult .ffsBoarding .ffsResultWrap > div:first-child, .ffsSrchResult .ffsDeparture .ffsResultWrap > div:first-child {
+    background-color: #e9f9ff;
+    border: 1px solid #D9D9D9;
+    line-height: 28px;
+    font-size:12px;
+}
+
+
+.ffsItemFltLogo {
+    height: 30px;
+    width: 27px;
+    display: inline-block;
+    float: left;
+    margin:22px 12px 5px 5px;
+}
+
+.badge-warning-gray {
+    background: #ccc;
+}
+
+.flight_bound .arrow-outbound,
+.flight_bound .arrow-return {
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    background-image: url("../../images/arrow_sides.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.flight_bound .arrow-return {
+    background-position: 0 -27px;
+}
+
+.best_fare {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 14px;
+    line-height: 1px;
+}
+
+.best_fare > .title {
+    background: none repeat scroll 0 0 #3080C8;
+    color: #FFFFFF;
+    font-size: 9px;
+    height: 10px;
+    line-height: 9px;
+    padding: 2px 6px 1px;
+}
+
+.best_fare > .corner {
+    background: url(../../images/best_fare_right.png) no-repeat;
+    height: 13px;
+    width: 15px;
+}
+
+.showDetLink{
+    margin: 5px 5px 0 0;
+}
+.showDetLink a{
+    display: inline-block;
+    font-size: 11px;
+    text-decoration: none;
+}
+.showDetLink a:hover{
+    text-decoration: none;
+}
+.showDetLink .hideDet{
+    display: none;
+}
+.showDetLink .active .showDet{
+    display: none;
+}
+.showDetLink .active .hideDet{
+    display: block;
+}
+.commCnt{
+    display: block;
+    margin: 5px 0 0;
+}
+
+/*media queries*/
+@media (min-width: 1200px) {
+    .ffsflightSlider .sliderFlights li {
+        width: 24.87%;
+    }
+
+    .ffsflightSlider .font12,
+    .ffsFlightCard .font12,
+    .ffsFlightCard .text-totallabel,
+    .ffsSrchResult .prevDay,
+    .ffsSrchResult .nxtDay,
+    .ffsResultWrap .font12 {
+        font-size: 12px !important;
+    }
+
+    .ffsflightSlider .font10,
+    .ffsFlightCard .font10,
+    .ffsResultWrap .font10,
+    .ffsItemInfo .ffsStops {
+        font-size: 11px !important;
+    }
+
+    .ffsFlightCard .font8,
+    .ffsResultWrap .font8 {
+        font-size: 9px !important;
+    }
+
+    .ffsFlightCard .font11,
+    .ffsResultWrap .font11 {
+        font-size: 12px !important;
+    }
+
+    .ffsFlightCard .font22 {
+        font-size: 23px !important;
+    }
+
+
+
+}
+
+@media (min-width: 980px)  and (max-width: 1199px) {
+    .ffsflightSlider .sliderFlights li {
+        width: 24.83%;
+    }
+    .ffsItemFltLogo{
+        margin: 22px 14px 5px 10px;
+    }
+    .ffsSrchItem .ffsDuration .flightLine{width:55px;}
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .ffsflightSlider .sliderFlights li {
+        width: 24.79%;
+    }
+
+    .ffsSrchItem .ffsItemInfo .font13 {
+        font-size: 12px !important;
+    }
+
+    .flight_bound {
+        padding: 5%;
+    }
+    .flight_bound .font20 {
+        font-size: 17px!important;
+    }
+    .flight_bound .arrow-outbound,
+    .flight_bound .arrow-return {
+        vertical-align: middle;
+    }
+    .ffsSrchItem .ffsDuration .flightLine{width:55px;}
+}
+
+/*@media (max-width: 767px) {*/
+/*.ffsSrchItem .ffsItemInfo .font13 {*/
+/*font-size: 12px !important;*/
+/*}*/
+
+/*.span9.ffsBoarding, .span9.ffsDeparture {*/
+/*float: left;*/
+/*width: 74.30939226519337%;*/
+/*}*/
+
+/*.span3.ffsBoarding.closed, .span3.ffsDeparture.closed {*/
+/*float: left;*/
+/*width: 22.92817679558011%;*/
+/*}*/
+
+/*.span3.ffsBoarding.closed {*/
+/*margin-right: 2.7624309392265194% !important;*/
+/*}*/
+
+/*.span3.ffsDeparture.closed {*/
+/*margin-left: 2.7624309392265194% !important;*/
+/*}*/
+
+/*.flight_bound {*/
+/*padding: 5%;*/
+/*}*/
+
+/*}*/
+
+
+
+
+/* ------------------------ new changes for legbase view ------------------------------ */
+.icon_cart{padding:4px 8px !important;}
+
+.icon_cart > i{
+    display:block;
+    padding:10px 15px;
+    background:url(../../images/icon_cart.png) center center no-repeat;
+}
+
+.label.dark{background:#575757;}
+.label.light{background:#bdbdbd;}
+
+
+.btn-warning.dark-grad{
+    background: rgb(252,175,42); /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZjYWYyYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjZjc1MDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  rgba(252,175,42,1) 0%, rgba(207,117,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,175,42,1)), color-stop(100%,rgba(207,117,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(252,175,42,1) 0%,rgba(207,117,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(252,175,42,1) 0%,rgba(207,117,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(252,175,42,1) 0%,rgba(207,117,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(252,175,42,1) 0%,rgba(207,117,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcaf2a', endColorstr='#cf7500',GradientType=0 ); /* IE6-8 */
+}
+
+
+.btn-warning.dark-grad:hover{
+    background: rgb(247,163,17); /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3YTMxMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjNjZhMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  rgba(247,163,17,1) 0%, rgba(198,106,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(247,163,17,1)), color-stop(100%,rgba(198,106,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(247,163,17,1) 0%,rgba(198,106,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(247,163,17,1) 0%,rgba(198,106,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(247,163,17,1) 0%,rgba(198,106,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(247,163,17,1) 0%,rgba(198,106,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7a311', endColorstr='#c66a00',GradientType=0 ); /* IE6-8 */
+}
+
+
+.cstWarningBtn, .warningRight{
+    display: inline-block;
+    padding: 4px 14px;
+    margin-bottom: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: top;
+}    
+.cstWarningBtn{
+    border: solid 1px #d1790f;
+    border-radius: 4px 0 0 4px;
+    background: transparent;
+    background-color: #f09e2f;
+    -webkit-box-shadow: inset 1px 2px rgba(255,255,255,.25);
+    -moz-box-shadow: inset 1px 2px rgba(255,255,255,.25);
+    box-shadow: inset 1px 2px rgba(255,255,255,.25);
+    background-image: -webkit-linear-gradient(bottom, #f26f0e, #ffa000);
+    background-image: -moz-linear-gradient(bottom, #f26f0e, #ffa000);
+    background-image: -o-linear-gradient(bottom, #f26f0e, #ffa000);
+    background-image: linear-gradient(to top, #f26f0e, #ffa000);
+    filter: none;
+}
+.cstWarningBtn:hover{
+    background-color: #ee9707;
+    box-shadow: inset 1px 2px rgba(255,255,255,.25);
+    background-image: -webkit-linear-gradient(bottom, #ce5d0a, #ee9707);
+    background-image: -moz-linear-gradient(bottom, #ce5d0a, #ee9707);
+    background-image: -o-linear-gradient(bottom, #ce5d0a, #ee9707);
+    background-image: linear-gradient(to top, #ce5d0a, #ee9707);
+    -webkit-box-shadow: inset 1px 2px rgba(255,255,255,.25);
+    -moz-box-shadow: inset 1px 2px rgba(255,255,255,.25);
+}
+.warningRight{
+    border: solid 1px #ca6f09;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    background: transparent;
+    background-color: #f98a13;
+    -webkit-box-shadow: inset 1px 2px rgba(255,255,255,.25);
+    -moz-box-shadow: inset 1px 2px rgba(255,255,255,.25);
+    box-shadow: inset 1px 2px rgba(255,255,255,.25);
+    background-image: -webkit-linear-gradient(bottom, #f98a13, #ffc34e);
+    background-image: -moz-linear-gradient(bottom, #f98a13, #ffc34e);
+    background-image: -o-linear-gradient(bottom, #f98a13, #ffc34e);
+    background-image: linear-gradient(to top, #f98a13, #ffc34e);
+    filter: none;
+}
+.warningRight:hover{
+    background-color: #d5740d;
+    box-shadow: inset 1px 2px rgba(255,255,255,.25);
+    background-image: -webkit-linear-gradient(bottom, #d5740d, #f2b030);
+    background-image: -moz-linear-gradient(bottom, #d5740d, #f2b030);
+    background-image: -o-linear-gradient(bottom, #d5740d, #f2b030);
+    background-image: linear-gradient(to top, #d5740d, #f2b030);
+    -webkit-box-shadow: inset 1px 2px rgba(255,255,255,.25);
+    -moz-box-shadow: inset 1px 2px rgba(255,255,255,.25);
+}
+
+
+
+
+.text-heading > .span3{width: 24%; }
+.text-heading > .span3 > span	{background:url(../../images/sorting-arrow.png) right center no-repeat; width:auto; display:inline-block; float:left; padding-right:6px; padding-left:2px;}
+.top-ffs-filter{display:none;}
+@media screen and (max-device-width: 1100px) {
+    .text-heading > .span3{width: 29%;}
+    .text-heading > .span5{width: 35%;}
+}
+
+@media screen and (max-device-width: 1024px) {
+    .ffsItemFltLogo{margin: 22px 13px 5px 7px;}
+    /*.ffsItemInfo > .span6{width: 56%;}*/
+    /*.ffsItemInfo > .span3{width: 19%;}*/
+    .ffsSrchItem .ffsDuration .flightLine {width: 85px;}
+    .ffsSrchItem .ffsDuration .icon-red-eye{left: 32%;}
+    .text-heading.span6{width: 55%;}
+    .text-heading.span3{width: 19%;}
+
+    .text-heading > .span3{width: 25%;}
+    .text-heading > .span4 span{text-align:center;}
+    .text-heading > .span5{width: 36%;}
+    .full-page-view > div.span3{display:none;}
+    .top-ffs-filter{display:block;}
+}
+
+@media screen and (max-device-width: 950px) {
+    .ffsSrchItem .ffsDuration .flightLine {width: 45px;}
+}
+
+.table-heading{border:1px solid  #d9d9d9;}
+
+.table-heading > div.text-heading{padding:4px 0px;	min-height:0px !important;}
+
+.table-heading > div.text-heading > div{min-height:0px !important;}
+
+.table-heading > div.text-heading > span,
+.table-heading > div.text-heading > div > span{
+    color:#006699;
+    font-size:11px;
+
+}
+
+
+/* ------------------------ new changes for divider view ------------------------------ */
+.ffs-divider .text-heading > .span3{width: 17%; }
+.ffs-divider .text-heading > .span3 > span	{background:url(../../images/sorting-arrow.png) right center no-repeat; width:auto; display:inline-block; float:left; padding-right:6px; padding-left:2px;}
+.ffs-divider .ffsItemFltLogo{ margin: 22px 27px 5px 5px;}
+.ffs-divider .ffsSrchItem .ffsDuration .flightLine {width: 215px;}
+.ffsItemDtlWrap .span4.ffsDtlCol .ffsDuration .flightLine {width: 215px;}
+@media screen and (max-device-width: 1200px) {
+    .ffs-divider .text-heading > .span3{width: 24%;}
+    .ffs-divider .ffsSrchItem .ffsDuration .flightLine {width: 164px;}
+    .ffsItemDtlWrap .span4.ffsDtlCol .ffsDuration .flightLine {width: 185px;}
+}
+
+@media screen and (max-device-width: 1100px) {
+    .ffs-divider .text-heading > .span3{width: 24%;}
+    .ffs-divider .text-heading > .span5{width: 41%;}
+    .ffs-divider .ffsSrchItem .ffsDuration .flightLine {width: 165px;}
+}
+
+@media screen and (max-device-width: 1025px) {
+    .ffs-divider .text-heading > .span3{width: 18%;}
+    .ffs-divider .ffsItemFltLogo{margin: 22px 19px 5px 7px;}
+    .ffs-divider .ffsSrchItem .ffsDuration .icon-red-eye{left: 37%;}
+    .ffs-divider .ffsSrchItem .ffsDuration .flightLine {width: 135px;}
+    .ffsItemDtlWrap .span4.ffsDtlCol .ffsDuration .flightLine {width: 190px;}
+
+}
+
+/* ------------------------ crowsel view ------------------------------ */
+
+.multi-flight-view .ffs-divider .text-heading > .span3{width: 22%; padding-left:3px; }
+.multi-flight-view .ffs-divider .ffsSrchItem .ffsDuration .flightLine {width: 60px;}
+.multi-flight-view .ffs-divider .ffsItemFltLogo{ margin: 22px 20px 5px 5px;}
+
+@media screen and (max-device-width: 1200px) {
+    .multi-flight-view .ffs-divider .text-heading > .span3{width: 27%; }
+    .multi-flight-view .ffs-divider .ffsSrchItem .ffsDuration .flightLine {width: 35px;}
+}
+
+@media screen and (max-device-width: 1025px) {
+    .multi-flight-view .font14{font-size:12px;}
+    .multi-flight-view .ffs-divider .text-heading > .span3{width: 26%; }
+    .multi-flight-view .ffs-divider .ffsSrchItem .ffsDuration .flightLine {width: 90px;}
+}
+
+@media screen and (max-device-width: 980px) {
+    .multi-flight-view .ffs-divider .ffsSrchItem .ffsDuration .flightLine {width: 45px;}
+}
+
+
+.number-count{
+    display:inline-block;
+    margin-right:10px;
+    min-width:20px;
+    text-align:center;
+    font-size:12px;
+    background:#ccdce2;
+    color:#030303;
+    font-weight:bold;
+    line-height:15px;
+    padding:2px;
+    box-shadow:0px 0px 4px #a7a7a7 inset;
+    -moz-box-shadow:0px 0px 4px #a7a7a7 inset;
+    -webkit-box-shadow:0px 0px 4px #a7a7a7 inset;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    text-shadow: 0 1px #fff;
+    -moz-text-shadow: 0 1px #fff;
+}
+
+i.divider{
+    display:block;
+    margin:0 auto;
+    width:2px;
+    background-color:#ececec !important;
+    height:50px;
+}
+
+.stickey .cardTop {background-image:none; background-color:#fff;}
+
+.owl-theme .owl-controls .owl-buttons div{
+    background:RGBA(0,0,0,0.3) url(../../images/left-right-nav.png) no-repeat !important;
+    position:absolute !important;
+    margin:-15px 0 0 0px !important;
+    height:30px;
+    width:15px;
+    top:50% !important;
+
+}
+
+.owl-theme .owl-controls .owl-buttons div:hover{opacity:0.8 !important;}
+
+.owl-theme .owl-controls .owl-buttons div:first-child{
+    background-position:6px center !important;
+    left:5px !important;
+    border-radius:0 50% 50% 0 !important;
+    -moz-border-radius:0 50% 50% 0 !important;
+    -webkit-border-radius:0 50% 50% 0 !important;
+}
+
+.owl-theme .owl-controls .owl-buttons div:last-child{
+    background-position:-19px center !important;
+    right:5px !important;
+    border-radius:50% 0 0 50% !important;
+    -moz-border-radius:50% 0 0 50% !important;
+    -webkit-border-radius:50% 0 0 50% !important;
+}
+
+/* baggage policy table */
+.baggageTable{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.baggageTable li{
+    margin: 0 0 20px 20px;
+    padding: 0;
+    list-style: none;
+}
+.baggageTable .imgBox{
+    display: inline-block;
+    margin: 0 10px 0 0;
+    width: 40px;
+}
+.baggageTable .imgBox img{
+    max-width: 100%;
+}
+.baggageTable a{
+    display: inline-block;
+}
+
+/* ---------------- trip-base-view ---------------------------- */
+.trip-base-view .text-heading span{float:none;}
+.trip-base-view .text-heading .span4{width: 29%; padding-left:10px; }
+.trip-base-view .text-heading .span3{width: 24%; padding-left:10px; }
+.trip-base-view .text-heading .span4:first-child span{background: url("../../images/sorting-arrow.png") no-repeat scroll 38px center rgba(0, 0, 0, 0); }
+.trip-base-view .text-heading .span3 span{background-image:none !important; }
+.trip-base-view .ffsItemFltLogo{ margin: 0px 20px 5px 5px;}
+.trip-base-view .ffsSrchItemsWrap {
+    border:1px solid #eeeeee !important;
+}
+.trip-base-view .ffsSrchItemsWrap:hover{
+    border:1px solid #cfcfcf !important;
+}
+.trip-base-view .ffsSrchItemsWrap:last-child{margin-bottom:0px !important;}
+
+.trip-base-view .ffsSrchItem:hover .ffsItemInfo{background-image:none;}
+.trip-base-view .ffsItemInfo-heading{padding:33px 0px;}
+.trip-base-view .ffsItemInfo-heading.active{background:#fffce7; border-bottom:1px solid #d7d6d3;}
+.trip-base-view .ffsItemDtlWrap{border:0px none !important;}
+
+.trip-base-view .ffsSrchItemsWrap .ffsSrchItem{border:none;}
+.trip-base-view .wrap-dtls .ffsItemDtlWrap{border-right:1px solid #e9e9e9 !important; margin-right: -1px;}
+.trip-base-view .ffsSrchItem .ffsDuration .flightLine{ width:95px;}
+.trip-base-view .tripbase.ffsSaveBadge{
+    position:absolute;
+    right:0px;
+    top:0px;
+}
+.trip-base-view table td{padding:4px 0 5px 0px !important;vertical-align:top;}
+
+.trip-base-view span.fare-breakup{
+    cursor:pointer;
+    background:url(../../images/icon-plus-min.png) right 5px no-repeat;
+    padding-right:15px;
+}
+
+.trip-base-view span.fare-breakup.open{
+    background-position:right -9px;
+}
+.trip-base-view .ffsSrchItem .span3.w245{width:24.5%;}
+.trip-base-view .border-b-dotted{border-bottom:dotted 1px #cccccc;}
+
+.trip-base-view .detBtmCnt{
+    border-top: 1px solid #dfdfdf;
+}
+.tripbased-heading{
+    background: #fff !important;
+}
+.tripbased-heading div.text-heading{
+    padding: 0;
+}
+.fare-breakup-active .showHideTax{
+    display: none;
+}
+.fare-breakup-active .fare-breakup{
+    border-bottom: none;
+}
+
+@media screen and (max-device-width: 1200px) {
+    .trip-base-view .text-heading .span4{width: 28%;}
+    .trip-base-view .text-heading .span3{width: 24%; }
+    .trip-base-view .text-heading .span3 span{background-image:none !important; }
+}
+@media screen and (max-device-width: 1024px) {
+    .trip-base-view .text-heading .span4{text-align:left; }
+
+}
+@media (min-width: 768px) and (max-width: 979px){
+    .ffsSrchItem .ffsDuration .flightLine {
+        width: 30px;
+    }
+    .actDetails .ffsDuration .flightLine {
+        width: 45px;
+    }
+
+}
+
+
+
+

@@ -1,0 +1,614 @@
+/*------------------------TemplateList START---------------------------*/
+.code-container {
+    border: solid thin lightgray;
+    background: white;
+}
+
+.border-container {
+    padding: 5px 0px;
+    margin: 25px 0px;
+    border: solid thin lightgrey;
+    border-width: 1px 0px 0px 0px;
+}
+
+.strip-loader {
+    background: url(../../../images/common/throbber.gif) no-repeat;
+    width: 128px;
+    height: 16px;
+}
+
+.crossBtn {
+    background-color: rgb(255, 255, 255);
+}
+
+.strip-item:focus {
+    background-color: white;
+    transition-duration: 1s;
+}
+
+/**style for height of keywords area in template listing*/
+.keywords-textarea-height {
+    height: 300px !important;
+}
+
+/*------------------------TemplateList ENDS----------------------------*/
+/*---------------------------------------------------------------------*/
+
+.no-image-selected {
+    background-image: url('../../../images/common/img_notthing_selected.gif');
+    background-repeat: no-repeat;
+    height: 70px;
+}
+
+/*---------------------------------------------------------------------*/
+/*-----------------------Watermark START----------------------------*/
+.placeholder {
+    color: gray;
+}
+
+/*-----------------------Watermark END----------------------------*/
+/*hack to render google map controls properly while bootstrap is on page START*/
+.hotel-dtl-map-canvas {
+    height: 500px;
+}
+
+.gmap-canvas img {
+    max-width: none;
+}
+
+/*hack to render google map controls properly while bootstrap is on page END*/
+
+/* Autosuggest loader image styles START*/
+input[type="text"].loader {
+    background: url(../../../images/common/textbox_loader.gif) no-repeat 99% center;
+    background-color: white;
+}
+
+/* Autosuggest loader image styles END*/
+
+/**Sticking footer to the bottom of the page.*/
+html, body, form {
+    height: 100%;
+}
+
+/*Fix for template editor showing scroll in firefox when editor is opened as margin-bottom was applied by bootstrap*/
+body > form {
+    margin-bottom: 0px;
+}
+
+#ucPWP_AP {
+    height: 100%;
+}
+
+#pageWrapper, #wrap-map-view {
+    min-height: 100%;
+    position: relative;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: auto !important;
+}
+
+/*footer section ends*/
+
+/**styles forhotel results overlay    */
+.overlay {
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.loader-centered {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    margin-left: -20px;
+}
+
+.preloader {
+    margin: 0px auto;
+    display: inline-block;
+    background: url(../../../images/common/img_loading_small.gif) no-repeat;
+    width: 60px;
+    height: 60px;
+    background-position: center;
+}
+
+.loader-centered-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    padding: 30% 0;
+    text-align: center;
+}
+
+/**overlay style ends*/
+
+/*cancellation policy START */
+.gap {
+    line-height: 5px;
+    height: 5px;
+}
+
+/*cancellation policy END */
+/* Hotel search START */
+
+.hotel-room-bar {
+    background-color: #f9f9f9;
+    background-image: -o-linear-gradient(180deg, rgb(239, 242, 244) 0%, rgb(250, 250, 250) 100%);
+    background-image: -moz-linear-gradient(180deg, rgb(239, 242, 244) 0%, rgb(250, 250, 250) 100%);
+    background-image: -webkit-linear-gradient(180deg, rgb(239, 242, 244) 0%, rgb(250, 250, 250) 100%);
+    background-image: -ms-linear-gradient(180deg, rgb(239, 242, 244) 0%, rgb(250, 250, 250) 100%);
+    background-image: linear-gradient(180deg, rgb(239, 242, 244) 0%, rgb(250, 250, 250) 100%);
+    border-bottom: 0px solid #CCC;
+}
+
+/*Hotel search END*/
+
+/* Button loading style START */
+.processing-primary {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-left: 3px;
+    background-image: url(../../../images/common/processing-primary.gif);
+}
+
+.processing-secondary {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-left: 3px;
+    background-image: url(../../../images/common/processing-secondary.gif);
+}
+
+/* Button loading style END */
+
+/*custom css for the sticky searchCriteria*/
+.floatElement {
+    z-index: 1;
+    background-color: white;
+}
+
+/*Hotel results map view modal pop up css overrides [START]*/
+.mapViewPopUp.modal {
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 99% !important;
+    margin: 0px !important;
+}
+
+/*Hotel results map view modal pop up css overrides [END]*/
+
+.cluster {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.map-view-utility-box {
+    height: auto !important;
+    background-color: #333333;
+}
+
+/*Hotel results map view modal pop up css overrides [END]*/
+.carousel img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Max-Height Remover */
+.max-height-no {
+    max-height: none !important;
+}
+
+.ember-row .ember-span:first-of-type {
+    margin-left: 0px;
+}
+
+.jmap-tabs-container {
+    width: 7000px;
+}
+
+/*Deals carousel styles override as creative team has set styles for id but we need for classes*/
+.hotel-carousel-nav {
+    text-align: center;
+}
+
+.hotel-carousel-nav a {
+    margin: 5px 0px;
+    background-image: url("../../../images/common/common-sprite.png");
+    background-position: 0px -1470px;
+    width: 16px;
+    height: 16px;
+    color: #000;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.hotel-carousel-nav a.current {
+    margin: 5px 0px;
+    background-image: url("../../../images/common/common-sprite.png");
+    background-position: 0px -1444px;
+    width: 16px;
+    height: 16px;
+}
+
+.destination-carousel.carousel {
+    margin-bottom: 9px !important;
+}
+
+.lineHeight2 {
+    line-height: 2;
+}
+
+.inline-blk {
+    display: inline-block;
+}
+
+.hover-view .hover-visible {
+    opacity: 0;
+}
+
+.hover-view:hover .hover-visible {
+    opacity: 0.7;
+}
+
+.hover-visible:hover {
+    opacity: 1 !important;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.single-line-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* feedback btn css starts */
+#feedback-btn {
+    background: url(../../../images/common/feedback_icon.png) center no-repeat;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 101px;
+    right: 0;
+    margin-right: -4px;
+    overflow: hidden;
+    position: fixed;
+    text-indent: -100000px;
+    bottom: 20%;
+    margin-top: 10px;
+    width: 27px;
+    z-index: 100001;
+    border: 2px solid lightslategrey;
+}
+
+#feedback-btn:hover, #feedback-btn:active {
+    background: url(../../../images/common/feedback_icon_hover.png) center no-repeat;
+    border: 2px solid black;
+}
+
+.feedback-model {
+    max-height: 409px !important;
+}
+
+.accordion-group.active .icon-chevron-right {
+    background-position: -313px -119px;
+}
+
+.dropdown-menu > li > a:hover > .t-icon-city-marker,
+.dropdown-menu > li > a:active > .t-icon-city-marker {
+    background-position: 0px -2043px;
+    background-repeat: no-repeat;
+}
+
+@keyframes domChanged {
+    from {
+        background: yellow;
+    }
+}
+
+@-webkit-keyframes domChanged {
+    from {
+        background: yellow;
+    }
+}
+
+.ember-view.dom-animation {
+    animation: domChanged 1s;
+    -webkit-animation: domChanged 1s;
+}
+
+/*repeating this css because core-style applies styles on id but we needed on class*/
+/* css added for scroll bar on activities page*/
+.scrollbox2 {
+    overflow: auto;
+    height: 200px;
+    padding: 0px;
+}
+
+.vertical-track2 {
+    width: 17px;
+    background: #e4e6e3;
+    border: 1px solid #dfdfdd;
+}
+
+.scrollbox2 ul {
+    width: 5000px;
+}
+
+.scrollbox2 ul li {
+    float: left;
+    list-style: none;
+}
+
+.vertical-handle2 {
+    width: 17px;
+}
+
+.vertical-handle3 .top {
+    width: 17px;
+    height: 17px;
+    background: url(http://enscrollplugin.com/images/green-vert-scrollbar.png) no-repeat;
+}
+
+.vertical-handle2 .bottom {
+    width: 17px;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    clip: rect(17px 17px 9999px 0);
+    background: url(http://enscrollplugin.com/images/green-vert-scrollbar.png) no-repeat 0 bottom;
+}
+
+.horizontal-track2 {
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: #e4e6e3;
+    border: 1px solid #dfdfdd;
+}
+
+.horizontal-handle2 {
+    height: 10px;
+}
+
+.horizontal-handle2 .left {
+    width: 15px;
+    border-radius: 5px;
+    height: 8px;
+    background: #000;
+}
+
+.horizontal-handle2 .right {
+    width: 100%;
+    height: 8px;
+    position: absolute;
+    right: 0;
+    border-radius: 5px;
+    top: 0;
+    clip: rect(0 9999px 17px 17px);
+    background: #000;
+}
+
+.corner2 {
+    width: 17px;
+    height: 17px;
+    background: #e4e6e3;
+    border: 1px solid #dfdfdd;
+}
+
+/* css added for scroll bar on activities page*/
+.pv50 {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+}
+
+/* css added for scroll bar on activities page*/
+
+/*css for counter*/
+.id-counter {
+    counter-reset: vc_id_counter;
+}
+
+.id-counter .vc-counter {
+    counter-increment: vc_id_counter;
+}
+
+.id-counter .vc-counter:before {
+    content: counter(vc_id_counter);
+}
+
+/*override to remove opacity change on image hover in profile*/
+.thumbnail img {
+    opacity: 1;
+}
+
+.width-236px {
+    width: 236px !important
+}
+
+.height-140px {
+    height: 140px !important;
+}
+
+.icon-mobile {
+    background: url(../../../images/common/icon-mobile.png) no-repeat;
+    height: 32px;
+    width: 32px;
+}
+
+.icon-tablet {
+    background: url(../../../images/common/icon-tablet.png) no-repeat;
+    height: 32px;
+    width: 32px;
+}
+
+.icon-desktop {
+    background: url(../../../images/common/icon-desktop.png) no-repeat;
+    height: 32px;
+    width: 32px;
+}
+
+.icon-all-devices {
+    background: url(../../../images/common/icon-all-devices.png) no-repeat;
+    height: 32px;
+    width: 32px;
+}
+
+
+/* to remove cross icon from input types in  IE10*/
+INPUT::-ms-clear
+{
+width : 0;
+height: 0;
+}
+
+
+
+/*Custom css for embed on plug and play widget. loader for iframe*/
+
+/* embed css used by nxt*/
+
+.embed-video
+        {
+            background: none repeat scroll 0 0 #CCCCCC;
+            display: block;
+            position: absolute;
+            z-index: 1000;
+        }
+        .embed-video-content
+        {
+            padding: 20px;
+        }
+        .embed-video h2
+        {
+            float: left;
+            margin-bottom: 0;
+            width: 50%;
+        }
+        .embed-video .type-toggle
+        {
+            float: right;
+            width: 50%;
+        }
+        .embed-video .type-toggle li
+        {
+            display: block;
+            float: right;
+        }
+        .embed-video .type-toggle a
+        {
+            /*background: none repeat scroll 0 0 #333333;*/
+            background: #f5f5f5;
+            display: block;
+            float: left;
+            font-size: 11px;
+            font-weight: normal;
+            margin: 2px 1px;
+            padding: 0.25em 0.5em;
+        }
+        .embed-video .type-toggle a.selected
+        {
+            background: none repeat scroll 0 0 #FFFFFF;
+            color: #333333;
+            cursor: text;
+            font-weight: bold;
+        }
+        .embed-video p
+        {
+            font-size: 95%;
+        }
+        .embed-video .embed-code
+        {
+            font-size: 100%;
+            height: 190px;
+            margin-bottom: 0.5em;
+            width: 99%;
+            cursor:auto;
+        }
+        .embed-video a.cl
+        {
+            background: url("../../../images/common/ui-icons_ffffff_256x240.png") no-repeat scroll -80px -128px transparent;
+            display: block;
+            height: 16px;
+            position: absolute;
+            right: 4px;
+            text-indent: -9999em;
+            top: 2px;
+            width: 16px;
+        }
+
+         .rounded, .rounded a, .rounded span, .button, .button a, .button span
+        {
+            border-radius: 6px 6px 6px 6px;
+        }
+        
+        
+ .video-options {
+    clear: both;
+    float: left;
+    margin: 1px 0 0;
+    width: 512px;
+}
+
+.video-options li > a.embed {
+    float: right;
+}
+
+.video-options li > a {
+    background: url("../../../images/common/bg-translucent-black.png") repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-family: 'Calibri','Lucida Grande',Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    margin-left: 1px;
+    padding: 0.25em 0.5em;
+}
+
+.iframeLoader{
+   position:absolute;
+   left:25%;
+   top:35%;
+   border-radius:20px;
+   padding:15px;
+   border:1px solid #777777;
+   background:#ffffff;
+   box-shadow:0px 0px 10px #777777;
+}
+
+.cursor-auto{
+    cursor:auto !important;
+}
+
+.seatmap-holder{
+    border-top:1px solid #B8B8B8;
+	background: #f5f5f5;
+	margin-top:10px;
+}
+
+
+.vertical-scroll{
+    overflow:auto;
+    height:150px;
+}
+

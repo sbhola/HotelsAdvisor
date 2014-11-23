@@ -1,0 +1,133 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelsAdvisor", "HotelAdvisor\HotelsAdvisor.csproj", "{3F87C1F8-D6CC-4CB1-9A4F-7605AB1AB61C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelsAdvisorService", "HotelsAdvisorService\HotelsAdvisorService\HotelsAdvisorService.csproj", "{ACAD49E8-C9E5-47C9-B653-ECC85D2A3E65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElasticSearch", "ElasticSearch\ElasticSearch.csproj", "{DFDD8FDD-D17A-4E10-A506-A68BF7EF396B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelsAdvisorServiceFixtures", "HotelsAdvisorServiceFixtures\HotelsAdvisorServiceFixtures.csproj", "{6C3A22AD-9FAF-4C2E-B68D-65DD8886CAD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutocompleteData", "AutocompleteData\AutocompleteData.csproj", "{96AA523D-E361-4A5D-BF5D-1AD2CABD8620}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelAdvisor.Dal", "HotelAdvisor.Dal\HotelAdvisor.Dal.csproj", "{7AC8F992-CFCB-4E4E-98A8-DDD824B6F3A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelAdvisor.Interfaces", "HotelAdvisor.Interfaces\HotelAdvisor.Interfaces.csproj", "{AF77EC81-70DE-4B4C-9887-5059193D6F7E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Model", "1. Model", "{D8E6A890-7463-4DAA-861D-70B0565D36AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. API", "2. API", "{5DA5AC0B-2CD4-4221-99D6-1E61C7928E2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelAdvisor.BLL.Model", "HotelAdvisor.BLL.Model\HotelAdvisor.BLL.Model.csproj", "{26565C24-8BA1-4201-9960-40C7F20F3169}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Host", "3.Host", "{6D479026-BB4E-41B6-915D-288E724C95FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Service", "4.Service", "{0E3DCFC7-DB68-4198-9F78-E3BDE65DB5DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.Test", "5.Test", "{B4DD3F1C-17E9-44F6-854A-AE4762B86403}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelAdvisor.Services.DataContracts", "HotelAdvisor.Services.DataContracts\HotelAdvisor.Services.DataContracts.csproj", "{F01662E2-57D1-4CE0-B06D-5A0A3294C055}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelAdvisor.Services.ServiceContracts", "HotelAdvisor.Services.ServiceContracts\HotelAdvisor.Services.ServiceContracts.csproj", "{7550E1F8-901D-44C3-BD15-B0590BBC4563}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElasticSearchFixtures", "ElasticSearchFixtures\ElasticSearchFixtures.csproj", "{F4D395F2-8566-40F9-85FE-BFC77B6A7D3A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{FED19DED-C8A3-401E-8500-4CE0994F572E}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoteladvisorUIAutomation", "HoteladvisorUIAutomation\HoteladvisorUIAutomation.csproj", "{A8D48A4B-22AA-46A7-91E4-A8287051C220}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E6CCF15A-4445-4353-90C9-3BEBDA28A430}"
+	ProjectSection(SolutionItems) = preProject
+		HotelsAdvisor.vsmdi = HotelsAdvisor.vsmdi
+		Local.testsettings = Local.testsettings
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{1F8F482F-C881-4648-A93A-564E0F913B75}"
+	ProjectSection(SolutionItems) = preProject
+		References\AppacitiveLoggingFramework\AppacitiveAutomationFramework.dll = References\AppacitiveLoggingFramework\AppacitiveAutomationFramework.dll
+		References\AppacitiveLoggingFramework\Selenium.WebDriverBackedSelenium.dll = References\AppacitiveLoggingFramework\Selenium.WebDriverBackedSelenium.dll
+		References\AppacitiveLoggingFramework\Tavisca.Testing.Platform.dll = References\AppacitiveLoggingFramework\Tavisca.Testing.Platform.dll
+		References\AppacitiveLoggingFramework\ThoughtWorks.Selenium.Core.dll = References\AppacitiveLoggingFramework\ThoughtWorks.Selenium.Core.dll
+		References\AppacitiveLoggingFramework\WebDriver.dll = References\AppacitiveLoggingFramework\WebDriver.dll
+		References\AppacitiveLoggingFramework\WebDriver.Support.dll = References\AppacitiveLoggingFramework\WebDriver.Support.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = HotelsAdvisor.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F87C1F8-D6CC-4CB1-9A4F-7605AB1AB61C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F87C1F8-D6CC-4CB1-9A4F-7605AB1AB61C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F87C1F8-D6CC-4CB1-9A4F-7605AB1AB61C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F87C1F8-D6CC-4CB1-9A4F-7605AB1AB61C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACAD49E8-C9E5-47C9-B653-ECC85D2A3E65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACAD49E8-C9E5-47C9-B653-ECC85D2A3E65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACAD49E8-C9E5-47C9-B653-ECC85D2A3E65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACAD49E8-C9E5-47C9-B653-ECC85D2A3E65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFDD8FDD-D17A-4E10-A506-A68BF7EF396B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFDD8FDD-D17A-4E10-A506-A68BF7EF396B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFDD8FDD-D17A-4E10-A506-A68BF7EF396B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFDD8FDD-D17A-4E10-A506-A68BF7EF396B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C3A22AD-9FAF-4C2E-B68D-65DD8886CAD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C3A22AD-9FAF-4C2E-B68D-65DD8886CAD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C3A22AD-9FAF-4C2E-B68D-65DD8886CAD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C3A22AD-9FAF-4C2E-B68D-65DD8886CAD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96AA523D-E361-4A5D-BF5D-1AD2CABD8620}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96AA523D-E361-4A5D-BF5D-1AD2CABD8620}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96AA523D-E361-4A5D-BF5D-1AD2CABD8620}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96AA523D-E361-4A5D-BF5D-1AD2CABD8620}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AC8F992-CFCB-4E4E-98A8-DDD824B6F3A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AC8F992-CFCB-4E4E-98A8-DDD824B6F3A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AC8F992-CFCB-4E4E-98A8-DDD824B6F3A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AC8F992-CFCB-4E4E-98A8-DDD824B6F3A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF77EC81-70DE-4B4C-9887-5059193D6F7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF77EC81-70DE-4B4C-9887-5059193D6F7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF77EC81-70DE-4B4C-9887-5059193D6F7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF77EC81-70DE-4B4C-9887-5059193D6F7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26565C24-8BA1-4201-9960-40C7F20F3169}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26565C24-8BA1-4201-9960-40C7F20F3169}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26565C24-8BA1-4201-9960-40C7F20F3169}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26565C24-8BA1-4201-9960-40C7F20F3169}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F01662E2-57D1-4CE0-B06D-5A0A3294C055}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F01662E2-57D1-4CE0-B06D-5A0A3294C055}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F01662E2-57D1-4CE0-B06D-5A0A3294C055}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F01662E2-57D1-4CE0-B06D-5A0A3294C055}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7550E1F8-901D-44C3-BD15-B0590BBC4563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7550E1F8-901D-44C3-BD15-B0590BBC4563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7550E1F8-901D-44C3-BD15-B0590BBC4563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7550E1F8-901D-44C3-BD15-B0590BBC4563}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4D395F2-8566-40F9-85FE-BFC77B6A7D3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4D395F2-8566-40F9-85FE-BFC77B6A7D3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4D395F2-8566-40F9-85FE-BFC77B6A7D3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4D395F2-8566-40F9-85FE-BFC77B6A7D3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8D48A4B-22AA-46A7-91E4-A8287051C220}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8D48A4B-22AA-46A7-91E4-A8287051C220}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8D48A4B-22AA-46A7-91E4-A8287051C220}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8D48A4B-22AA-46A7-91E4-A8287051C220}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ACAD49E8-C9E5-47C9-B653-ECC85D2A3E65} = {6D479026-BB4E-41B6-915D-288E724C95FF}
+		{3F87C1F8-D6CC-4CB1-9A4F-7605AB1AB61C} = {6D479026-BB4E-41B6-915D-288E724C95FF}
+		{7AC8F992-CFCB-4E4E-98A8-DDD824B6F3A3} = {5DA5AC0B-2CD4-4221-99D6-1E61C7928E2A}
+		{AF77EC81-70DE-4B4C-9887-5059193D6F7E} = {5DA5AC0B-2CD4-4221-99D6-1E61C7928E2A}
+		{DFDD8FDD-D17A-4E10-A506-A68BF7EF396B} = {5DA5AC0B-2CD4-4221-99D6-1E61C7928E2A}
+		{6C3A22AD-9FAF-4C2E-B68D-65DD8886CAD8} = {B4DD3F1C-17E9-44F6-854A-AE4762B86403}
+		{F4D395F2-8566-40F9-85FE-BFC77B6A7D3A} = {B4DD3F1C-17E9-44F6-854A-AE4762B86403}
+		{A8D48A4B-22AA-46A7-91E4-A8287051C220} = {B4DD3F1C-17E9-44F6-854A-AE4762B86403}
+		{26565C24-8BA1-4201-9960-40C7F20F3169} = {D8E6A890-7463-4DAA-861D-70B0565D36AA}
+		{F01662E2-57D1-4CE0-B06D-5A0A3294C055} = {0E3DCFC7-DB68-4198-9F78-E3BDE65DB5DA}
+		{7550E1F8-901D-44C3-BD15-B0590BBC4563} = {0E3DCFC7-DB68-4198-9F78-E3BDE65DB5DA}
+	EndGlobalSection
+EndGlobal

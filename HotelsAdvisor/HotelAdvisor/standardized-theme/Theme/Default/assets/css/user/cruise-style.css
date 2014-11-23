@@ -1,0 +1,954 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #333333;
+
+}
+
+b, strong {
+    font-weight: 700
+}
+
+li, ul {
+    padding: 0;
+    margin: 0;
+    list-style: none
+}
+
+.btn-warning {
+    background-image: none;
+    background-color: #f18722;
+    text-shadow: none;
+}
+
+[class*=wlc-icon-], [class^=wlc-icon-] {
+    display: inline-block;
+    vertical-align: text-top;
+    background-image: url(../../../images/cruise/wlc-sprite.png);
+    background-position: 0 0;
+    background-repeat: no-repeat
+}
+
+.wlc-icon-prev {
+    background-position: 0 0;
+    width: 50px !important;
+    height: 50px
+}
+
+.wlc-icon-nxt {
+    background-position: -51px 0;
+    width: 50px;
+    height: 50px
+}
+
+.wlc-icon-up {
+    background-position: -128px 0;
+    width: 25px;
+    height: 25px
+}
+
+.wlc-icon-down {
+    background-position: -102px 0;
+    width: 25px;
+    height: 25px
+}
+
+.wlc-icon-twitter {
+    background-position: -154px 0;
+    width: 25px;
+    height: 25px
+}
+
+.wlc-icon-picasa {
+    background-position: -180px 0;
+    width: 25px;
+    height: 25px
+}
+
+.wlc-icon-ytube {
+    background-position: -206px 0;
+    width: 25px;
+    height: 25px
+}
+
+.wlc-icon-fb {
+    background-position: -232px 0;
+    width: 25px;
+    height: 25px
+}
+
+.wlc-icon-home {
+    background-position: -154px -27px;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle
+}
+
+.wlc-icon-home:hover {
+    background-position: -180px -27px
+}
+
+.wlc-icon-search {
+    background-position: -206px -27px;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle
+}
+
+.wlc-icon-search:hover {
+    background-position: -232px -27px
+}
+
+.wlc-icon-plus {
+    background-position: -258px 0;
+    width: 15px;
+    height: 15px
+}
+
+.wlc-icon-minus {
+    background-position: -274px 0;
+    width: 15px;
+    height: 15px
+}
+
+.wlc-icon-info {
+    background-position: -258px -26px;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle
+}
+
+header {
+    background-color: #fff;
+    -webkit-box-shadow: 0 9px 6px -6px #949494;
+    -moz-box-shadow: 0 9px 6px -6px #949494;
+    box-shadow: 0 9px 6px -6px #949494;
+    margin-bottom: 100px
+}
+
+#wlcHomePage header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    margin-bottom: 0
+}
+
+.adv-search-panel {
+    min-height: 100px;
+    max-height: 450px;
+}
+
+.nav-wlc, .wlc-search-widget {
+    display: inline-block;
+    margin-bottom: 0;
+    padding-top: 25px;
+    max-height: 37px;
+    vertical-align: top;
+}
+
+.nav-wlc > li {
+    border-left: 1px solid #b7b7b7;
+    position: relative
+}
+
+.nav-wlc > li:first-child {
+    border-left: none
+}
+
+.nav-wlc > li > a {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #666;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 20px;
+    outline: 0
+}
+
+.nav-wlc > li:hover > a {
+    color: #f1892c;
+    background-color: transparent
+}
+
+.nav-wlc li .wlc-icon-search:hover, .nav-wlc > li:hover .wlc-icon-search {
+    background-position: -232px -27px
+}
+
+.nav-wlc li .sub-menu-wrap {
+    display: none;
+    position: absolute;
+    display: table-row;
+    z-index: 9;
+    top: 40px;
+    left: 0;
+    width: 370px;
+    background-color: rgba(0, 0, 0, .9);
+    padding: 25px 25px 15px 0;
+    text-align: left;
+    clear: both;
+    color: #fff
+}
+
+
+.sub-menu-wrap:after, .sub-menu-wrap:before {
+    bottom: 100%;
+    left: 5%;
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none
+}
+
+.sub-menu-wrap:before {
+    border-color: rgba(0, 0, 0, 0);
+    border-bottom-color: #000;
+    border-width: 10px;
+    margin-left: 2px
+}
+
+.nav-wlc li .sub-menu-wrap ul, .nav-wlc li .sub-menu-wrap ul li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.nav-wlc li .sub-menu-wrap ul {
+    display: table-cell;
+    top: 0;
+    left: 0;
+    position: relative;
+    margin-left: 0
+}
+
+.nav-wlc li .sub-menu-wrap ul:first-child {
+    margin-left: 0
+}
+
+.nav-wlc li .sub-menu-wrap ul li {
+    margin-bottom: 10px;
+    width: 160px;
+    float: left;
+    padding-left: 25px;
+}
+.nav-wlc li .sub-menu-wrap ul li a {
+    display: block;
+    color: #fff;
+    text-align: left;
+    text-decoration: none
+}
+
+.nav-wlc li .sub-menu-wrap ul li a:hover {
+    color: #f1892c
+}
+
+.nav-wlc li:last-child .sub-menu-wrap {
+    left: inherit;
+    right: 0 !important;
+    min-width: 500px
+}
+
+.nav-wlc li:last-child .sub-menu-wrap:after, .nav-wlc li:last-child .sub-menu-wrap:before {
+    left: inherit;
+    right: 4%
+}
+
+.nav-wlc li:last-child .sub-menu-wrap .tab-content {
+    color: #fff
+}
+
+.nav-wlc.wlc-search-widget > li {
+    border-left: 1px solid #b7b7b7!important;
+    position: relative
+}
+.wlc-search-widget .sub-menu-wrap {
+    padding: 25px!important;
+    padding-bottom: 15px!important;
+}
+#wlcSearchTabs > li {
+    margin-bottom: 20px;
+    padding-left: 0px;
+    width: auto;
+}
+
+#wlcSearchTabs > li > a {
+    text-transform: uppercase;
+    border: 0;
+    background: 0 0;
+    border-left: 1px solid #e0e0e0;
+    padding: 4px 10px
+}
+
+#wlcSearchTabs > li:first-child > a {
+    padding-left: 0;
+    border-left: 0
+}
+
+#wlcSearchTabs > li.active > a, #wlcSearchTabs > li:hover > a {
+    color: #f1892c
+}
+
+.sub-menu-wrap label {
+    font-size: 13px;
+    text-transform: uppercase
+}
+
+.sub-menu-wrap select {
+    width: 100% !important
+}
+
+.sub-menu-wrap .input-append.span10 {
+    margin-left: 0;
+    margin-bottom: 0
+}
+
+
+
+
+header .logo {
+    position: relative;
+    width: 222px;
+    height: 128px;
+    margin-top: -29px;
+    text-align: center
+}
+
+header .logo a {
+    background: url(../../../images/cruise/logo-btm-curve.png) center bottom no-repeat;
+    display: block;
+    padding: 0 !important;
+    padding-bottom: 5px !important;
+}
+
+.sub-menu-wrap input[type="text"], #tabFlight .date input[type="text"] {
+    width: 97%;
+}
+
+#tabCruise input[type="text"],
+#tabFlight input[type="text"] {
+    width: 94%;
+}
+
+#wlcFullpage .slide img {
+    width: 100%;
+    height: 100%;
+}
+
+#wlcFullpage .slide .bg-dot-pattern {
+    position: absolute;
+    z-index: 8;
+    width: 100%;
+    height: 100%;
+    background: url(../../../images/cruise/dot-pattern.png) left top repeat
+}
+
+#wlcFullpage .section .wlc-icon-nxt, #wlcFullpage .section .wlc-icon-prev {
+    border: 0
+}
+
+#wlcFullpage .slide-caption {
+    position: absolute;
+    left: 20%;
+    top: 40%;
+    z-index: 9
+}
+
+#wlcFullpage .slide-caption .info, #wlcFullpage .slide-caption h1 {
+    margin: 0;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, .85);
+    color: #fff;
+    margin-bottom: 3px
+}
+
+#wlcFullpage .slide-caption h1 {
+    display: inline-block;
+    font-family: Roboto, sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 100%;
+    text-transform: uppercase;
+    min-width: 475px;
+    max-width: 45%;
+}
+
+#wlcFullpage .slide-caption .info {
+    font-size: 20px;
+    font-weight: 300;
+    min-width: 475px;
+    max-width: 45%;
+}
+
+.wlc-page-nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: block;
+    position: absolute;
+    bottom: 2%;
+    z-index: 10;
+    text-align: center;
+    width: 100%
+}
+
+.wlc-page-nav li {
+    display: inline-block
+}
+
+.wlc-page-nav li a {
+    display: inline-block;
+    padding: 0 20px;
+    background-color: rgba(0, 0, 0, .85);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    font-size: 16px;
+    line-height: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none
+}
+
+.wlc-page-nav a [class*=wlc-icon-], .wlc-page-nav a [class^=wlc-icon-] {
+    margin: -2px 0 0 5px
+}
+
+/*css for ship-detail-page*/
+
+.deck-plans ul li {
+    float: left;
+    width: 11%;
+    position: relative;
+    cursor: pointer;
+    padding: 0px !important;
+    background-image: none;
+}
+.deck-plans ul li:hover span.arw-down, .deck-plans ul li.active span.arw-down {
+
+    display: block !important;
+}
+
+span.arw-down {
+    width: 0;
+    display: none !important;
+    height: 0 !important;
+    position: absolute;
+    left: 46%;
+    height: 160px;
+    background-color: transparent !important;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #ddd;
+}
+
+.deck-plans ul li span {
+    display: block;
+    text-align: center;
+    height: 20px;
+    background-color: #ddd;
+}
+
+.bg-pink {
+    background-color: #f69bc2 !important;
+}
+.bg-cornflowerblue{
+    background-color: #9aabd8 !important;
+}
+.bg-blueviolet{
+    background-color: #9f72b3 !important;
+}
+.bg-drk-pink{
+    background-color: #ec0088 !important;
+}
+.bg-drk-blue{
+    background-color: #2d2f94 !important;
+}
+.bg-drk-violet{
+    background-color: #91298e !important;
+}
+.bg-orange{
+    background-color: #f88f11 !important;
+}
+.bg-yellow{
+    background-color: #eeea10 !important;
+}
+
+
+.wlc-detail-slider .item img {
+    width: 100%;
+}
+
+.ship-overview .deals-carousel .carousel, .ship-overview .deals-carousel .carousel-inner .item {
+    height: 200px;
+    cursor: pointer;
+}
+.wlc-detail-tabs .tab-content .carousel-caption {
+    height: 20px;
+    color: #fff !important;
+    text-align: left;
+
+}
+.wlc-detail-tabs .tab-content .carousel-caption:hover, .ship-overview .deals-carousel .carousel .deals-img-wrap:hover .carousel-caption {
+    height: 100px;
+    max-height: 150px;
+    -webkit-transition: height 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: height 0.5s;
+}
+
+.wlc-content .ship-overview table tr td {
+    padding: 2px;
+    padding-left: 10px;
+    border: 1px solid #ddd;
+}
+#tab-onboard .accordion-group {
+    margin-bottom: 5px;
+    background: #fcfcfc;
+    webkit-box-shadow: 0 8px 6px -6px #c7c4c4;
+    -moz-box-shadow: 0 8px 6px -6px #c7c4c4;
+    box-shadow: 0 6px 5px -6px #c7c4c4;
+}
+
+/*css for ship-detail-page*/
+
+footer {
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    height: auto !important;
+    background-color: #414141;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .4), 0 0 40px rgba(0, 0, 0, .3) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, .4), 0 0 40px rgba(0, 0, 0, .3) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .4), 0 0 40px rgba(0, 0, 0, .3) inset
+}
+
+footer li, footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+footer a, footer address {
+    color: #cacaca;
+    font-size: 13px;
+    text-transform: none;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration: none !important
+}
+
+footer a:hover {
+    color: #fff
+}
+
+#wlcHomePage #footer {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 9
+}
+
+
+#wlcHomePage #footer .container {
+    padding-bottom: 4%
+}
+
+.wlc-content {
+    padding-bottom: 50px
+}
+
+.wlc-content ul li {
+    background-image: url("../../../images/common/common-sprite.png");
+    background-position: 0px -2087px;
+    background-repeat: no-repeat;
+    padding-left: 12px
+}
+
+.wlc-detail-tabs .detail-nav-tabs {
+    background-color: #f2f1f1 !important;
+    font-size: 14px;
+    margin-bottom: 0;
+    border: 1px solid #ddd
+}
+
+.wlc-detail-tabs .detail-nav-tabs > li {
+    background-image: none;
+    padding: 0
+}
+
+.wlc-detail-tabs .detail-nav-tabs > li > a {
+    padding-top: 7px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    margin-right: 0;
+    padding-left: 20px;
+    padding-right: 20px
+}
+
+.wlc-detail-tabs .detail-nav-tabs > .active > a, .wlc-detail-tabs .detail-nav-tabs > .active > a:hover {
+    font-weight: 700;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    color: #363636;
+    outline: 0
+}
+
+.wlc-detail-tabs .detail-nav-tabs.sub-tabs {
+    background-color: transparent!important;
+    border: 0;
+    border-bottom: 1px solid #8F8F8F!important;
+}
+
+.wlc-detail-tabs .detail-nav-tabs.sub-tabs>.active>a,
+.wlc-detail-tabs .detail-nav-tabs.sub-tabs>.active>a:hover {
+    border-top: 3px solid #c8c8c8 !important;
+}
+
+.wlc-detail-tabs .tab-content {
+    padding-top: 10px
+}
+
+.wlc-detail-tabs .tab-content, .wlc-detail-tabs .tab-content p {
+    font-size: 13px;
+    line-height: 160%
+}
+
+.wlc-detail-tabs .tab-content ul {
+    list-style: none;
+    margin-bottom: 20px
+}
+
+.detail-ship-content .media {
+    padding-bottom: 24px;
+    padding-top: 24px;
+    border-bottom: 1px solid #c4c4c4
+}
+
+.detail-ship-content .media:first-child {
+    padding-top: 0
+}
+
+.detail-ship-content .media .media-object {
+    border: 1px solid #dedede
+}
+
+.detail-ship-content .media .media-body h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2567a8;
+    margin-top: 0
+}
+
+.dates-rates-content table {
+    border-left: 1px solid #d0d0d0;
+    border-radius: 0
+}
+
+.dates-rates-content td, .dates-rates-content td table td {
+    font-size: 11px
+}
+
+.dates-rates-content thead td {
+    background-color: #d0d0d0;
+    color: #363636;
+    font-weight: 700;
+    border-left-color: #d0d0d0;
+    text-transform: uppercase
+}
+
+.dates-rates-content table td {
+    border-left: 1px solid transparent
+}
+
+.dates-rates-content .hidden-table {
+    display: none;
+}
+
+.dates-rates-content .hidden-table > td {
+    padding: 0;
+    border: 0
+}
+
+.dates-rates-content td table {
+    margin-bottom: 0;
+    border: 0;
+    border-radius: 0;
+    background-color: #F3F3F3;
+    border-top: 1px solid #d0d0d0;
+    border-left: 0 solid #d0d0d0;
+    border-bottom: 1px solid #696969;
+}
+
+.dates-rates-content td table thead td {
+    background-color: #F3F3F3
+}
+
+.dates-rates-content table table thead td:first-child {
+    background-color: #e3e3e3;
+    border-radius: 0 !important
+}
+
+.dates-rates-content td table td {
+    border-left: 1px solid #d0d0d0
+}
+
+.dates-rates-content tr.sailed td {
+    background-color: #ffe5e5
+}
+
+.dates-rates-content tr.active td {
+    background-color: #e6e6e6;
+    border-top: 1px solid #696969;
+    color: #000;
+}
+
+.dates-rates-content .get-quote, .dates-rates-content .get-quote a {
+    color: #fff;
+    text-align: center;
+    text-decoration: none
+}
+
+.dates-rates-content tr.active td.bg-orange {
+    background-color: #f18722;
+}
+
+.dates-rates-content tr.active td.bg-green {
+    background-color: #228f53;
+}
+
+.dates-rates-content tr.active td.bg-blue {
+    background-color: #2570b8;
+}
+
+.dates-rates-content tr.active td.bg-purple {
+    background-color: #7743b2;
+}
+
+.dates-rates-content .get-quote:hover,
+.dates-rates-content tr.active .get-quote:hover {
+    background-color: #515151;
+    color: #fff;
+    text-decoration: none
+}
+.deck-plan.bg-blue {
+    background-color: #F3F3F3!important;
+    border-top: 1px solid #2570b8;
+    border-right: 5px solid #2570b8;
+    text-align: center;
+}
+.deck-plan.bg-green {
+    background-color: #F3F3F3!important;
+    border-top: 1px solid #228f53;
+    border-right: 5px solid #228f53;
+    text-align: center;
+}
+.deck-plan.bg-purple {
+    background-color: #F3F3F3!important;
+    border-top: 1px solid #7743b2;
+    border-right: 5px solid #7743b2;
+    text-align: center;
+}
+.dates-rates-content .deck-plan a {
+    color: #2567a0;
+    font-weight: bold;
+    text-decoration: none;
+}
+.dates-rates-content .deck-plan a:hover {
+    color: #000;
+}
+.dates-rates-content .table-bordered tbody:last-child tr:last-child td:last-child {
+    border-radius: 0;
+}
+.wlc-detail-tabs .ship-tour-info {
+    font-size: 14px;
+    line-height: 160%;
+    color: #878787;
+    padding-top: 30px
+}
+
+.wlc-detail-tabs .ship-tour-info span {
+    color: #2567a8
+}
+
+#wlcDetailCarousel .carousel-control {
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-top: 0
+}
+
+.sub-menu-wrap .input-prepend.input-append input {
+    width: 50px !important;
+    text-align: center
+}
+
+.sub-menu-wrap .input-prepend.input-append .btn {
+    width: auto;
+    background-color: #e6e6e6;
+    margin-bottom: 9px
+}
+
+.sub-menu-wrap .add-rooms {
+    border-bottom: 1px dotted #e5e5e5;
+    margin-bottom: 9px
+}
+
+.wlc-search-listing .price {
+    font-size: 25px;
+    font-weight: 700
+}
+
+.wlc-search-listing .price sup {
+    font-size: 15px;
+    font-weight: 600
+}
+
+.wlc-search-listing .wlc-search-item {
+    -webkit-box-shadow: 0 0 4px 0 rgba(50, 50, 50, 0.30);
+    -moz-box-shadow: 0 0 4px 0 rgba(50, 50, 50, .3);
+    box-shadow: 0 0 4px 0 rgba(50, 50, 50, .3);
+    margin-bottom: 15px
+}
+
+.wlc-search-listing .item-details {
+    display: none
+}
+
+/*inner page footer*/
+#footer {
+    position: relative;
+    padding-bottom: 0px;
+}
+
+.datetimepicker {
+    z-index: 1000!important;
+}
+
+/*media query*/
+@media (min-width: 768px) and (max-width: 979px) {
+    header .nav-wlc > li > a {
+        font-size: 12px;
+        padding: 0 15px;
+        line-height: 30px
+    }
+
+    #wlcFullpage .slide img {
+        height: 100%
+    }
+
+    #wlcFullpage .slide {
+        overflow: hidden
+    }
+
+    .controlArrow {
+        top: 60%
+    }
+
+    #wlcFullpage .slide-caption {
+        left: 10%
+    }
+
+    #wlcFullpage .slide-caption h1 {
+        font-size: 25px;
+        min-width: 375px;
+    }
+
+    #wlcFullpage .slide-caption .info {
+        font-size: 15px;
+        min-width: 375px;
+    }
+
+    #footer a, #footer address {
+        line-height: 20px;
+        font-size: 11px;
+    }
+
+    #wlcFullpage #footer .container {
+        padding-top: 10px;
+        padding-bottom: 6%
+    }
+
+    .wlc-page-nav li a {
+        font-size: 15px;
+        line-height: 30px;
+        padding: 0 10px
+    }
+
+    .nav-wlc li .sub-menu-wrap {
+        overflow-wrap: break-word;
+        padding: 15px;
+        left: 0;
+        width: 330px;
+    }
+    .sub-menu-wrap:before {
+        margin-left: -3px;
+    }
+
+    .sub-menu-wrap input, .sub-menu-wrap label, .sub-menu-wrap li, .sub-menu-wrap li a, .sub-menu-wrap select {
+        font-size: 12px
+    }
+
+    .nav-wlc li .sub-menu-wrap {
+        padding-left: 0px;
+    }
+
+    .nav-wlc li .sub-menu-wrap ul li {
+        margin-bottom: 5px;
+        width: 150px;
+        padding-left: 15px;
+    }
+    .wlc-search-widget .sub-menu-wrap {
+        padding: 15px!important;
+        padding-bottom: 15px!important;
+    }
+    .nav-wlc .wlc-icon-home {
+        background-position: -154px -52px
+    }
+
+    .nav-wlc li .wlc-icon-search {
+        background-position: -206px -52px
+    }
+
+    .nav-wlc .wlc-icon-home:hover {
+        background-position: -180px -52px
+    }
+
+    .nav-wlc li .wlc-icon-search:hover, .nav-wlc li:hover .wlc-icon-search {
+        background-position: -232px -52px
+    }
+    .carousel-caption {
+        padding: 8px;
+        font-size: 12px;
+        line-height: 16px
+    }
+    .carousel-caption p {
+        line-height: 13px !important;
+    }
+
+    .carousel-caption h4 {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .ship-overview .deals-carousel .carousel{
+        height: 160px;
+    }
+    .wlc-detail-tabs .tab-content .carousel-caption p.ellipsis {
+        /*white-space: nowrap;*/
+        /*overflow: hidden;*/
+        /*text-overflow: ellipsis;*/
+        /*-o-text-overflow: ellipsis;*/
+        /*-ms-text-overflow: ellipsis;*/
+    }
+    .cruise-quick-links {
+        font-size: 12px;
+    }
+
+}

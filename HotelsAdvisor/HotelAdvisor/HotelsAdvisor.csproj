@@ -1,0 +1,821 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3F87C1F8-D6CC-4CB1-9A4F-7605AB1AB61C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HotelsAdvisor</RootNamespace>
+    <AssemblyName>HotelsAdvisor</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>44301</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="ElasticLinq">
+      <HintPath>..\packages\ElasticLinq.1.0.0\lib\net45\ElasticLinq.dll</HintPath>
+    </Reference>
+    <Reference Include="Elasticsearch.Net">
+      <HintPath>..\packages\Elasticsearch.Net.1.1.1\lib\Elasticsearch.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ElasticsearchCRUD">
+      <HintPath>..\packages\ElasticsearchCRUD.1.0.5\lib\net45\ElasticsearchCRUD.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook">
+      <HintPath>..\packages\Facebook.6.8.0\lib\net45\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.AspNet.Identity">
+      <HintPath>..\packages\MongoDB.AspNet.Identity.1.0.5\lib\net45\MongoDB.AspNet.Identity.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="Mvc.Html.Bootstrap">
+      <HintPath>..\packages\Mvc.Html.Bootstrap.0.1.4666.41540\lib\net40\Mvc.Html.Bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="Nest">
+      <HintPath>..\packages\NEST.1.1.1\lib\Nest.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Portable.Licensing">
+      <HintPath>..\packages\Portable.Licensing.1.1.0\lib\portable-net40+sl4+wp7+win8\Portable.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Channels" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="T4MVCExtensions">
+      <HintPath>..\packages\T4MVCExtensions.3.6.5\lib\net40\T4MVCExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="TwitterBootstrapMVC5">
+      <HintPath>..\packages\TwitterBootstrapMVC5.3.13.10\lib\net40\TwitterBootstrapMVC5.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Bootstrap Html Helpers\BootstrapTextAreaFor.cs" />
+    <Compile Include="Bootstrap Html Helpers\HelperMethods.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HotelController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HotelsAdvisorService.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AutocompleteSearchObject.cs" />
+    <Compile Include="Models\HomePageModel.cs" />
+    <Compile Include="Models\Hotel.cs" />
+    <Compile Include="Models\HotelModelForIntermediatePage.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Review.cs" />
+    <Compile Include="Models\HotelReview.cs" />
+    <Compile Include="Models\Search.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Content\colorbox.css" />
+    <Content Include="Content\image-hover.css" />
+    <Content Include="Images\border.png" />
+    <Content Include="Images\controls.png" />
+    <Content Include="Images\ie6\borderBottomCenter.png" />
+    <Content Include="Images\ie6\borderBottomLeft.png" />
+    <Content Include="Images\ie6\borderBottomRight.png" />
+    <Content Include="Images\ie6\borderMiddleLeft.png" />
+    <Content Include="Images\ie6\borderMiddleRight.png" />
+    <Content Include="Images\ie6\borderTopCenter.png" />
+    <Content Include="Images\ie6\borderTopLeft.png" />
+    <Content Include="Images\ie6\borderTopRight.png" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\loading_background.png" />
+    <Content Include="Images\overlay.png" />
+    <Content Include="Scripts\facebookIntegration.js" />
+    <Content Include="Scripts\rating-validation.js" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="Translator\Extension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\bootstrap-fileupload.css" />
+    <Content Include="assets\css\bootstrap-image-gallery.css" />
+    <Content Include="assets\css\bootstrap-responsive.css" />
+    <Content Include="assets\css\bootstrap-timepicker.css" />
+    <Content Include="assets\css\bootstrap-transfer.css" />
+    <Content Include="assets\css\bootstrap.css" />
+    <Content Include="assets\css\carousel_deals.css" />
+    <Content Include="assets\css\car_dropdown_search.css" />
+    <Content Include="assets\css\core-styles.css" />
+    <Content Include="assets\css\custom.css" />
+    <Content Include="assets\css\custom_button.css" />
+    <Content Include="assets\css\datepicker.css" />
+    <Content Include="assets\css\daterangepicker-bs3.css" />
+    <Content Include="assets\css\datetimepicker.css" />
+    <Content Include="assets\css\default.css" />
+    <Content Include="assets\css\demo_travelnxt\bootstrap.css" />
+    <Content Include="assets\css\demo_travelnxt\demo_travelnxt.css" />
+    <Content Include="assets\css\demo_travelnxt\jquery.mCustomScrollbar.css" />
+    <Content Include="assets\css\demo_travelnxt\responsiveslides.css" />
+    <Content Include="assets\css\detailspage.css" />
+    <Content Include="assets\css\hotel_search.css" />
+    <Content Include="assets\css\icon-fonts.css" />
+    <Content Include="assets\css\jquery.jscrollpane.codrops1.css" />
+    <Content Include="assets\css\jquery.jscrollpane.codrops2.css" />
+    <Content Include="assets\css\jquery.mCustomScrollbar.css" />
+    <Content Include="assets\css\layout-editor.css" />
+    <Content Include="assets\css\main.css" />
+    <Content Include="assets\css\mediaquery_widget.css" />
+    <Content Include="assets\css\medium-editor.css" />
+    <Content Include="assets\css\newFFSchedule.css" />
+    <Content Include="assets\css\owl.carousel.css" />
+    <Content Include="assets\css\owl.theme.css" />
+    <Content Include="assets\css\owl.transitions.css" />
+    <Content Include="assets\css\prettyPhoto.css" />
+    <Content Include="assets\css\print.css" />
+    <Content Include="assets\css\register.css" />
+    <Content Include="assets\css\responsive.css" />
+    <Content Include="assets\css\slider.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\tn3.css" />
+    <Content Include="assets\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="assets\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="assets\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="assets\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="assets\ico\favicon.ico" />
+    <Content Include="assets\img\bs-docs-masthead-pattern.png" />
+    <Content Include="assets\img\glyphicons-halflings-bluegrey.png" />
+    <Content Include="assets\img\glyphicons-halflings-white.png" />
+    <Content Include="assets\img\glyphicons-halflings.png" />
+    <Content Include="assets\img\loading.gif" />
+    <Content Include="assets\js\application.js" />
+    <Content Include="assets\js\bootstrap-affix.js" />
+    <Content Include="assets\js\bootstrap-alert.js" />
+    <Content Include="assets\js\bootstrap-button.js" />
+    <Content Include="assets\js\bootstrap-carousel.js" />
+    <Content Include="assets\js\bootstrap-collapse.js" />
+    <Content Include="assets\js\bootstrap-datepicker.js" />
+    <Content Include="assets\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="assets\js\bootstrap-dropdown.js" />
+    <Content Include="assets\js\bootstrap-fileupload.js" />
+    <Content Include="assets\js\bootstrap-image-gallery.js" />
+    <Content Include="assets\js\bootstrap-image-gallery.min.js" />
+    <Content Include="assets\js\bootstrap-modal.js" />
+    <Content Include="assets\js\bootstrap-multiselect.js" />
+    <Content Include="assets\js\bootstrap-popover.js" />
+    <Content Include="assets\js\bootstrap-scrollspy.js" />
+    <Content Include="assets\js\bootstrap-slider.js" />
+    <Content Include="assets\js\bootstrap-spinedit.js" />
+    <Content Include="assets\js\bootstrap-tab.js" />
+    <Content Include="assets\js\bootstrap-timepicker.js" />
+    <Content Include="assets\js\bootstrap-tooltip.js" />
+    <Content Include="assets\js\bootstrap-transfer.js" />
+    <Content Include="assets\js\bootstrap-transition.js" />
+    <Content Include="assets\js\bootstrap-typeahead.js" />
+    <Content Include="assets\js\bootstrap.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\carousel.js" />
+    <Content Include="assets\js\carousel_homepage.js" />
+    <Content Include="assets\js\common.js" />
+    <Content Include="assets\js\countUp.js" />
+    <Content Include="assets\js\css_browser_selector.js" />
+    <Content Include="assets\js\custom-scrollbar.js" />
+    <Content Include="assets\js\daterangepicker.js" />
+    <Content Include="assets\js\date_control.js" />
+    <Content Include="assets\js\demo_travelnxt\custom_functions.js" />
+    <Content Include="assets\js\demo_travelnxt\jquery.mCustomScrollbar.js" />
+    <Content Include="assets\js\demo_travelnxt\jquery.smoothscroll.js" />
+    <Content Include="assets\js\demo_travelnxt\owl.carousel.js" />
+    <Content Include="assets\js\demo_travelnxt\responsiveslides.js" />
+    <Content Include="assets\js\enscroll-0.5.5.min.js" />
+    <Content Include="assets\js\enscroll-0.5.6.min.js" />
+    <Content Include="assets\js\freewall.js" />
+    <Content Include="assets\js\google-code-prettify\prettify.css" />
+    <Content Include="assets\js\google-code-prettify\prettify.js" />
+    <Content Include="assets\js\jquery-1.6.4.min.js" />
+    <Content Include="assets\js\jquery-1.8.2.min.js" />
+    <Content Include="assets\js\jquery-1.9.1.js" />
+    <Content Include="assets\js\jquery.easing-1.3.min.js" />
+    <Content Include="assets\js\jquery.flippy.min.js" />
+    <Content Include="assets\js\jquery.js" />
+    <Content Include="assets\js\jquery.jscrollpane.js" />
+    <Content Include="assets\js\jquery.jscrollpane.min.js" />
+    <Content Include="assets\js\jquery.mCustomScrollbar.js" />
+    <Content Include="assets\js\jquery.min.js" />
+    <Content Include="assets\js\jquery.mousewheel.js" />
+    <Content Include="assets\js\jquery.prettyPhoto.js" />
+    <Content Include="assets\js\jquery.tn3lite.min.js" />
+    <Content Include="assets\js\layout-editor.js" />
+    <Content Include="assets\js\load-image.min.js" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\map_view.js" />
+    <Content Include="assets\js\medium-editor.js" />
+    <Content Include="assets\js\moment.js" />
+    <Content Include="assets\js\mwheelIntent.js" />
+    <Content Include="assets\js\newFFS-divider.js" />
+    <Content Include="assets\js\owl.carousel.js" />
+    <Content Include="assets\js\plugins.js" />
+    <Content Include="assets\js\plugnplay_widgets.js" />
+    <Content Include="assets\js\respond.js" />
+    <Content Include="assets\js\scroll-startstop.events.jquery.js" />
+    <Content Include="assets\js\spin.js" />
+    <Content Include="assets\js\spin.min.js" />
+    <Content Include="assets\js\spinloader.js" />
+    <Content Include="assets\js\transition.js" />
+    <Content Include="assets\js\twitter_bootstrap_widgets.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Custom-AddReview.css" />
+    <Content Include="Content\justified-nav.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Images\best.jpg" />
+    <Content Include="Images\cancel-off.png" />
+    <Content Include="Images\cancel-on.png" />
+    <Content Include="Images\caribbean.jpg" />
+    <Content Include="Images\closeup.jpg" />
+    <Content Include="Images\hotsun.jpg" />
+    <Content Include="Images\jamaica.jpg" />
+    <Content Include="Images\Map-Marker-Flag-3-Left-Chartreuse-icon.png" />
+    <Content Include="Images\road.jpg" />
+    <Content Include="Images\star-half.png" />
+    <Content Include="Images\star-off.png" />
+    <Content Include="Images\star-on.png" />
+    <Content Include="Images\thumb-1.jpg" />
+    <Content Include="Scripts\includes\discount-hotel-discover-10.asp" />
+    <Content Include="Scripts\includes\discount-hotel-features.asp" />
+    <Content Include="Scripts\includes\discount-hotel-footer.asp" />
+    <Content Include="Scripts\includes\discount-hotel-header-inside.asp" />
+    <Content Include="Scripts\includes\discount-hotel-header.asp" />
+    <Content Include="Scripts\includes\discount-hotel-register.asp" />
+    <Content Include="Scripts\includes\discount-hotel-result-listing-no-price.asp" />
+    <Content Include="Scripts\includes\discount-hotel-result-listing-with-price.asp" />
+    <Content Include="Scripts\includes\discount-hotel-result-sorting.asp" />
+    <Content Include="Scripts\includes\discount-hotel-search-panel.asp" />
+    <Content Include="Scripts\includes\discount-hotel-video.asp" />
+    <Content Include="minimized\0.bootstrap-fileupload.css" />
+    <Content Include="minimized\1.bootstrap.css" />
+    <Content Include="minimized\10.responsiveslides_modified.css" />
+    <Content Include="minimized\11.icon-fonts.css" />
+    <Content Include="minimized\12.layout-editor.css" />
+    <Content Include="minimized\2.bootstrap-responsive.css" />
+    <Content Include="minimized\3.datepicker.css" />
+    <Content Include="minimized\3.daterangepicker-bs3.css" />
+    <Content Include="minimized\3.datetimepicker.css" />
+    <Content Include="minimized\4.bootstrap-timepicker.css" />
+    <Content Include="minimized\4.bootstrap-transfer.css" />
+    <Content Include="minimized\4.carousel_deals.css" />
+    <Content Include="minimized\4.style.css" />
+    <Content Include="minimized\5.bootstrap-image-gallery.css" />
+    <Content Include="minimized\5.prettyPhoto.css" />
+    <Content Include="minimized\6.jquery.jscrollpane.codrops2.css" />
+    <Content Include="minimized\6.slider.css" />
+    <Content Include="minimized\7.hotel_search.css" />
+    <Content Include="minimized\8.car_dropdown_search.css" />
+    <Content Include="minimized\8.main.css" />
+    <Content Include="minimized\9.custom_button.css" />
+    <Content Include="minimized\CodeMirror-codemirror.css" />
+    <Content Include="minimized\core-styles.css" />
+    <Content Include="minimized\jquery.jscrollpane.codrops1.css" />
+    <Content Include="minimized\TreeView-jquery.treeview.css" />
+    <Content Include="minimized\z.Custom.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="assets\fonts\tavisca-product-suite.eot" />
+    <Content Include="assets\fonts\tavisca-product-suite.svg" />
+    <Content Include="assets\fonts\tavisca-product-suite.ttf" />
+    <Content Include="assets\fonts\tavisca-product-suite.woff" />
+    <Content Include="assets\ico\Thumbs.db" />
+    <Content Include="assets\img\Thumbs.db" />
+    <Content Include="assets\js\README.md" />
+    <Content Include="app.config" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\CustomAddReview.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery.colorbox.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-raty.js" />
+    <Content Include="Scripts\jquery-ui-1.10.4.custom.js" />
+    <Content Include="Scripts\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\site.js" />
+    <Content Include="Scripts\TwitterBootstrapMvcJs.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\0.bootstrap-fileupload.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\1.bootstrap.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\1.bootstrap.he-IL.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\10.responsiveslides_modified.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\11.icon-fonts.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\12.layout-editor.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\2.bootstrap-responsive.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\2.bootstrap-responsive.he-IL.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\3.datepicker.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\3.datepicker.he-IL.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\3.daterangepicker-bs3.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\3.datetimepicker.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\4.bootstrap-timepicker.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\4.bootstrap-transfer.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\4.carousel_deals.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\4.style.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\5.bootstrap-image-gallery.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\5.prettyPhoto.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\6.jquery.jscrollpane.codrops2.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\6.slider.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\7.hotel_search.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\8.car_dropdown_search.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\8.main.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\libs\9.custom_button.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\user\CodeMirror-codemirror.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\user\core-styles.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\user\core-styles.he-IL.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\user\cruise-style.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\user\discount-hotel-style.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\user\jquery.jscrollpane.codrops1.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\user\TreeView-jquery.treeview.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\user\z.Custom.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\css\user\z.Custom.he-IL.css" />
+    <Content Include="standardized-theme\Theme\Default\assets\js\bootstrap-carousel.js" />
+    <Content Include="standardized-theme\Theme\Default\assets\js\bootstrap-datepicker.js" />
+    <Content Include="standardized-theme\Theme\Default\assets\js\bootstrap.min.js" />
+    <Content Include="standardized-theme\Theme\Default\assets\js\image.js" />
+    <Content Include="standardized-theme\Theme\Default\assets\js\jquery-1.10.2.js" />
+    <Content Include="standardized-theme\Theme\Default\assets\js\jquery.easings.min.js" />
+    <Content Include="standardized-theme\Theme\Default\assets\js\jquery.mCustomScrollbar.js" />
+    <Content Include="standardized-theme\Theme\Default\assets\js\jquery.slimscroll.min.js" />
+    <Content Include="standardized-theme\Theme\Default\assets\js\lightbox.js" />
+    <Content Include="standardized-theme\Theme\Default\images\activity\activity-sprite.png" />
+    <Content Include="standardized-theme\Theme\Default\images\carousel_thumnail.png" />
+    <Content Include="standardized-theme\Theme\Default\images\car\car-placeholder.png" />
+    <Content Include="standardized-theme\Theme\Default\images\car\car-sprite.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\arrow_top.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\banner_Ad.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\common\bg-translucent-black.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\bg_lowest_price.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\bg_matrix_hover.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\common\bg_subnavtab.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\common\bg_subnavtab_hover.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\common\bg_verticalshadow.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\big-triangles.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\blank.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\common\checkout_steps_bar.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\checkout_steps_bar_mainbg.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\choose_arrow.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\common-sprite.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\cvv-helper.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\common\default_deals_picture.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\common\down-arrow.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\empty-cart.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\common\error_messages.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\feedback_icon.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\feedback_icon_hover.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\flags.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\glyphicons-halflings-bluegrey.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\glyphicons-halflings-white.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\glyphicons-halflings.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\hover_left_border.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\common\icon-all-devices.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\icon-desktop.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\icon-mobile.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\icon-tablet.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\icon_discount.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\img-1px-shadow.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\img_loading_small.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\common\img_notthing_selected.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\common\img_placeholder_notavailable.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\common\img_placeholder_soldout.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\indicator.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\common\item_row_line.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\layover_arrow.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\layover_bg.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\left-arrow.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\loading.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\common\logo-travelnxt.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\popup_footer_pattern.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\preloader.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\common\processing-primary.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\common\processing-secondary.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\common\ribbon-tag.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\right-arrow.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\sep-2clr.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\common\sep-triangle.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\common\sprite_creditcards.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\textbox_loader.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\common\throbber.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\common\title_legends_showhide.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\common\top_shadow.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\top_shadow_greybg.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\top_shadow_whitebg.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\triangle_left.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\ui-icons_ffffff_256x240.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\up-arrow.png" />
+    <Content Include="standardized-theme\Theme\Default\images\common\wings.png" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\dot-pattern.png" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\img-hotel.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\large\cruise-1.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\large\cruise-2.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\large\cruise-3.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\large\cruise-4.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\large\cruise-5.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\large\cruise-6.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\large\cruise-7.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\large\cruise-8.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\logo-btm-curve.png" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\logo-wlc.png" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\slider\slider1.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\slider\slider2.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\slider\slider3.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\thumb\thumb-ship-1.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\thumb\thumb-ship-2.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\thumb\thumb-ship-3.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\thumb\thumb-ship-4.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\thumb\thumb-ship-5.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\timeline\arrow.png" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\timeline\background-white.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\timeline\bar.png" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\timeline\big-arrow.png" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\timeline\blck-arrow-left.png" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\timeline\blck-arrow-right.png" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\timeline\close.png" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\timeline\dot-rollover.png" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\timeline\dot-selected.png" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\timeline\dot.png" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\timeline\glass.png" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\timeline\line.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\timeline\loading.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\timeline\loadingAnimation.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\timeline\next.png" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\timeline\prev.png" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\timeline\zoomIn.png" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\wlc-name.png" />
+    <Content Include="standardized-theme\Theme\Default\images\cruise\wlc-sprite.png" />
+    <Content Include="standardized-theme\Theme\Default\images\deal-icon.png" />
+    <Content Include="standardized-theme\Theme\Default\images\deal-info-car.png" />
+    <Content Include="standardized-theme\Theme\Default\images\deal-info-plane.png" />
+    <Content Include="standardized-theme\Theme\Default\images\deal-sprit.png" />
+    <Content Include="standardized-theme\Theme\Default\images\discount-hotel\bg-box-pattern.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\discount-hotel\bg-key-holes.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\discount-hotel\dh-logo-color.png" />
+    <Content Include="standardized-theme\Theme\Default\images\discount-hotel\dh-logo-white.png" />
+    <Content Include="standardized-theme\Theme\Default\images\discount-hotel\dh-sprite.png" />
+    <Content Include="standardized-theme\Theme\Default\images\discount-hotel\header-strip.png" />
+    <Content Include="standardized-theme\Theme\Default\images\discount-hotel\photo\dscover-img-1-1.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\discount-hotel\photo\dscover-img-1-2.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\discount-hotel\photo\dscover-img-1-3.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\discount-hotel\photo\dscover-img-2-1.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\discount-hotel\photo\dscover-img-2-2.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\discount-hotel\photo\dscover-img-2-3.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\discount-hotel\photo\dscover-img-3-1.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\discount-hotel\photo\dscover-img-3-2.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\discount-hotel\photo\dscover-img-3-3.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\discount-hotel\photo\dscover-img-3-4.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\discount-hotel\photo\smart-deal-1.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\discount-hotel\photo\smart-deal-2.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\discount-hotel\photo\smart-deal-3.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\discount-hotel\thumb\map-image-big.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\discount-hotel\thumb\thumb-hotel-1.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\discount-hotel\thumb\thumb-hotel-2.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\editor-menu-sprite.png" />
+    <Content Include="standardized-theme\Theme\Default\images\Emails\ac-icon.png" />
+    <Content Include="standardized-theme\Theme\Default\images\Emails\flight-01-icon.png" />
+    <Content Include="standardized-theme\Theme\Default\images\Emails\flight-02-icon.png" />
+    <Content Include="standardized-theme\Theme\Default\images\Emails\icon-car.png" />
+    <Content Include="standardized-theme\Theme\Default\images\Emails\icon-flight-rt.png" />
+    <Content Include="standardized-theme\Theme\Default\images\Emails\icon-phone-sign.png" />
+    <Content Include="standardized-theme\Theme\Default\images\Emails\icon-plane.png" />
+    <Content Include="standardized-theme\Theme\Default\images\Emails\icon_amenities_tag.png" />
+    <Content Include="standardized-theme\Theme\Default\images\Emails\icon_email.png" />
+    <Content Include="standardized-theme\Theme\Default\images\Emails\icon_mailer_sprite.png" />
+    <Content Include="standardized-theme\Theme\Default\images\Emails\icon_placeholder_air_chiana.png" />
+    <Content Include="standardized-theme\Theme\Default\images\Emails\icon_placeholder_amenities.png" />
+    <Content Include="standardized-theme\Theme\Default\images\Emails\img_logo_footer.png" />
+    <Content Include="standardized-theme\Theme\Default\images\Emails\img_placeholder_hotel1.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\Emails\luggage-icon.png" />
+    <Content Include="standardized-theme\Theme\Default\images\Emails\mileage-icon.png" />
+    <Content Include="standardized-theme\Theme\Default\images\Emails\print-icon.png" />
+    <Content Include="standardized-theme\Theme\Default\images\Emails\round-trip-icon.png" />
+    <Content Include="standardized-theme\Theme\Default\images\Emails\sprite-car-amenities.png" />
+    <Content Include="standardized-theme\Theme\Default\images\Emails\transmission-icon.png" />
+    <Content Include="standardized-theme\Theme\Default\images\Emails\user-icon.png" />
+    <Content Include="standardized-theme\Theme\Default\images\ffs-icon-select-gry.png" />
+    <Content Include="standardized-theme\Theme\Default\images\ffs-icon-select.png" />
+    <Content Include="standardized-theme\Theme\Default\images\flight\flight-sprite.png" />
+    <Content Include="standardized-theme\Theme\Default\images\flight\seatmap-sprite.png" />
+    <Content Include="standardized-theme\Theme\Default\images\hotel\hotel-sprite.png" />
+    <Content Include="standardized-theme\Theme\Default\images\icon_cart.png" />
+    <Content Include="standardized-theme\Theme\Default\images\icon_cart1.png" />
+    <Content Include="standardized-theme\Theme\Default\images\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="standardized-theme\Theme\Default\images\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="standardized-theme\Theme\Default\images\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="standardized-theme\Theme\Default\images\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="standardized-theme\Theme\Default\images\ico\favicon.ico" />
+    <Content Include="standardized-theme\Theme\Default\images\image-selection.png" />
+    <Content Include="standardized-theme\Theme\Default\images\image-thumnail.png" />
+    <Content Include="standardized-theme\Theme\Default\images\image-video-thumnail.png" />
+    <Content Include="standardized-theme\Theme\Default\images\img_logo_footer.png" />
+    <Content Include="standardized-theme\Theme\Default\images\layoutedit-controlls.png" />
+    <Content Include="standardized-theme\Theme\Default\images\left-right-nav1.png" />
+    <Content Include="standardized-theme\Theme\Default\images\map-thumnail.png" />
+    <Content Include="standardized-theme\Theme\Default\images\outbound_return_sprite.png" />
+    <Content Include="standardized-theme\Theme\Default\images\photos\01.png" />
+    <Content Include="standardized-theme\Theme\Default\images\photos\02.png" />
+    <Content Include="standardized-theme\Theme\Default\images\photos\03.png" />
+    <Content Include="standardized-theme\Theme\Default\images\photos\default\default_thumb.png" />
+    <Content Include="standardized-theme\Theme\Default\images\photos\default\loader.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\photos\default\sprite.png" />
+    <Content Include="standardized-theme\Theme\Default\images\photos\default\sprite_next.png" />
+    <Content Include="standardized-theme\Theme\Default\images\photos\default\sprite_prev.png" />
+    <Content Include="standardized-theme\Theme\Default\images\photos\default\sprite_x.png" />
+    <Content Include="standardized-theme\Theme\Default\images\photos\default\sprite_y.png" />
+    <Content Include="standardized-theme\Theme\Default\images\photos\pics\image_placehoder1.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\photos\pics\image_placehoder2.jpg" />
+    <Content Include="standardized-theme\Theme\Default\images\plugnplay\arrow-plugnplay-left.png" />
+    <Content Include="standardized-theme\Theme\Default\images\plugnplay\arrow-plugnplay-right.png" />
+    <Content Include="standardized-theme\Theme\Default\images\plugnplay\plugnplaysprites.png" />
+    <Content Include="standardized-theme\Theme\Default\images\tn3\bg.png" />
+    <Content Include="standardized-theme\Theme\Default\images\tn3\preload.gif" />
+    <Content Include="standardized-theme\Theme\Default\images\tn3\tbg.png" />
+    <Content Include="standardized-theme\Theme\Default\images\tn3\tbg2.png" />
+    <Content Include="standardized-theme\Theme\Default\images\tn3\tn3.png" />
+    <Content Include="standardized-theme\Theme\Default\images\video-link.png" />
+    <Content Include="standardized-theme\Theme\Default\images\video-widget.png" />
+    <Content Include="standardized-theme\Theme\DiscountHotel\Layouts\IndexStyles\js\discount-hotel-script.js" />
+    <Content Include="standardized-theme\Theme\styleguide\assets\style-guide.css" />
+    <Content Include="standardized-theme\Theme\styleguide\images\folder-css.jpg" />
+    <Content Include="standardized-theme\Theme\styleguide\images\folder-libs.jpg" />
+    <Content Include="standardized-theme\Theme\styleguide\images\folder-structure-1.jpg" />
+    <Content Include="standardized-theme\Theme\styleguide\images\folder-structure-4.jpg" />
+    <Content Include="standardized-theme\Theme\styleguide\images\folder-structure.jpg" />
+    <Content Include="standardized-theme\Theme\styleguide\images\folder-user.jpg" />
+    <Content Include="standardized-theme\Theme\styleguide\images\font.jpg" />
+    <Content Include="standardized-theme\Theme\styleguide\images\instantsprite.jpg" />
+    <Content Include="standardized-theme\Theme\styleguide\primeface.html" />
+    <Content Include="standardized-theme\Theme\styleguide\styleguide.html" />
+    <Content Include="standardized-theme\Theme\WLC\Layouts\IndexStyles\css\flat.css" />
+    <Content Include="standardized-theme\Theme\WLC\Layouts\IndexStyles\css\jquery.fullPage.css" />
+    <Content Include="standardized-theme\Theme\WLC\Layouts\IndexStyles\js\jquery.fullPage.min.js" />
+    <Content Include="standardized-theme\Theme\WLC\Layouts\IndexStyles\js\jquery.timeline.min.js" />
+    <Content Include="standardized-theme\Theme\WLC\Layouts\IndexStyles\js\wlcScript.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Hotel\AddReview.cshtml" />
+    <Content Include="Views\Hotel\Index.cshtml" />
+    <Content Include="Views\Hotel\Details.cshtml" />
+    <Content Include="Views\Hotel\Create.cshtml" />
+    <Content Include="Views\Hotel\Edit.cshtml" />
+    <Content Include="Views\Hotel\Delete.cshtml" />
+    <Content Include="Views\Shared\_HotelsAdvisor.cshtml" />
+    <Content Include="standardized-theme\Theme\Default\assets\fonts\tavisca-product-suite.eot" />
+    <Content Include="standardized-theme\Theme\Default\assets\fonts\tavisca-product-suite.svg" />
+    <Content Include="standardized-theme\Theme\Default\assets\fonts\tavisca-product-suite.ttf" />
+    <Content Include="standardized-theme\Theme\Default\assets\fonts\tavisca-product-suite.woff" />
+    <Content Include="Views\Shared\_IntermediateLayout.cshtml" />
+    <Content Include="Views\Hotel\CustomLogin.cshtml" />
+    <Content Include="Views\Hotel\CreateAccount.cshtml" />
+    <Content Include="Views\Hotel\HotelsListing.cshtml" />
+    <Content Include="Views\Shared\_IntermediateLayout1.cshtml" />
+    <Content Include="Views\Shared\_IntermediateLayout2.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Images\sprite\" />
+    <Folder Include="img\default\" />
+    <Folder Include="standardized-theme\Theme\DiscountHotel\Layouts\IndexStyles\css\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutocompleteData\AutocompleteData.csproj">
+      <Project>{96aa523d-e361-4a5d-bf5d-1ad2cabd8620}</Project>
+      <Name>AutocompleteData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ElasticSearch\ElasticSearch.csproj">
+      <Project>{dfdd8fdd-d17a-4e10-a506-a68bf7ef396b}</Project>
+      <Name>ElasticSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HotelAdvisor.BLL.Model\HotelAdvisor.BLL.Model.csproj">
+      <Project>{26565c24-8ba1-4201-9960-40c7f20f3169}</Project>
+      <Name>HotelAdvisor.BLL.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56441</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56441/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Import Project="..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

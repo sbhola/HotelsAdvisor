@@ -1,0 +1,46 @@
+.tab-pane p{font-size:13px;	line-height:20px;}
+
+.gallery-wall{
+	float:left;
+	height:auto;
+	width:100%;
+}
+.cell-container{
+	float:left;
+	height:auto;
+	margin-left:20px;
+	overflow:hidden;
+	width:200px;
+	transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+}
+
+.cell-container:first-child{margin-left:0px;}
+
+.cell-container .cell{
+	width:100%;
+	background:#999;
+	float:left;
+	min-height:123px;
+	margin-bottom: 20px;
+	position:relative;
+	transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+}
+
+.cell-container .cell a > img{position:absolute; height:100%;}
+.cell-container .cell:last-child{margin-bottom:0px;}
+.mCSB_horizontal.mCSB_inside > .mCSB_container{margin-bottom:0px !important;}
+
+@media screen and (max-device-width: 1200px) {
+	.cell-container{width:160px;}
+	.cell-container .cell{min-height:98px;}
+}
+@media screen and (max-device-width: 980px) {
+	.cell-container{width:140px;}
+	.cell-container .cell{min-height:72px;}
+}

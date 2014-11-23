@@ -1,0 +1,225 @@
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+
+.jspContainer
+{
+	overflow: hidden;
+	position: relative;
+}
+
+.jspPane
+{
+	position: absolute;
+}
+
+.jspVerticalBar
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 6px;
+	height: 100%;
+	background:none;
+}
+
+.jspHorizontalBar
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 6px;
+	background:none;
+}
+
+.jspVerticalBar *,
+.jspHorizontalBar *
+{
+	margin: 0;
+	padding: 0;
+}
+
+.jspCap
+{
+	display: none;
+}
+
+.jspHorizontalBar .jspCap
+{
+	float: left;
+}
+
+.jspTrack
+{
+	background:#e7e7e7;
+	position: relative;
+	border-top-left-radius:10px;
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;
+border-bottom-left-radius:10px;
+}
+
+.jspDrag
+{
+	background: #333;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag
+{
+	float: left;
+	height: 100%;
+}
+
+.jspArrow
+{
+	background:none;
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer;
+}
+
+.jspArrow.jspDisabled
+{
+	cursor: default;
+	background: #80808d;
+}
+
+.jspVerticalBar .jspArrow
+{
+	height: 16px;
+}
+
+.jspHorizontalBar .jspArrow
+{
+	width: 16px;
+	float: left;
+	height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus
+{
+	outline: none;
+}
+
+.jspCorner
+{
+	background:none;
+	float: left;
+	height: 100%;
+}
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner
+{
+	margin: 0 -3px 0 0;
+}
+
+
+/*-------- Custom Styles for Scroll Bar *--------------/
+/* Styles specific to this particular page */
+.scroll-pane-air {
+	width: 100%;
+	height: 120px;
+	overflow: auto;
+}
+.scroll-pane-amenities {
+	width: 100%;
+	height: 120px;
+	overflow: auto;
+}
+.scroll-pane-class {
+	width: 100%;
+	height: 158px;
+	overflow: auto;
+}
+
+.scroll-pane-location {
+	width: 100%;
+	height: 120px;
+	overflow: auto;
+}
+.scroll-pane-agency {
+	width: 100%;
+	height: 170px;
+	overflow: auto;
+}
+
+.scroll-pane-car {
+	width: 100%;
+	height: 243px;
+	overflow-x: visible !important;
+}
+.scroll-pane-matrixview, .scroll-pane-activities {
+	width: 100%;
+	height: 243px;
+	overflow-x: visible !important;
+}
+
+.scroll-pane-policy {
+	width: 100%;
+	height: 170px;
+	overflow: auto;
+}
+.scroll-pane-carmatrix, .scroll-pane-flightmatrix {
+	width: 100%;
+	height: 305px;
+	overflow: auto;
+}
+
+.scroll-pane-filtermap {
+	width: 100%;	
+	height: 503px;
+	overflow: auto;
+}
+.horizontal-only {
+	height: auto;
+	max-height: 243px;
+}
+
+.horizontal-only-activities {
+	height: auto;
+	max-height: 263px;
+}
+.horizontal-only-car {
+	height: auto;
+	height: 243px;
+}
+.horizontal-only-carmatrix {
+	height: auto;
+	height: 243px;
+}
+
+.vertical-only-car {
+	height: auto;
+	height: 243px;
+}
+
+
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+.custom_verticalslider > .jspContainer {
+	width: 146px !important;
+} /* css rules for ipad portrait */
+.horizontal-only-car {
+	width: 535px !important;
+} /* css rules for ipad portrait */
+}
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+.horizontal-only-car {
+	width: 690px !important;
+} /* your css rules for ipad landscape */
+
+}
+

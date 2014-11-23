@@ -1,0 +1,9 @@
+
+.panel-collapse, .collapse.in {
+    height: auto !important;
+}
+.panel .accordion_title {
+    background-color: #F5F5F5;
+}
+
+

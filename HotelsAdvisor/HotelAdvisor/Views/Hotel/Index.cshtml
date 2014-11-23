@@ -1,0 +1,122 @@
+@model HotelsAdvisor.Models.HomePageModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_HotelsAdvisor.cshtml";
+}
+
+<div class="search-panel" style="margin-top: -26%">
+
+    <div id="wlcHomePage" class="search-bar-blue" style="background-color: #374555; height: 46%">
+        <!-- search panel include --->
+        @using (Html.BeginForm("ListHotels", "Hotel", FormMethod.Post))
+        {
+            <div class="container" style="margin-top: 51px">
+                <div class="search-bar bg-off-white round-corners">
+                    <div class="row-fluid">
+                        <div class="span11">
+                            <div class="control-group mbn guest-rooms positionR">
+                                <div class="controls positionR">
+                                    @*  <input type="text" placeholder="search by Hotel name or Location" data-toggle="popover" data-placement="bottom">*@
+                                    @Html.TextBoxFor(model => model.SearchResult.SearchResultLine1, new { @class = "autocomplete-with-hidden search-box", data_url = Url.Action("GetListForAutocomplete", "Hotel"), placeholder = "search by Hotel Name or Location", style = "max-width:100%;height:50px;margin-bottom:1%" })
+                                    @Html.HiddenFor(model => model.SearchResult.SearchResultLine2)
+                                    @Html.HiddenFor(model => model.SearchResult.SearchResultLine3)
+                                    @Html.HiddenFor(model => model.SearchResult.Category)
+                                    @Html.HiddenFor(model => model.SearchResult.Id)
+                                    @Html.ValidationMessageFor(model => model.SearchResult.SearchResultLine1)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span1 pagination-right" style="margin-top: 8px; margin-left: 20px">
+                            <button id="search" disabled class="btn btn-warning pvl btn-srch width-100p"><i class="dh-icon-srch-lg"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <!-- search panel include --->
+
+    </div>
+</div>
+
+<section class="discover-ten-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="span10 offset1">
+                <div class="row-fluid">
+                    <div class="discover-title">
+                        <h2 class="color-black pagination-centered mbm">DISCOVER</h2>
+                        <div class="pagination-centered mbl"><i class="dh-icon-yelo-diamond"></i><span class="display-inline color-black mrm mlm">Top Hotels</span> <i class="dh-icon-yelo-diamond"></i></div>
+                    </div>
+                </div>
+
+                <div class="pagination-centered mbl">
+
+                    <div class="row-fluid">
+
+                        @for (int i = 0; i < Model.TopHotels.Count; i++)
+                        {
+                            <div class="box-3 pull-left">
+                                @* <div class="col-md-12">*@
+
+                                <div class="thumb" style="margin-right: 10px">
+                                    <div class="thumbnail img-responsive">
+
+                                        @if (Model.TopHotels[i].ImageList.Count != 0)
+                                        {
+                                            <img src="@Model.TopHotels[i].ImageList[0]" class="image-hover" alt="Image Not Found" style="width:500px;height:250px" />
+                                        }
+                                        else
+                                        {
+                                            <img src="" class="image-hover" alt="Image Not Found" style="width: 500px; height: 250px" />
+                                        }
+
+                                        <div class="caption" style="height: 90px; text-align: left">
+                                            <div class=" clearfix">
+                                                <h3 class="pull-left caption-header" style="margin: 0; font-size: 15px">
+
+                                                    @Html.ActionLink(Model.TopHotels[i].Name, "Details", new { hotelId = Model.TopHotels[i].Id })
+
+                                                </h3>
+                                            </div>
+                                            <div class="spaces pull-right">
+                                                @for (int j = 0; j < Model.TopHotels[i].Rating; j++)
+                                                {
+                                                    <span class="glyphicon glyphicon-star"></span>
+                                                }
+                                                @for (int j = 0; j < 5 - Model.TopHotels[i].Rating; j++)
+                                                {
+                                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                                }
+
+                                            </div>
+
+                                            <span class="fontcolor">@Html.DisplayFor(modelItem => Model.TopHotels[i].City),@Html.DisplayFor(modelItem => Model.TopHotels[i].StateCode),@Html.DisplayFor(modelItem => Model.TopHotels[i].Country)</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                @*</div>*@
+                            </div>
+                        }
+
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@Styles.Render("~/autocomplete/css")
+@Styles.Render("~/autocomplete/jquery-ui/css")
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/site")
+    @Scripts.Render("~/autocomplete/js")
+
+}

@@ -1,0 +1,67 @@
+#style-guide, #prime-face {
+    display: block;
+    width: 85%;
+    /*margin: 0px auto 0 auto;*/
+    margin-left: 12%;
+    background: none;
+}
+
+#guide-content {
+    display: block;
+    background: #fff;
+    padding: 0px 15px;
+    margin-left: 1%;
+    min-height: 100%;
+}
+
+/* side navigation */
+#sidemenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 12%;
+    border: 1px solid #c9c9c9;
+    background: #e8e8e8;
+}
+
+#sidemenu li {
+    display: block;
+    border-top: 1px solid #fff;
+    font-size: 1.1em;
+}
+
+#sidemenu li a {
+    text-align: left;
+    display: block;
+    padding: 8px 8px 8px 10%;
+    color: #979797;
+    text-decoration: none;
+    border-bottom: 1px solid #d1d1d1;
+    font-weight: 400;
+}
+
+#sidemenu li a:hover {
+    background: #f2f2f2;
+}
+
+#sidemenu li a strong {
+    display: block;
+    margin-top: 5px;
+}
+
+#sidemenu li a.open {
+    background: #fff;
+    color: #000;
+    font-weight: 700;
+}
+
+.hidden {
+    display: none;
+}
+
+.open {
+    display: block;
+}

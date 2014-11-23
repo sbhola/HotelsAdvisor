@@ -1,0 +1,1 @@
+jQuery(document).ready(function(){ window.Lightbox = new jQuery().visualLightbox({borderSize:39,classNames:'vlightbox1',descSliding:true,enableRightClick:false,enableSlideshow:false,prefix:'vlb1',resizeSpeed:7,slideTime:4,startZoom:true}) });

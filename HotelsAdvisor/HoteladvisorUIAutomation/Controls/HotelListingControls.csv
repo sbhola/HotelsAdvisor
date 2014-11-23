@@ -1,0 +1,17 @@
+﻿pAddress,p#pAddress
+logoImg,img[id='logoImg']
+registerLink,a#registerLink
+loginLink,a#loginLink
+displayUserName,a#displayUserName
+logoutForm,a#logoutForm
+registerForm,form#registerForm
+loginForm,form.form-horizontal
+h1ErrorPage,h1[class='text-danger']
+pHotelCount,p#hotelCount
+hotelDisplayDiv,div#hotelDisplayDiv
+imgClick,img#imgClick
+imgCboxPhoto,img.cboxPhoto
+imgCboxClose,div#cboxClose
+hotelNameLink,a#hotelNameLink
+hotelAddressDiv,div.span7.result_title
+showDetailsButton,a#showDetailsButton

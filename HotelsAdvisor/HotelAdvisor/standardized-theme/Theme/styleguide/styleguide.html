@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Mystique Style Guide</title>
+    <link href="../Default/assets/css/libs/1.bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="../Default/assets/css/user/core-styles.css" rel="stylesheet" type="text/css"/>
+    <link href="../Default/assets/css/user/z.Custom.css" rel="stylesheet" type="text/css"/>
+    <link href="../Default/assets/css/libs/5.prettyPhoto.css" rel="stylesheet" type="text/css"/>
+
+    <link href="assets/style-guide.css" rel="stylesheet" type="text/css"/>
+
+</head>
+
+<body>
+
+<div id="style-guide" class="clearfix positionR">
+<ul id="sidemenu">
+    <li class="color-orange ptm pbm" style="padding-left: 10%;"><strong>Mystique Style Guide</strong></li>
+    <li><a href="#Purpose" class="open">Purpose &amp; Audience</a></li>
+    <li><a href="#Folder">Folder Structure</a></li>
+    <li><a href="#CssFolder">CSS Folder</a></li>
+    <li><a href="#Corestyle">core-styles.css</a></li>
+    <li><a href="#zCustom">z.Custom.css</a></li>
+    <li><a href="#ImagesFolder">Images Folder</a></li>
+    <li><a href="#icons">Icon Sprite</a></li>
+    <li><a href="#Fonts">Font Family</a></li>
+    <li><a href="#Heading">Heading Tags</a></li>
+    <li><a href="#ulol">Default List Style</a></li>
+    <li><a href="#Form">Form Elements</a></li>
+    <li><a href="#Minification">CSS Minification</a></li>
+</ul>
+<!-- @end #sidemenu -->
+<div id="guide-content">
+
+    <!--Tab content 1-->
+    <div id="Purpose" class="content-block" style="min-height:500px;">
+        <div class="well mtl">
+        <h1 class="mbm">Purpose of Style guide</h1>
+        <p>The purpose of this guide is to share the HTML &amp; CSS formatting rules used to create a Mystique Theme. A
+            consistent user experience across the Mystique themes is achieved through a similar interaction and
+            behavior. As an example, when a user is searching for Air, car or a Hotel, the search behaviors and function
+            across different Themes is the same. The look and feel of the result page could be different based on the
+            font face, text and button colors etc.</p>
+
+        <p>The Themes will have different layout, placement of widgets on the Home page, but the rest of the flow will
+            be the same.</p>
+
+        <p>This guide will help the designers &amp; developers with rules to create a new Theme or modify an existing
+            theme. This Guide also provides standards to ensure that</p>
+        <ul>
+            <li>The CSS files don't contain any unused, redundant styles</li>
+            <li>The files/folder structure for all the Themes is the same</li>
+            <li>There are no unused, redundant images and all the icons are grouped as a sprite image, as far as
+                possible.
+            </li>
+        </ul>
+            </div>
+        <div class="well">
+        <h1 class="mbm">Audience</h1>
+        <p>Style guide will be referred to whenever new content, new features are introduced, or a new Theme is created.
+            These Guidelines are essential for Web Designers and Web Developers. They must consider these when adding or
+            changing content on Mystique Web Application.</p>
+        </div>
+    </div>
+
+    <!--Tab content 1-->
+
+    <!--Tab content 2-->
+    <div id="Folder" class="content-block hidden" style="min-height:500px;">
+        <div class="well mtl">
+        <h1 class="mbm">Default Theme Folder</h1>
+        <p><strong>Themes</strong> folder has <strong>Default Theme folder</strong>. It is Mystique's default base theme.</p>
+            <p><img src="images/folder-structure.jpg" alt="Folder Structure" title="Folder Structure"/></p>
+        </div>
+        <div class="well">
+            <h1 class="mbm">Bootstrap Folder</h1>
+        <p>Default theme folder contain <strong>Bootstrap folder</strong> with <strong>assets</strong> and <strong>images</strong>.</p>
+        <p><img src="images/folder-structure-1.jpg" alt="Folder Structure" title="Folder Structure"/></p>
+        </div>
+    </div>
+
+    <!--Tab content 2-->
+
+    <!--Tab content 3-->
+    <div id="ImagesFolder" class="content-block hidden" style="min-height:500px;">
+        <div class="well mtl">
+        <h1 class="mbm">Images Folder</h1>
+        <p>
+            All the Themes will have a standard folder structure for the images.
+            <br/><br/>
+            <img src="images/folder-structure-4.jpg" alt="Images" title="Images"/>
+        </p>
+        <p>Separate folder for every module eg. Flight / Hotel / Car / Activity / Emails / Plugnplay. There is also a
+            common folder which contain common images used throughout site.</p>
+        </div>
+        </div>
+    <!--Tab content 3-->
+
+    <!--Tab content 4-->
+    <div id="CssFolder" class="content-block hidden" style="min-height:500px;">
+        <div class="well mtl">
+        <h1 class="mbm">CSS Folder</h1>
+        <p>There are two main css folder <strong>libs</strong> and <strong>user</strong>.
+        </p>
+        <p><img src="images/folder-css.jpg" alt="css" title="css"/></p>
+        <p>Each of the CSS has a specific role which will be explained in the following sections.</p>
+
+        </div>
+            <div class="row-fluid">
+                <div class="well span6">
+                    <h2 class="mbm">"libs" Folder</h2>
+                    <p>This folder contains CSS files for libraries like Bootstrap, jQuery and jQuery plugins.</p>
+                    <p><img src="images/folder-libs.jpg" alt="libs folder" title="libs folder"/></p>
+                </div>
+                <div class="well span6">
+                    <h2 class="mbm">"user" Folder</h2>
+                    <p>This folder contains custom CSS files.</p>
+                    <p><strong>"core-styles.css"</strong> is main CSS file.</p>
+                    <p><strong>"z.Custom.css"</strong> this file is written by developer team.</p>
+                    <p><img src="images/folder-user.jpg" alt="user folder" title="user folder"/></p>
+                </div>
+            </div>
+
+
+
+
+
+    </div>
+    <!--Tab content 4-->
+
+    <!--Tab content 5-->
+    <div id="Corestyle" class="content-block hidden " style="min-height:500px;">
+        <div class="well mtl">
+        <h1 class="mbm">core-styles.css</h1>
+        <p>This file contains global CSS classes which impacts the whole site. Only Creative team will make any changes
+            to this file. If a developer has to change anything in "core-style.css" it will have to be reviewed by
+            Creative beforehand.
+        </p>
+        <p>The top section of "core-style.css" has all the default styles and required for the Theme. E.g. styles for
+            the tags like html, body, custom icons, font size, font color, border.
+        </p>
+        <p>The class naming convention used is Bootstrap style simple hypenated(-) separated words eg. <strong>"class-name"</strong></p>
+        </div>
+        <div class="well">
+        <h2 class="mbm">Common Padding and Margin classes</h2>
+        <p>To avoid repetitive margin and padding specifications in the CSS, common.css has a set of predefined Margins
+            and Padding classes with various values from Small, Medium & Large. By default, the values for these
+            margin/padding are <strong>Small=5px</strong>, <strong>Medium=10px</strong> and <strong>Large=20px</strong>.
+        </p>
+        <p>A designer/developer should avoid specifying margins and padding while creating new CSS classes and instead
+            append these predefined classes for margin and padding wherever required.</p>
+        <p><strong>eg. for top padding of 10px</strong>, class used is <strong>"ptm"</strong></p>
+            <p><pre class="prettyprint linenums">&lt;span class="ptm"&gt;top padding of 10px(medium)&lt;/span&gt;</pre></p>
+        <p><strong>eg. for bottom margin of 20px</strong>, class used is <strong>"mbl"</strong></p>
+        </div>
+        <div class="well">
+        <h2 class="mbm">Common Colors, Font size classes</h2>
+        <p>All the commonly used font sizes and colors are defined.</p>
+        <p><strong>eg. for font size 16 we need to use class <span class="font-16 color-orange">"font-16"</span>.</strong></p>
+        <p><strong>eg. for orange color font we need to use class <span class="color-orange">"color-orange".</span></strong></p>
+            </div>
+        <div class="well">
+        <h2 class="mbm">Font Lowercase and Uppercase</h2>
+        <p><span class="font-low-case">font-low-case</span> <span class="font-up-case">font-up-case</span></p>
+        </div>
+    </div>
+    <!--Tab content 5-->
+
+    <!--Tab content 6-->
+    <div id="icons" class="content-block hidden " style="min-height:500px;">
+        <div class="well mtl">
+        <h1 class="mbm">Custom Icon Sprite</h1>
+        <p>The icon sprite is created online on <a href="http://instantsprite.com/" target="_blank">instantsprite.com</a> with default options.</p>
+        <p><img src="images/instantsprite.jpg" alt="instant sprite options" title="instant sprite options"></p>
+        </div>
+        <div class="well">
+            <h2 class="mbm">Sprite Naming Convention</h2>
+        <p>The class name for <strong>Flight</strong> icon will start with <strong>"flight-icon-XXXXX"</strong></p>
+        <p>The class name for <strong>Car</strong> icon will start with <strong>"car-icon-XXXXX"</strong></p>
+        <p>The class name for <strong>Hotel</strong> icon will start with <strong>"hotel-icon-XXXXX"</strong></p>
+        <p class="mbl">The class name for <strong>Activity</strong> icon will start with <strong>"activity-icon-XXXXX"</strong></p>
+
+        <p>If you want to add any new icon you need to include it in existing sprite with the proper naming convention as above.</p>
+        </div>
+        <div class="well">
+        <h2 class="mbm">The icons which are not module specific are distinguished as common</h2>
+        <p class="mbl">The class name for <strong>Common</strong> icon will start with <strong>"t-icon-XXXXX"</strong></p>
+        <h3 class="mbm mtl">All the icons can be seen module wise listed in Primeface.</h3>
+        </div>
+        </div>
+
+<!--Tab content 6-->
+
+    <!--Tab content 7-->
+    <div id="zCustom" class="content-block hidden " style="min-height:500px;">
+        <div class="well mtl">
+        <h1 class="mbm">z.Custom.css</h1>
+        <p>Mystique developers have created the z custom css file for their convenience.</p>
+            <p>Mystique team should not create same classes again and again avoid redundant classes.</p>
+        </div>
+        </div>
+    <!--Tab content 7-->
+    <!--Tab content 8-->
+
+<div id="Fonts" class="content-block hidden" style="min-height:500px;">
+<div class="well mtl">
+    <h1 class="mbm">Default Font Family</h1>
+    <p>Default theme is using Google's <strong>Lato font family</strong>. No any other font family is used.</p>
+    <p>The Google font API is linked in the Master Page head section and the font family is mentioned in the "core-style.css".</p>
+    <p><img src="images/font.jpg" alt="fonts" title="fonts"/></p>
+    </div>
+    <div class="well">
+    <h2 class="mbm">Google Font API</h2>
+    <p><strong>&lsaquo;link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic'
+             rel='stylesheet' type='text/css'&rsaquo;</strong></p>
+            <p>If in case you need to implement any new font family you need the font API as above with different font weights eg. 400, 600, 700 etc.</p>
+    </div>
+</div>
+<!--Tab content 8-->
+
+<!--Tab content 9-->
+
+<div id="Heading" class="content-block hidden " style="min-height:500px;">
+    <div class="well mtl">
+        <h1 class="mbm">Heading Tags</h1>
+
+         <p>The standard Heading font sizes for the Mystique default theme are as mentioned below.</p>
+
+        <h1 class="mtm">Header Level 1</h1>
+        <h2 class="mtm">Header Level 2</h2>
+        <h3 class="mtm">Header Level 3</h3>
+        <h4 class="mtm">Header Level 4</h4>
+    </div>
+</div>
+<!--Tab content 9-->
+
+    <!--Tab content 9-->
+
+    <div id="ulol" class="content-block hidden " style="min-height:500px;">
+        <div class="well mtl">
+            <h1 class="mbm">Default List Tags</h1>
+
+            <p class="font-bold">Unordered List</p>
+            <ul class="mbl">
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Curabitur vulputate velit eget mi pellentesque, sed sollicitudin erat fermentum.</li>
+                <li>Nunc sodales ligula vel erat pulvinar, sollicitudin semper ligula auctor.</li>
+                <li>Mauris pellentesque sem in urna aliquam, eu mollis dui egestas.</li>
+            </ul>
+            <p class="font-bold">Ordered List</p>
+            <ol>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Curabitur vulputate velit eget mi pellentesque, sed sollicitudin erat fermentum.</li>
+                <li>Nunc sodales ligula vel erat pulvinar, sollicitudin semper ligula auctor.</li>
+                <li>Mauris pellentesque sem in urna aliquam, eu mollis dui egestas.</li>
+            </ol>
+
+        </div>
+    </div>
+    <!--Tab content 9-->
+
+
+<!--Tab content 10-->
+<div id="Form" class="content-block hidden " style="min-height:500px;">
+<h1 class="mbm mtl">Form Elements:</h1>
+<p>As we are using Bootstrap v2.3.0 framework you can refer to <a
+        href="http://bootstrapdocs.com/v2.3.0/docs/getting-started.html" target="_blank">Bootstrap</a> website
+</p>
+</div>
+<!--Tab content 10-->
+
+<!--Tab content 12-->
+<div id="Minification" class="content-block hidden " style="min-height:500px;">
+
+    <div class="mtl">
+        <div class="mbm"><h1>CSS Minification</h1></div>
+        <div class=" pbl" style="width:70%;">
+            To minify/compress your CSS perform a POST request to <a href="http://cssminifier.com/raw" target="_blank">www.cssminifier.com/raw</a>
+            with the input parameter set to the CSS you want to minify.
+            <br/><br/>
+        </div>
+
+
+    </div>
+
+    <div class="clear"></div>
+</div>
+<!--Tab content 12-->
+
+<!-- @end #content -->
+</div>
+<div class="clear"></div>
+</div>
+
+
+<!--js files-->
+<script type="text/javascript" src="../Default/assets/js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../../../assets/js/bootstrap.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=sunburst"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $('#sidemenu a').on('click', function (e) {
+            e.preventDefault();
+            //alert('hi');
+            if ($(this).hasClass('open')) {
+                // do nothing because the link is already open
+            } else {
+                var oldcontent = $('#sidemenu a.open').attr('href');
+                var newcontent = $(this).attr('href');
+
+                $(oldcontent).fadeOut('fast', function () {
+                    $(newcontent).fadeIn().removeClass('hidden');
+                    $(oldcontent).addClass('hidden');
+                });
+
+                $('#sidemenu a').removeClass('open');
+                $(this).addClass('open');
+            }
+        });
+    });
+
+</script>
+
+</body>
+</html>

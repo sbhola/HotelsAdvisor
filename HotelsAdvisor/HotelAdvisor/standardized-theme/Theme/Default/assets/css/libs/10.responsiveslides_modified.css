@@ -1,0 +1,94 @@
+/*! http://responsiveslides.com v1.54 by @viljamis */
+.callbacks_container{ height:100%; overflow:hidden;}
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  	height:100%;
+  }
+
+.rslides li {
+	background-size:cover !important;
+	-moz-background-size:cover !important;
+	-webkit-background-size:cover !important;
+	background-position:center center !important;
+	position: absolute;
+	display: none;
+	width: 100%;
+	height:100%;
+	left: 0;
+	top: 0;
+  }
+
+.rslides li.vegas { background-image:url(../../../images/vegas.jpg); }
+.rslides li.athens { background-image:url(../../../images/athens.jpg); }
+.rslides li.singapore { background-image:url(../../../images/singapore.jpg); }
+
+.rslides li:first-of-type {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+
+.callbacks .caption {
+	display: block;
+	position: absolute;
+	z-index: 2;
+	font-size: 20px;
+	text-shadow: none;
+	color: #fff;
+	background: #000;
+	background: rgba(0,0,0, .8);
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 10px 20px;
+	margin: 0;
+	max-width: none;
+}
+
+.callbacks_nav {
+	position: absolute;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	top: 52%;
+	left: 0;
+	opacity: 0.7;
+	z-index: 3;
+	text-indent: -9999px;
+	overflow: hidden;
+	text-decoration: none;
+	height: 61px;
+	width: 38px;
+	background: transparent url("../../images/caresual_nav.png") no-repeat left top;
+	margin-top: -45px;
+		-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.callbacks_nav:active , 
+.callbacks_nav:hover{
+  opacity: 1.0;
+  }
+
+.callbacks_nav.next {
+  left: auto;
+  background-position: right top;
+  right: 0;
+  }
+  
+  
+  

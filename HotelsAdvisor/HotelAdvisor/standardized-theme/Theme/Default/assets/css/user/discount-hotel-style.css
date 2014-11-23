@@ -1,0 +1,499 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    /*300, 400, 600, 700, 800*/
+}
+.font-merriweather {
+    font-family: 'Merriweather', serif;
+    /*300, 400, 700, 900*/
+}
+
+.height-100p {
+    height: 100% !important;
+}
+/*h1{*/
+    /*font-size: 32px;*/
+/*}*/
+
+/*discount hotel sprite*/
+[class*=dh-icon-], [class^=dh-icon-] {
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(../../../images/discount-hotel/dh-sprite.png);
+    background-position: 0 0;
+    background-repeat: no-repeat
+}
+.dh-icon-badge { background-position: 0 0; width: 48px; height: 59px;  }
+.dh-icon-fb { background-position: 0 -69px; width: 20px; height: 19px;  }
+.dh-icon-guarantee { background-position: 0 -98px; width: 83px; height: 59px;  }
+.dh-icon-hotel-big { background-position: 0 -167px; width: 54px; height: 59px;  }
+.dh-icon-lock-badge { background-position: 0 -236px; width: 50px; height: 59px;  }
+.dh-icon-mail-big { background-position: 0 -305px; width: 55px; height: 35px;  }
+.dh-icon-rss { background-position: 0 -350px; width: 20px; height: 19px;  }
+.dh-icon-twitter { background-position: 0 -379px; width: 23px; height: 19px;  }
+.dh-icon-white-arrow { background-position: 0 -408px; width: 20px; height: 19px;  }
+.dh-icon-yelo-diamond { background-position: 0 -437px; width: 12px; height: 12px;  }
+
+.dh-icon-srch-lg { background-position: 0 -459px; width: 29px; height: 30px;  }
+.dh-icon-calendar { background-position: 0 -498px; width: 22px; height: 24px;  }
+.dh-icon-guests { background-position: 0 -532px; width: 22px; height: 20px;  }
+.dh-icon-arro-rt-big { background-position: 0 -562px; width: 22px; height: 48px;  }
+/*discount hotel sprite*/
+/*discount home page css*/
+
+.header-home {
+    padding: 20px 0;
+    z-index: 9;
+    position: relative;
+ }
+.header-home .navbar-inner, .header-inside .navbar-inner {
+     background-color: transparent;
+}
+.header-home .navbar .nav > li > a, .header-inside .navbar .nav > li > a {
+    color: #eeeeee;
+    font-size: 13px ;
+    text-shadow: none;
+}
+.header-home .navbar .user-links .nav > li > a, .header-inside .navbar .user-links .nav > li > a {
+    padding: 5px 10px;
+}
+.header-home .navbar .user-links .nav > li.register, .header-inside .navbar .user-links .nav > li.register {
+    background-color: #878986;
+    padding-right: 10px;
+}
+.header-home .navbar .user-links .nav > li.login, .header-inside .navbar .user-links .nav > li.login {
+    background-color: #ea682f;
+    position: relative;
+    z-index: 9;
+}
+.header-home .navbar .user-links .nav > li.login:before, .header-inside .navbar .user-links .nav > li.login:before {
+    bottom: 1%;
+    left: -12px;
+    z-index: -1;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none
+    border-color: rgba(0, 0, 0, 0);
+    border-bottom: 30px solid #ea682f;
+    border-left: 12px solid transparent;
+    border-right: 19px solid transparent;
+}
+.header-inside {
+    webkit-box-shadow: 0 8px 6px -6px #c7c4c4;
+    -moz-box-shadow: 0 8px 6px -6px #c7c4c4;
+    box-shadow: 0 8px 6px -6px #c7c4c4;
+    background: #2869a2 url("../../../images/discount-hotel/header-strip.png") -80px 0px no-repeat;
+    height: 80px;
+}
+#discount-video {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+.video-banner {
+    position: absolute;
+    width: 100%;
+    top: -20px;
+    height: 600px;
+    overflow: hidden;
+    min-width: 1045px;
+}
+.search-panel {
+    position: relative;
+    height: 495px;
+}
+.search-panel .search-bar-blue {
+    background-color: rgba(110, 138, 170, 0.5);
+    padding: 20px 0px;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+
+}
+ .search-bar {
+    padding: 10px;
+    bottom: 4%;
+    /*position: absolute;*/
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 9;
+}
+.search-bar input[type="text"] {
+    height:43px;
+    /*background-color: #e5e7e9;*/
+    width: 100%;
+    margin-bottom: 0;
+}
+.search-module input[type="text"] {
+    color: #000;
+}
+.search-bar .btn-srch {
+    padding: 10px 5px;
+}
+.search-module .search-bar {
+    border: 9px solid #21649f;
+    margin: 20px 0px;
+}
+.guest-rooms .dh-icon-guests, .checkin-date .dh-icon-calendar {
+    top:30%;
+    right:0;
+}
+.banner-text {
+    font-size: 46px;
+    position: absolute;
+    bottom: 40%;
+    line-height: 50px;
+    font-weight: 600;
+    color: #fff;
+}
+.banner-text .text-big {
+    display: block;
+    font-size: 63px;
+    line-height: 67px;
+    font-weight: 100;
+}
+/*discount home page css*/
+
+.features-wrap {
+    padding: 30px 0 25px 0;
+}
+.discover-ten-wrap {
+    background: url("../../../images/discount-hotel/bg-box-pattern.gif") left top repeat;
+    padding: 40px 0;
+}
+.discover-ten-wrap .discover-title {
+    font-size: 24px;
+    font-weight: 400;
+}
+.discover-ten-wrap .discover-title h2 {
+    font-size: 48px;
+    font-family: 'Merriweather', serif;
+    line-height: 100%;
+    font-weight: 300;
+}
+
+.discover-img-wrap img {
+    width: 100%;
+    height: 100%;
+}
+.discover-img-wrap .img-title {
+    position: absolute;
+    bottom: 0;
+    z-index: 9;
+    font-weight: 300;
+}
+
+.discover-ten-wrap .box-1 {
+    width: 60%;
+    height: 420px;
+}
+
+.discover-ten-wrap .box-1 .discover-img-wrap {
+    height: 100%;
+}
+
+.discover-ten-wrap .box-2 {
+    width: 40%;
+    height: 420px;
+    overflow: hidden;
+}
+.discover-ten-wrap .box-2 img {
+    height: 210px;
+}
+.discover-ten-wrap .box-3 {
+    width: 33.334%;
+    overflow: hidden;
+}
+
+.discover-ten-wrap .box-4 {
+    width: 25%;
+    overflow: hidden;
+}
+
+.discover-ten-wrap .box-1 .img-title {
+    font-size: 48px;
+}
+.discover-ten-wrap .box-2 .img-title {
+    font-size: 36px;
+}
+.discover-ten-wrap .box-3 .img-title {
+    font-size: 28px;
+}
+.discover-ten-wrap .box-4 .img-title {
+    font-size: 24px;
+}
+/*flip css*/
+.discover-ten-wrap .discover-img-wrap {
+    position: relative;
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+}
+/* -- make sure to declare a default for every property that you want animated -- */
+/* -- general styles, including Y axis rotation -- */
+.discover-img-wrap .front {
+    position: relative;
+    top: 0;
+    z-index: 900;
+    width: inherit;
+    height: inherit;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform-style: preserve-3d;
+    -moz-backface-visibility: hidden;
+    /* -- transition is the magic sauce for animation -- */
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.discover-img-wrap .back {
+    position: absolute;
+    top: 0;
+    z-index: 800;
+    width: 100%;
+    height: 100%;
+    background-color: #fab845;
+    font-size: 16px;
+    font-weight: 400;
+    -webkit-transform: rotateY(-180deg);
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-transform: rotateY(-180deg);
+    -moz-transform-style: preserve-3d;
+    -moz-backface-visibility: hidden;
+    /* -- transition is the magic sauce for animation -- */
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.discover-img-wrap.flip .front {
+    z-index: 900;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+}
+.discover-img-wrap.flip .back {
+    z-index: 1000;
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+}
+/*flip css*/
+
+
+.discount-hotel-register {
+    background: url("../../../images/discount-hotel/bg-key-holes.gif") center repeat;
+    min-height: 116px;
+}
+.discount-hotel-register .title-1 {
+    font-size: 18px;
+    text-align: left;
+    font-weight: 400;
+}
+.discount-hotel-register .title-2 {
+    font-size: 40px;
+    font-weight: 400;
+    text-align: left;
+}
+.pagination-left {
+    text-align: left!important;
+}
+.border-btm-blu {
+    border-bottom: 1px solid #3671a6;
+}
+.img-border {
+    border: 3px solid #dbdbdb;
+}
+.badge-checkout {
+    padding: 10px 20px;
+    border-radius: 50%;
+    font-size: 24px;
+    background: #48484a;
+}
+.dh-sorting-panel {
+    background-color: #edf2f6;
+    padding: 15px;
+}
+.dh-sorting-panel .btn-group .btn {
+    border-radius: 0;
+    background-image: none;
+    background-color: #fff;
+    text-shadow: none;
+    font-size: 12px;
+}
+.dh-sorting-panel .btn-group .btn:hover, .dh-sorting-panel .btn-group .btn.active {
+    background-color: #259b24;
+    color: #fff;
+}
+.dh-search-listing .dh-search-item {
+    border: 1px solid #dcdcdc;
+    margin-bottom: 20px;
+}
+
+.dh-search-listing .price {
+    font-size: 34px;
+    line-height: 80%;
+    font-weight: 600;
+}
+.dh-search-listing .price span {
+    font-size: 20px;
+}
+.dh-search-listing .item-title {
+    font-size: 20px;
+    font-weight: 600;
+
+}
+.dh-search-listing .btn {
+    font-size: 16px;
+}
+
+.main-content {
+    padding: 27px 0;
+}
+.dh-accordion .accordion-heading {
+    border-bottom: 1px solid #e9e9e9;
+}
+.dh-accordion .accordion-heading:last-child {
+    border-bottom: 0px none !important;
+}
+.dh-accordion .accordion-group {
+    margin-bottom: 0px;
+    border: 0px none;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+.dh-accordion .accordion-inner{
+    border-top:0px none ;
+}
+
+.dh-smart-deals-list .thumbnail {
+    padding: 0;
+    border: none;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 1px 5px rgba(124, 124, 124, 0.7);
+}
+.dh-smart-deals-list .thumbnail img {
+    width: 100%;
+}
+.dh-smart-deals-list h4 a {
+    color: #404040;
+}
+.dh-smart-deals-list .caption {
+    padding-bottom: 0;
+    margin-bottom: 12px;
+    min-height: 65px;
+    max-height: 65px;
+    overflow: hidden;
+}
+
+/*footer*/
+#dh-footer {
+    position: relative!important;
+    background-color: #23649d;
+    padding: 24px 0;
+}
+#dh-footer .footer-menu, #dh-footer .footer-menu li a {
+    color: White;
+}
+#dh-footer .footer-menu ul, #dh-footer .footer-menu li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#dh-footer .footer-menu li {
+    margin-bottom: 5px;
+}
+#dh-footer .two-column li {
+    float: left;
+    width: 50%;
+}
+
+
+
+
+/*media query*/
+@media (min-width: 768px) and (max-width: 979px) {
+    .header-inside {
+        background: #2869a2 url("../../../images/discount-hotel/header-strip.png") -470px 0 no-repeat;
+    }
+    .discover-ten-wrap .box-1 {
+        height: 300px;
+    }
+
+    .discover-ten-wrap .box-2 {
+        height: 300px;
+    }
+
+    .discover-ten-wrap .box-2 img {
+        height: 150px;
+    }
+
+    .discover-ten-wrap .box-1 .img-title {
+        font-size: 30px;
+    }
+
+    .discover-ten-wrap .box-2 .img-title {
+        font-size: 25px;
+    }
+
+    .discover-ten-wrap .box-3 .img-title {
+        font-size: 20px;
+    }
+    .discover-ten-wrap .box-4 {
+        width: 24.99%;
+    }
+    .discover-ten-wrap .box-4 .img-title {
+        font-size: 15px;
+    }
+    .video-banner {
+        min-width: 730px;
+        top:-180px
+    }
+    .search-panel {
+        height: 335px;
+    }
+    .search-panel .btn-srch {
+        padding: 11px 5px;
+    }
+    .discover-img-wrap .back {
+        font-size: 10px;
+        line-height: 12px;
+        text-align: justify;
+    }
+
+    .dh-search-listing .dh-search-item {
+        margin-bottom: 10px;
+    }
+    .dh-search-listing .item-title {
+        font-size: 15px;
+    }
+    .dh-search-listing .btn {
+        font-size: 14px;
+    }
+    .dh-search-listing .price {
+        font-size: 28px;
+    }
+    .dh-search-listing .price span {
+        font-size: 15px;
+    }
+    .dh-smart-deals-list h4 a {
+        font-size: 12px;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .video-banner {
+        min-width: 1000px;
+        top:-100px
+    }
+    .header-inside {
+        background: #2869a2 url("../../../images/discount-hotel/header-strip.png") -440px 0 no-repeat;
+    }
+}

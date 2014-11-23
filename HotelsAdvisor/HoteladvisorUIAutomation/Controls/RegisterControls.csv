@@ -1,0 +1,12 @@
+﻿﻿divHome,.header-home
+divRegister,.crt_acnt
+registerButtonOnHomePage,#registerLink
+emailId,#UserName
+password,#Password
+confirmPassword,#ConfirmPassword
+displayName,#DisplayName
+registerbuttonOnRegisterPage,.btn-warning
+msgForInavalidInput,.validation-summary-errors ul li
+LogOff,a[title='aLogOff']
+Registereader,.ptm
+registerForm,form#registerForm

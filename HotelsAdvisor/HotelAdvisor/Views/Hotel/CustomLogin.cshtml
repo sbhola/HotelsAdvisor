@@ -1,0 +1,120 @@
+﻿@model HotelsAdvisor.Models.LoginViewModel
+
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_IntermediateLayout.cshtml";
+}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Sign In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Included css styles -->
+    <link href="~/assets/css/bootstrap-fileupload.css" rel="stylesheet">
+    <link href="~/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="~/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="~/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="~/assets/css/datepicker.css" rel="stylesheet">
+    <link href="~/assets/css/daterangepicker-bs3.css" rel="stylesheet">
+    <link href="~/assets/css/datetimepicker.css" rel="stylesheet">
+    <link href="~/assets/css/bootstrap-timepicker.css" rel="stylesheet">
+    <link href="~/assets/css/bootstrap-transfer.css" rel="stylesheet">
+    <link href="~/assets/css/carousel_deals.css" rel="stylesheet">
+
+    <!-- Img gallery styles -->
+    <link href="~/assets/css/style.css" rel="stylesheet">
+    <link href="~/assets/css/bootstrap-image-gallery.css" rel="stylesheet">
+    <link href="~/assets/css/prettyPhoto.css" rel="stylesheet">
+    <!-- Img gallery styles -->
+
+    <link href="~/assets/css/jquery.jscrollpane.codrops2.css" rel="stylesheet">
+    <link href="~/assets/css/slider.css" rel="stylesheet">
+    <link href="~/assets/css/tn3.css" rel="stylesheet">
+    <link href="~/assets/css/hotel_search.css" rel="stylesheet">
+    <link href="~/assets/css/car_dropdown_search.css" rel="stylesheet">
+    <link href="~/assets/css/main.css" rel="stylesheet">
+    <!--<link href="../assets/css/mediaquery_widget.css" rel="stylesheet">-->
+    <link href="~/assets/css/custom_button.css" rel="stylesheet">
+    <link href="~/assets/css/core-styles.css" rel="stylesheet">
+    <link href="~/assets/css/jquery.jscrollpane.codrops1.css" rel="stylesheet">
+    <!--[if IE 8]>     <html class="ie8"> <![endif]-->
+    <link href="~/assets/css/print.css" rel="stylesheet" type="text/css" media="print">
+
+
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic,700italic,900italic" rel="stylesheet" type="text/css">
+    <link href="~/assets/css/icon-fonts.css" rel="stylesheet">
+    <link href="~/assets/css/layout-editor.css" rel="stylesheet">
+
+    <!--Included css styles-->
+
+    <!-- Google Web Font -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic,700italic,900italic" rel="stylesheet" type="text/css">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="~/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="~/assets/ico/apple-touch-icon-57-precomposed.png">
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50" data-twttr-rendered="true">
+    <div class="container mtl">
+        <div class="create_profile_title">
+            <div class="pull-left title pts">Sign In to DiscountHotels</div>
+            <div class="pull-right ptm txtAlignRight pbs">New to DiscountHotels? <a href="#">Create Account</a></div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="pbl"></div>
+    <div class="container">
+        <div class="row-fluid">
+            <div class="create_profile_wrap" style="margin-bottom: 1%">
+
+                <!-- form -->
+                <div class="pvm phl">
+                    <h5 class="mbm">Sign In with your username or email</h5>
+                    <div class="control-group">
+                        <div class="controls">
+                            <div class="mbm">
+                                <input type="text" placeholder="Username or email" id="userid" class="span12">
+                            </div>
+                            <div class="mbm">
+                                <input type="text" placeholder="Password" id="password" class="span12">
+                            </div>
+                            <label class="checkbox pull-left">
+                                <input type="checkbox">
+                                <small>Remember me</small>
+                            </label>
+                            <div class="pull-right"><a href="#"><small>Forgot your password?</small></a></div>
+                            <div class="clear"></div>
+                            <div class="txtAlignCenter mtl">
+                                <button class="btn btn-large btn-block btn-primary ">Sign In</button>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <section id="socialLoginForm">
+                @Html.Partial("_ExternalLoginsListPartial", new { Action = "ExternalLogin", ReturnUrl = ViewBag.ReturnUrl })
+            </section>
+            @section Scripts {
+                @Scripts.Render("~/bundles/jqueryval")
+            }
+        </div>
+    </div>
+    <script type="text/javascript" src="~/assets/js/twitter_bootstrap_widgets.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/bootstrap.min.js"></script>
+</body>
+</html>
